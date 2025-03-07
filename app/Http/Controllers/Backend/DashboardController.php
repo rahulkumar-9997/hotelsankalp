@@ -20,7 +20,7 @@ class DashboardController extends Controller
         $data['hotel-room'] = HotelRoom::count();
 
         $visitorCounts = Visit::selectRaw("DATE_FORMAT(visited_at, '%Y-%m-%d') as day, COUNT(*) as total_visits")
-        ->where('visited_at', '>=', Carbon::now()->subDays(6)->startOfDay())  // Fetch for the last 7 days
+        ->where('visited_at', '>=', Carbon::now()->subDays(28)->startOfDay())  // Fetch for the last 28 days
         ->groupBy('day')
         ->orderBy('day')
         ->get()

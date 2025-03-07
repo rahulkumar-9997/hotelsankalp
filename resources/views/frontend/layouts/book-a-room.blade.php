@@ -18,7 +18,7 @@
                      <div class="col-lg-6 col-md-6">
                         <div class="contact-field p-relative c-name">                                    
                            <label><i class="fal fa-badge-check"></i> Check In Date</label>
-                           <input type="date" id="chackin" name="check_in_date">
+                           <input type="date" id="chackin" name="check_in_date" value="{{ old('check_in_date') }}">
                         </div>
                         @if($errors->has('check_in_date'))
                            <div class="text-danger">{{ $errors->first('check_in_date') }}</div>
@@ -27,7 +27,7 @@
                      <div class="col-lg-6 col-md-6">
                         <div class="contact-field p-relative c-subject">                                   
                            <label><i class="fal fa-times-octagon"></i> Check Out Date</label>
-                           <input type="date" id="chackout" name="check_out_date">
+                           <input type="date" id="chackout" name="check_out_date" value="{{ old('check_out_date') }}">
                         </div>
                         @if($errors->has('check_out_date'))
                            <div class="text-danger">{{ $errors->first('check_out_date') }}</div>
@@ -38,10 +38,10 @@
                            <label><i class="fal fa-times-octagon"></i> Room Type</label>
                            <select name="room_type">
                               <option value="sports-massage">Select room Type</option>
-                              <option value="Deluxe Double Room">Deluxe Double Room</option>
-                              <option value="Super Deluxe Double Room">Super Deluxe Double Room</option>
-                              <option value="Triple Bed Room">Triple Bed Room</option>
-                              <option value="Family Quad Room">Family Quad Room</option>
+                              <option value="Deluxe Double Room" {{ old('room_type') == 'Super Deluxe Double Room' ? 'selected' : '' }}>Deluxe Double Room</option>
+                              <option value="Super Deluxe Double Room" {{ old('room_type') == 'Super Deluxe Double Room' ? 'selected' : '' }}>Super Deluxe Double Room</option>
+                              <option value="Triple Bed Room" {{ old('room_type') == 'Triple Bed Room' ? 'selected' : '' }}>Triple Bed Room</option>
+                              <option value="Family Quad Room" {{ old('room_type') == 'Family Quad Room' ? 'selected' : '' }}>Family Quad Room</option>
                               
                            </select>
                            @if($errors->has('room_type'))
@@ -74,7 +74,7 @@
                      <div class="col-lg-6 col-md-6">
                         <div class="contact-field p-relative c-option">
                            <label><i class="fal fa-users"></i> Contact Person Name</label>
-                           <input type="text" id="firstn" name="contact_person_name"  placeholder="Contact person name">
+                           <input type="text" id="firstn" name="contact_person_name"  placeholder="Contact person name" value="{{ old('contact_person_name') }}">
                            @if($errors->has('contact_person_name'))
                               <div class="text-danger">{{ $errors->first('contact_person_name') }}</div>
                            @endif
@@ -83,15 +83,33 @@
                      <div class="col-lg-6 col-md-6">
                         <div class="contact-field p-relative c-option">
                            <label><i class="fal fa-mobile"></i>Phone No.</label>
-                           <input type="text" maxlength="10"  name="phone_number"  placeholder="Phone/Mobile No.">
+                           <input type="text" maxlength="10"  name="phone_number"  placeholder="Phone/Mobile No." pattern="^[0-9]{10}$" 
+                           inputmode="numeric" 
+                           title="Please enter a 10-digit phone number"
+                           oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)" value="{{ old('phone_number') }}">
                            @if($errors->has('phone_number'))
                               <div class="text-danger">{{ $errors->first('phone_number') }}</div>
                            @endif
                         </div>
                      </div>
+                     <div class="col-lg-6 col-md-6">
+                        <div class="contact-field p-relative c-option">
+                           <label><i class="fal fa-mailbox"></i>Email Id.</label>
+                           <input type="email" name="email"  placeholder="Email id" value="{{ old('email') }}">
+                           @if($errors->has('email'))
+                              <div class="text-danger">{{ $errors->first('email') }}</div>
+                           @endif
+                        </div>
+                     </div>
+                     <div class="col-lg-6 col-md-6">
+                        <div class="contact-field p-relative c-option" style="margin-top: 20px;">
+                           {!! NoCaptcha::renderJs() !!}
+                           {!! NoCaptcha::display() !!}
+                        </div>
+                     </div>
                      <div class="col-lg-12">
                         <div class="slider-btn mt-15">                                          
-                           <button class="btn ss-btn" data-animation="fadeInRight" data-delay=".8s"><span>Book Table Now</span></button>				
+                           <button class="btn ss-btn" data-animation="fadeInRight" data-delay=".8s"><span>Submit</span></button>				
                         </div>
                      </div>
                   </div>
@@ -100,7 +118,7 @@
          </div>
          <div class="col-lg-6 col-md-6  d-flex align-items-center">
             <div class="booking-img">
-               <img src="{{asset('fronted/hotelsankalp-img/02-09-2024/delux_room/delux_room_5.jpg')}}" alt="img">
+               <img src="{{asset('fronted/hotelsankalp-img/new-12-24/1000x563.jpg')}}" alt="img">
             </div>
          </div>
       </div>

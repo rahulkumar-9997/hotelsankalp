@@ -32,9 +32,11 @@ Route::get('our-room', [FrontHomeController::class, 'ourRoom'])->name('our-room'
 Route::get('facilities', [FrontHomeController::class, 'ourFacilities'])->name('facilities');
 Route::get('contact-us', [FrontHomeController::class, 'contactUs'])->name('contact-us');
 Route::post('home-quick-enquiry.store', [FrontHomeController::class, 'homeEnquiryQuickSubmit'])->name('home-quick-enquiry.store');
-Route::post('book-a-room.store', [FrontHomeController::class, 'bookARooom'])->name('book-a-room.store');
-Route::post('contact-form.store', [FrontHomeController::class, 'contactForm'])->name('contact-form.store');
-
+Route::group(['middleware' => ['web']], function() {
+    Route::post('book-a-room.store', [FrontHomeController::class, 'bookARooom'])->name('book-a-room.store');
+    Route::post('contact-form.store', [FrontHomeController::class, 'contactForm'])->name('contact-form.store');
+});
+Route::get('/clear-cache', [FrontHomeController::class, 'clearCache'])->name('clear-cache');
 /**backend rout */
 Route::get('/login', [LoginController::class, 'showLoginForm']);
 Route::post('/login', [LoginController::class, 'login'])->name('login');

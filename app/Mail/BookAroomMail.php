@@ -21,8 +21,10 @@ class BookAroomMail extends Mailable
     public function build()
     {
         return $this->view('frontend.mail.book-a-room-mail')
-        ->from('sankalpbanaras@gmail.com', 'Hotelsankalp') // Sender's email and name
-        ->subject('Hotelsankalp Book a Room Enquiry');
+        ->from('sankalpbanaras@gmail.com', 'Hotelsankalp')
+        ->replyTo($this->data['email'], $this->data['contact_person_name'])
+        ->subject('Hotelsankalp Book a Room Enquiry On Website - www.hotelsankalp.com');
+
     }
 }
 

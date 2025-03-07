@@ -8,7 +8,7 @@
                                <div class="footer-widget mb-30">
                                    <div class="f-widget-title mb-30">
                                        <a href="{{URL::to('/')}}">
-										<img src="{{asset('fronted/hotelsankalp-img/logo/transparent-logo.png')}}" alt="logo"></a>
+										<img src="{{asset('fronted/hotelsankalp-img/logo/logo-new.png')}}" alt="logo"></a>
                                    </div>
                                    <p>Experience top-rated tranquility in the heart of Varanasi, where your safety and comfort are our priority.</p>
                                    <div class="footer-social">                                    
@@ -59,14 +59,24 @@
                                        <ul>
                                        <li>
                                            <i class="icon fal fa-phone"></i>
-                                           <span>+91-9415285030<br>+91-9208464648</span>
+                                           <span>0542-2975050
+										   <br><a href="tel:+919005050196">+91-9005050196</a>
+										   </span>
                                        </li>
+									   <li>
+                                            <i class="icon fab fa-whatsapp"></i>
+                                            <span style="margin-top: 15px; display: block;">
+                                                <a href="tel:+919005050197">+91-9005050197</a>
+                                            </span>
+                                       </li>
+									   
                                       <li>
                                        <i class="icon fal fa-envelope"></i>
                                            <span>
-                                               <a href="mailto:sankalpbanaras@gmail.com">sankalpbanaras@gmail.com</a>
-                                          <br>
-                                          <a href="mailto:info@sankalpbanaras.com">info@sankalpbanaras.com</a>
+                                            <a href="mailto:sankalpbanaras@gmail.com">sankalpbanaras@gmail.com</a>
+                                            <br>
+                                            <a href="mailto:info@sankalpbanaras.com">info@sankalpbanaras.com</a>
+											
                                           </span>
                                        </li>
                                        <li>
@@ -90,6 +100,7 @@
                            <div class="col-lg-12 col-md-12"> 
                                 <div class="text-center">                       
                                 <p class="mb-0">Copyright <?php echo date("Y"); ?> Hotelsankalp All Rights Reserved</p>
+                                
                                 </div> 
                            </div>
                            

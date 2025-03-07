@@ -18,5 +18,6 @@
 <script src="{{asset('fronted/js/jquery.magnific-popup.min.js')}}"></script>
 <script src="{{asset('fronted/js/element-in-view.js')}}"></script>
 <script src="{{asset('fronted/js/main.js')}}"></script>
+<script src="{{asset('fronted/js/jquery.fancybox.js')}}"></script>
 
 @stack('scripts')

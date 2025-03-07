@@ -1,9 +1,9 @@
 @extends('frontend.layouts.master')
 @section('title','Hotel Sankalp :: Our Room')
 @section('description', 'Hotel Sankalp')
-@section('keywords', 'Qulity Room , Best Accommodation Hotel in varanasi, Wellness & Spa in varanasi, Varanasi Hotel, Luxury Hotel in Varanasi, Hotel sankalp facilities') 
+@section('keywords', 'Qulity Room , Best Accommodation Hotel in varanasi, Wellness & Spa in varanasi, Varanasi Hotel, Luxury Hotel in Varanasi, Hotel sankalp facilities')
 @section('main-content')
-    <section class="breadcrumb-area d-flex align-items-center" style="background-image:url('{{asset('fronted/hotelsankalp-img/breadcrub/bread-2.jpg') }}')">
+    <section class="breadcrumb-area d-flex align-items-center" style="background-image:url('{{asset('fronted/hotelsankalp-img/new-12-24/bread/1.jpg') }}')">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-xl-12 col-lg-12">
@@ -42,9 +42,11 @@
                      <div class="single-services mb-30 banner-slider">
                         <div class="services-thumb slider slider-for slider-for-big_{{$sr_no}}">
                            @foreach ($hotel_room_row->images as $image) 
+                           <a class="lightbox" data-fancybox="images-{{$hotel_room_row->id}}" data-caption="{{ $hotel_room_row->title }}" href="{{ asset('hotel-sankalp-image-file/room-image/large/'. $image->image_path ) }}" title="{{ $hotel_room_row->title }}">
                               <div class="slider-banner-image">
                                  <img src="{{ asset('hotel-sankalp-image-file/room-image/large/'. $image->image_path ) }}" alt="{{ $hotel_room_row->title }}">
                               </div>
+                           </a>
                            @endforeach
                            
                         </div>

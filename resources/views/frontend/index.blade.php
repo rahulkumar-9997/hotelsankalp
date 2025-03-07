@@ -1,4 +1,4 @@
-@php 
+@php
 use App\Models\BlogImages;
 @endphp
 @extends('frontend.layouts.master')
@@ -9,8 +9,8 @@ use App\Models\BlogImages;
 @section('main-content')
 <!-- main-area -->
 
-   <!-- slider-area -->
-   <!-- <section id="home" class="slider-area fix p-relative" >
+<!-- slider-area -->
+<!-- <section id="home" class="slider-area fix p-relative" >
       <div class="slider-active" >
           <div class="single-slider slider-bg d-flex align-items-center" style="background-image: url(img/slider/ghat4.avif); background-size: cover;height: 100vh;">
                   <div class="container" 
@@ -54,7 +54,47 @@ use App\Models\BlogImages;
           </div>
       </div> 
       </section> -->
-   <section id="home" class="slider-area fix p-relative home">
+<div id="carouselExampleCaptions" class="carousel slide"  data-bs-ride="carousel" data-bs-interval="5000">
+   <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+   </div>
+   <div class="carousel-inner">
+      @if (isset($data['banner']) && $data['banner']->count() > 0)
+      @foreach($data['banner'] as $banner_row)
+      <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+         <img src="{{ asset('hotel-sankalp-image-file/banner-image/' . $banner_row->banner_image_desktop) }}" class="d-block w-100" alt="...">
+         <div class="centered">
+            @if($banner_row->banner_title !== null && $banner_row->banner_title !== '')
+            <div class="carousel-overlay">
+               <div class="slider-content s-slider-content text-center mt-3">
+                  <h3 data-animation="fadeInUp" data-delay=".4s">
+                     {{ $banner_row->banner_title }}
+                  </h3>
+                  @if($banner_row->banner_content !== null && $banner_row->banner_content !== '')
+                  <p data-animation="fadeInUp" data-delay=".6s">{{ $banner_row->banner_content }}</p>
+                  @endif
+
+               </div>
+            </div>
+            @endif
+         </div>
+      </div>
+      @endforeach
+      @endif
+   </div>
+   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+   </button>
+   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+   </button>
+</div>
+
+<!-- <section id="home" class="slider-area fix p-relative home">
       <div class="slider-active">
       @if (isset($data['banner']) && $data['banner']->count() > 0)
          @foreach($data['banner'] as $banner_row)
@@ -65,17 +105,19 @@ use App\Models\BlogImages;
                   <div class="container">
                      <div class="row justify-content-center marg">
                         <div class="col-lg-8 col-md-8 ">
+                           @if($banner_row->banner_title !== null && $banner_row->banner_title !== '')
                            <div class="carousel-overlay">
                               <div class="slider-content s-slider-content text-center mt-3">
                                  <h3 data-animation="fadeInUp" data-delay=".4s">
                                  {{ $banner_row->banner_title }}
                                  </h3>
-                                 <p data-animation="fadeInUp" data-delay=".6s">{{ $banner_row->banner_content }}</p>
-                                 <div class="slider-btn mt-30">
-                                    <a href="{{ $banner_row->banner_url_link }}" class="btn ss-btn active mr-15" data-animation="fadeInLeft" data-delay=".4s">Discover More</a>
-                                 </div>
+                                 @if($banner_row->banner_content !== null && $banner_row->banner_content !== '')
+                                    <p data-animation="fadeInUp" data-delay=".6s">{{ $banner_row->banner_content }}</p>
+                                 @endif  
+                                 
                               </div>
                            </div>
+                           @endif
                         </div>
                      </div>
                   </div>
@@ -84,260 +126,269 @@ use App\Models\BlogImages;
          @endforeach
       @endif
       </div>
-   </section>
-   <!-- slider-area-end -->
-   <!-- booking-area -->
-   <div id="booking" class="booking-area p-relative">
-      <div class="container">
-         <form action="{{route('home-quick-enquiry.store')}}" class="contact-form form-home" method="post">
-            @csrf
-            <div class="row align-items-center">
-               <div class="col-lg-12">
-                  <h6 class="text-center text-danger">Booking Start 1 November 2024.</h6>
-                  <ul>
-                     <li>
-                        <div class="contact-field p-relative c-name">  
-                           <label><i class="fal fa-badge-check"></i> Check In Date</label>
-                           <input type="date" id="chackin" name="check_in_date">
-                           @if($errors->has('check_in_date'))
-                              <div class="text-danger">{{ $errors->first('check_in_date') }}</div>
-                           @endif
-                        </div>
-                     </li>
-                     <li>
-                        <div class="contact-field p-relative c-name">  
-                           <label><i class="fal fa-times-octagon"></i> Check Out Date</label>
-                           <input type="date" id="chackout" name="check_out_date">
-                           @if($errors->has('check_out_date'))
-                              <div class="text-danger">{{ $errors->first('check_out_date') }}</div>
-                           @endif
-                        </div>
-                     </li>
-                     <li>
-                        <div class="contact-field p-relative c-name">
-                           <label><i class="fal fa-concierge-bell"></i>No. of Rooms</label>
-                           <select name="no_of_rooms" id="rm" class="home-room">
-                              <option value="sports-massage">Room</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                              <option value="4">4</option>
-                              <option value="5">5</option>
-                              <option value="6">6</option>
-                              <option value="7">7</option>
-                              <option value="8">8</option>
-                              <option value="9">9</option>
-                              <option value="10+">10+</option>
-                           </select>
-                           @if($errors->has('no_of_rooms'))
-                              <div class="text-danger">{{ $errors->first('no_of_rooms') }}</div>
-                           @endif
-                        </div>
-                     </li>
-                     <li>
-                        <div class="contact-field p-relative c-name">
-                           <label><i class="fal fa-users"></i> Contact Person</label>
-                           <input type="text" id="firstn" name="contact_person_name"  placeholder="Contact person name">
-                           @if($errors->has('contact_person_name'))
-                              <div class="text-danger">{{ $errors->first('contact_person_name') }}</div>
-                           @endif
-                        </div>
-                     </li>
-                     <li>
-                        <div class="contact-field p-relative c-name">
-                           <label><i class="fal fa-mobile"></i> Phone No.</label>
-                           <input maxlength="10" type="text" id="firstn" name="phone_no" placeholder="Phone/Mobile No.">
-                           @if($errors->has('phone_no'))
-                              <div class="text-danger">{{ $errors->first('phone_no') }}</div>
-                           @endif
-                        </div>
-                     </li>
-                     
-                     <li>
-                        <div class="slider-btn">    
-                           <label><i class="fal fa-calendar-alt"></i></label>
-                           <button class="btn ss-btn" data-animation="fadeInRight" data-delay=".8s">Quick Enuiry</button>
-                        </div>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-         </form>
-      </div>
-   </div>
-   <!-- booking-area-end -->
-   <!-- about-area -->
-   <section class="about-area about-p pt-120 pb-120 p-relative fix">
-      <div class="animations-02">
-        <img src="{{asset('fronted/img/bg/an-img-02.png')}}" alt="contact-bg-an-02">
-    </div>
-      <div class="container">
-         <div class="row justify-content-center align-items-center">
-            <div class="col-lg-6 col-md-12 col-sm-12">
-               <div class="s-about-img p-relative  wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s">
-                  <img src="{{asset('fronted/img/features/about_img_02.png')}}" alt="img">   
-                  <div class="about-icon">
-                     <img src="{{asset('fronted/img/gallery/2.2.jpg')}}" alt="img" onerror="this.src='img/gallery/1.jpg'">   
-                  </div>
-               </div>
-            </div>
-            <div class="col-lg-6 col-md-12 col-sm-12">
-               <div class="about-content s-about-content  wow fadeInRight  animated pl-30" data-animation="fadeInRight" data-delay=".4s">
-                  <div class="about-title second-title pb-25">
-                     <h5>About Us</h5>
-                     <h2> Ensuring Safety and Comfort for Your Stay.</h2>
-                  </div>
-                  <p>Our hotel stands out as a top-rated haven in Varanasi, where your safety and comfort are our top priorities. Nestled in the heart of this ancient city, we offer a sanctuary amidst the hustle and bustle, ensuring a peaceful and secure stay for all our guests. Our commitment to excellence is reflected in our high ratings, which highlight our dedication to providing exceptional service and maintaining the highest standards of safety and hygiene.</p>
-                  <p>Experience true tranquility and relaxation in Varanasi, known for its vibrant spirituality and rich cultural heritage. Our hotel offers a serene retreat where you can unwind and rejuvenate, away from the chaos of everyday life. Whether you're exploring the city's temples and ghats or simply seeking a peaceful getaway, our top-rated establishment provides the perfect blend of comfort, convenience, and safety for a memorable stay in Varanasi.</p>
-                  <div class="about-content3 mt-30">
-                     <div class="row justify-content-center align-items-center">
-                        
-                        <div class="col-md-12">
-                           <div class="slider-btn ml--3">                                          
-                              <a href="{{url('about-us') }}" class="btn ss-btn smoth-scroll">Read More</a>				
-                           </div>
-                        </div>
-                        
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </section>
-   <!-- about-area-end -->
-   <!-- service-details2-area -->
-   @if (isset($data['hotel_facilities']) && $data['hotel_facilities']->count() > 0)
-   <section id="service-details2" class="pt-120 pb-90 p-relative" style="background-color: #f7f5f1;">
-      <div class="animations-01">
-        <img src="{{asset('fronted/img/bg/an-img-01.png')}}" alt="an-img-01">
-    </div>
-      <div class="container">
+   </section>-->
+<!-- slider-area-end -->
+<!-- booking-area -->
+<div id="booking" class="booking-area p-relative">
+   <div class="container">
+      <form action="{{route('home-quick-enquiry.store')}}" class="contact-form form-home" method="post">
+         @csrf
          <div class="row align-items-center">
             <div class="col-lg-12">
-               <div class="section-title center-align mb-50 text-center">
-                  <h5>Explore</h5>
+               <!-- <h6 class="text-center text-danger">Booking Start 1 November 2024.</h6> -->
+               <ul>
+                  <li>
+                     <div class="contact-field p-relative c-name">
+                        <label><i class="fal fa-badge-check"></i> Check In Date</label>
+                        <input type="date" id="chackin" name="check_in_date">
+                        @if($errors->has('check_in_date'))
+                        <div class="text-danger">{{ $errors->first('check_in_date') }}</div>
+                        @endif
+                     </div>
+                  </li>
+                  <li>
+                     <div class="contact-field p-relative c-name">
+                        <label><i class="fal fa-times-octagon"></i> Check Out Date</label>
+                        <input type="date" id="chackout" name="check_out_date">
+                        @if($errors->has('check_out_date'))
+                        <div class="text-danger">{{ $errors->first('check_out_date') }}</div>
+                        @endif
+                     </div>
+                  </li>
+                  <li>
+                     <div class="contact-field p-relative c-name">
+                        <label><i class="fal fa-concierge-bell"></i>No. of Rooms</label>
+                        <select name="no_of_rooms" id="rm" class="home-room">
+                           <option value="sports-massage">Room</option>
+                           <option value="1">1</option>
+                           <option value="2">2</option>
+                           <option value="3">3</option>
+                           <option value="4">4</option>
+                           <option value="5">5</option>
+                           <option value="6">6</option>
+                           <option value="7">7</option>
+                           <option value="8">8</option>
+                           <option value="9">9</option>
+                           <option value="10+">10+</option>
+                        </select>
+                        @if($errors->has('no_of_rooms'))
+                        <div class="text-danger">{{ $errors->first('no_of_rooms') }}</div>
+                        @endif
+                     </div>
+                  </li>
+                  <li>
+                     <div class="contact-field p-relative c-name">
+                        <label><i class="fal fa-users"></i> Contact Person</label>
+                        <input type="text" id="firstn" name="contact_person_name" placeholder="Contact person name">
+                        @if($errors->has('contact_person_name'))
+                        <div class="text-danger">{{ $errors->first('contact_person_name') }}</div>
+                        @endif
+                     </div>
+                  </li>
+                  <li>
+                     <div class="contact-field p-relative c-name">
+                        <label><i class="fal fa-mobile"></i> Phone No.</label>
+                        <input
+                           type="text"
+                           id="firstn"
+                           name="phone_no"
+                           placeholder="Phone/Mobile No."
+                           pattern="^[0-9]{10}$"
+                           maxlength="10"
+                           inputmode="numeric"
+                           title="Please enter a 10-digit phone number"
+                           oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)">
+                        @if($errors->has('phone_no'))
+                        <div class="text-danger">{{ $errors->first('phone_no') }}</div>
+                        @endif
+                     </div>
+                  </li>
+
+                  <li>
+                     <div class="slider-btn">
+                        <label><i class="fal fa-calendar-alt"></i></label>
+                        <button class="btn ss-btn" data-animation="fadeInRight" data-delay=".8s">Quick Enuiry</button>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </form>
+   </div>
+</div>
+<!-- booking-area-end -->
+<!-- about-area -->
+<section class="about-area about-p pt-120 pb-120 p-relative fix">
+   <div class="animations-02">
+      <img src="{{asset('fronted/img/bg/an-img-02.png')}}" alt="contact-bg-an-02">
+   </div>
+   <div class="container">
+      <div class="row justify-content-center align-items-center">
+         <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="s-about-img p-relative  wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s">
+               <img src="{{asset('fronted/hotelsankalp-img/new-12-24/about-top.jpg')}}" alt="img">
+               <div class="about-icon">
+                  <img src="{{asset('fronted/hotelsankalp-img/new-12-24/about-bottom.jpg')}}" alt="img">
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="about-content s-about-content  wow fadeInRight  animated pl-30" data-animation="fadeInRight" data-delay=".4s">
+               <div class="about-title second-title pb-25">
+                  <h5>About Us</h5>
+                  <h2> Ensuring Safety and Comfort for Your Stay.</h2>
+               </div>
+               <p>Our hotel stands out as a top-rated haven in Varanasi, where your safety and comfort are our top priorities. Nestled in the heart of this ancient city, we offer a sanctuary amidst the hustle and bustle, ensuring a peaceful and secure stay for all our guests. Our commitment to excellence is reflected in our high ratings, which highlight our dedication to providing exceptional service and maintaining the highest standards of safety and hygiene.</p>
+               <p>Experience true tranquility and relaxation in Varanasi, known for its vibrant spirituality and rich cultural heritage. Our hotel offers a serene retreat where you can unwind and rejuvenate, away from the chaos of everyday life. Whether you're exploring the city's temples and ghats or simply seeking a peaceful getaway, our top-rated establishment provides the perfect blend of comfort, convenience, and safety for a memorable stay in Varanasi.</p>
+               <div class="about-content3 mt-30">
+                  <div class="row justify-content-center align-items-center">
+
+                     <div class="col-md-12">
+                        <div class="slider-btn ml--3">
+                           <a href="{{url('about-us') }}" class="btn ss-btn smoth-scroll">Read More</a>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<!-- about-area-end -->
+<!-- service-details2-area -->
+@if (isset($data['hotel_facilities']) && $data['hotel_facilities']->count() > 0)
+<section id="service-details2" class="pt-120 pb-90 p-relative" style="background-color: #f7f5f1;">
+   <div class="animations-01">
+      <img src="{{asset('fronted/img/bg/an-img-01.png')}}" alt="an-img-01">
+   </div>
+   <div class="container">
+      <div class="row align-items-center">
+         <div class="col-lg-12">
+            <div class="section-title center-align mb-50 text-center">
+               <h5>Explore</h5>
+               <h2>
+                  The Hotel Facilities
+               </h2>
+            </div>
+         </div>
+         @foreach($data['hotel_facilities'] as $hotel_facilities_row)
+         <div class="col-lg-4 col-md-6">
+            <div class="services-08-item mb-30">
+               <div class="services-icon2">
+                  <img src="{{ asset('hotel-sankalp-image-file/facilities-icon/'. $hotel_facilities_row->facilities_icon) }}" alt="img">
+               </div>
+               <div class="services-08-thumb">
+                  <img src="{{ asset('hotel-sankalp-image-file/facilities-icon/'. $hotel_facilities_row->facilities_icon) }}" alt="img">
+               </div>
+               <div class="services-08-content">
+                  <h3><a href="#"> {{ $hotel_facilities_row->title }}</a></h3>
+                  <p>
+
+                     {!! strip_tags(substr($hotel_facilities_row->facilities_content, 0, 200)) !!}
+                  </p>
+                  <a href="#">Read More <i class="fal fa-long-arrow-right"></i></a>
+               </div>
+            </div>
+         </div>
+         @endforeach
+         <div class="col-md-12">
+            <div class="ml--3 text-center">
+               <a href="{{url('facilities') }}" class="btn ss-btn smoth-scroll">Read More</a>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+@endif
+<!-- service-details2-area-end -->
+<!-- room-area-->
+@if (isset($data['hotel_room']) && $data['hotel_room']->count() > 0)
+<section id="services" class="services-area pt-113 pb-150 room-home">
+   <div class="container">
+      <div class="row justify-content-center">
+         <div class="col-xl-12">
+            <div class="section-title center-align mb-50 text-center">
+               <h5>The pleasure of luxury</h5>
+               <h2>Rooms & Suites</h2>
+               <!-- <p>Proin consectetur non dolor vitae pulvinar. Pellentesque sollicitudin dolor eget neque viverra, sed interdum metus interdum. Cras lobortis pulvinar dolor, sit amet ullamcorper dolor iaculis vel</p> -->
+            </div>
+         </div>
+      </div>
+      <div class="row services-active">
+         @foreach($data['hotel_room'] as $hotel_room_row)
+
+         <div class="col-xl-4 col-md-6">
+            <div class="single-services mb-30">
+               <div class="services-thumb">
+                  <a class="gallery-link popup-image" href="{{ asset('hotel-sankalp-image-file/room-image/large/'. $hotel_room_row->random_image->image_path) }}">
+                     <img src="{{ asset('hotel-sankalp-image-file/room-image/large/'. $hotel_room_row->random_image->image_path) }}" alt="img">
+                  </a>
+               </div>
+               <div class="services-content">
+                  <div class="day-book">
+                     <ul>
+                        <li>Rs.{{ $hotel_room_row->room_price }}/ + Tax</li>
+                        <li><a href="{{url('our-room#bookaroom') }}">Book Now</a></li>
+                     </ul>
+                  </div>
+                  <h4><a href="#">{{ $hotel_room_row->title }}</a></h4>
+                  <p>
+                     {!! strip_tags(substr($hotel_room_row->details, 0, 150)) !!}
+                  </p>
+                  <div class="icon">
+                     <ul>
+                        <li><img src="{{asset('fronted/img/icon/sve-icon1.png')}}" alt="img"></li>
+                        <li><img src="{{asset('fronted/img/icon/sve-icon2.png')}}" alt="img"></li>
+                        <li><img src="{{asset('fronted/img/icon/sve-icon3.png')}}" alt="img"></li>
+                        <li><img src="{{asset('fronted/img/icon/sve-icon4.png')}}" alt="img"></li>
+                        <li><img src="{{asset('fronted/img/icon/sve-icon5.png')}}" alt="img"></li>
+                        <li><img src="{{asset('fronted/img/icon/sve-icon6.png')}}" alt="img"></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         @endforeach
+      </div>
+   </div>
+</section>
+@endif
+<!-- room-area-end -->
+<!-- feature-area -->
+<section class="feature-area2 p-relative fix mb-5" style="background: #f7f5f1;">
+   <div class="animations-02">
+      <img src="{{asset('fronted/img/bg/an-img-02.png')}}" alt="contact-bg-an-05">
+   </div>
+   <div class="container">
+      <div class="row justify-content-center align-items-center">
+         <div class="col-lg-6 col-md-12 col-sm-12 pr-30">
+            <div class="feature-img">
+               <img src="{{asset('fronted/hotelsankalp-img/02-09-2024/reception_2.jpg')}}" alt="img" class="img">
+            </div>
+         </div>
+         <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="feature-content s-about-content">
+               <div class="feature-title pb-20 mt-4">
+                  <h5>Luxury Hotel in Varanasi</h5>
                   <h2>
-                     The Hotel Facilities
-                   </h2>
+                     Jewel of the Ganges.
+                  </h2>
                </div>
-            </div>
-            @foreach($data['hotel_facilities'] as $hotel_facilities_row)
-            <div class="col-lg-4 col-md-6">
-               <div class="services-08-item mb-30">
-                  <div class="services-icon2">
-                     <img src="{{ asset('hotel-sankalp-image-file/facilities-icon/'. $hotel_facilities_row->facilities_icon) }}" alt="img">
-                  </div>
-                  <div class="services-08-thumb">
-                     <img src="{{ asset('hotel-sankalp-image-file/facilities-icon/'. $hotel_facilities_row->facilities_icon) }}" alt="img">
-                  </div>
-                  <div class="services-08-content">
-                     <h3><a href="#"> {{ $hotel_facilities_row->title }}</a></h3>
-                     <p>
-                        
-                        {!! strip_tags(substr($hotel_facilities_row->facilities_content, 0, 200)) !!}
-                     </p>
-                     <a href="#">Read More <i class="fal fa-long-arrow-right"></i></a>
-                  </div>
-               </div>
-            </div>
-            @endforeach
-            <div class="col-md-12">
-               <div class="ml--3 text-center">                                          
-                  <a href="{{url('facilities') }}" class="btn ss-btn smoth-scroll">Read More</a>				
-               </div>
-            </div>
-         </div>
-      </div>
-   </section>
-   @endif
-   <!-- service-details2-area-end -->
-   <!-- room-area-->
-   @if (isset($data['hotel_room']) && $data['hotel_room']->count() > 0)
-   <section id="services" class="services-area pt-113 pb-150 room-home">
-      <div class="container">
-         <div class="row justify-content-center">
-            <div class="col-xl-12">
-               <div class="section-title center-align mb-50 text-center">
-                  <h5>The pleasure of luxury</h5>
-                  <h2>Rooms & Suites</h2>
-                  <!-- <p>Proin consectetur non dolor vitae pulvinar. Pellentesque sollicitudin dolor eget neque viverra, sed interdum metus interdum. Cras lobortis pulvinar dolor, sit amet ullamcorper dolor iaculis vel</p> -->
-               </div>
-            </div>
-         </div>
-         <div class="row services-active">
-            @foreach($data['hotel_room'] as $hotel_room_row)
-               
-               <div class="col-xl-4 col-md-6">
-                  <div class="single-services mb-30">
-                     <div class="services-thumb">
-                        <a class="gallery-link popup-image" href="{{ asset('hotel-sankalp-image-file/room-image/large/'. $hotel_room_row->random_image->image_path) }}">
-                        <img src="{{ asset('hotel-sankalp-image-file/room-image/large/'. $hotel_room_row->random_image->image_path) }}" alt="img">
-                        </a>
-                     </div>
-                     <div class="services-content">
-                        <div class="day-book">
-                           <ul>
-                              <li>Rs.{{ $hotel_room_row->room_price }}/ + Tax</li>
-                              <li><a href="{{url('our-room#bookaroom') }}">Book Now</a></li>
-                           </ul>
-                        </div>
-                        <h4><a href="#">{{ $hotel_room_row->title }}</a></h4>
-                        <p>
-                           {!! strip_tags(substr($hotel_room_row->details, 0, 150)) !!}
-                        </p>
-                        <div class="icon">
-                           <ul>
-                              <li><img src="{{asset('fronted/img/icon/sve-icon1.png')}}" alt="img"></li>
-                              <li><img src="{{asset('fronted/img/icon/sve-icon2.png')}}" alt="img"></li>
-                              <li><img src="{{asset('fronted/img/icon/sve-icon3.png')}}" alt="img"></li>
-                              <li><img src="{{asset('fronted/img/icon/sve-icon4.png')}}" alt="img"></li>
-                              <li><img src="{{asset('fronted/img/icon/sve-icon5.png')}}" alt="img"></li>
-                              <li><img src="{{asset('fronted/img/icon/sve-icon6.png')}}" alt="img"></li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            @endforeach
-         </div>
-      </div>
-   </section>
-   @endif
-   <!-- room-area-end -->    
-   <!-- feature-area -->
-   <section class="feature-area2 p-relative fix mb-5" style="background: #f7f5f1;">
-      <div class="animations-02">
-        <img src="{{asset('fronted/img/bg/an-img-02.png')}}" alt="contact-bg-an-05">
-    </div>
-      <div class="container">
-         <div class="row justify-content-center align-items-center">
-            <div class="col-lg-6 col-md-12 col-sm-12 pr-30">
-               <div class="feature-img">                               
-                  <img src="{{asset('fronted/hotelsankalp-img/02-09-2024/reception_2.jpg')}}" alt="img" class="img">              
-               </div>
-            </div>
-            <div class="col-lg-6 col-md-12 col-sm-12">
-               <div class="feature-content s-about-content">
-                  <div class="feature-title pb-20 mt-4">
-                     <h5>Luxury Hotel in Varanasi</h5>
-                     <h2>
-                        Jewel of the Ganges.
-                     </h2>
-                  </div>
-                  <p>Our hotel in Varanasi stands out for its prime location near the ghats, offering guests stunning views and easy access to the spiritual heart of the city. We pride ourselves on providing exceptional service, ensuring that every aspect of your stay is taken care of by our dedicated staff, from seamless check-in to attentive assistance throughout your visit.</p>
-                  <p>Experience comfort and luxury in our rooms and suites, designed for utmost relaxation. Indulge in culinary delights at our restaurant, featuring local and international cuisine. Rejuvenate at our spa with a range of treatments for body and mind. Host events in our modern, well-equipped spaces, prioritizing safety and offering special packages for a memorable stay.</p>
-                  <!-- <div class="slider-btn mt-15">                                          
+               <p>Our hotel in Varanasi stands out for its prime location near the ghats, offering guests stunning views and easy access to the spiritual heart of the city. We pride ourselves on providing exceptional service, ensuring that every aspect of your stay is taken care of by our dedicated staff, from seamless check-in to attentive assistance throughout your visit.</p>
+               <p>Experience comfort and luxury in our rooms and suites, designed for utmost relaxation. Indulge in culinary delights at our restaurant, featuring local and international cuisine. Rejuvenate at our spa with a range of treatments for body and mind. Host events in our modern, well-equipped spaces, prioritizing safety and offering special packages for a memorable stay.</p>
+               <!-- <div class="slider-btn mt-15">                                          
                      <a href="/" class="btn ss-btn smoth-scroll">Discover More</a>				
                      </div> -->
-               </div>
             </div>
          </div>
       </div>
-   </section>
-   <!-- feature-area-end -->
-   <!-- pricing-area -->
-   <!-- <section id="pricing" class="pricing-area pt-120 pb-60 fix p-relative">
+   </div>
+</section>
+<!-- feature-area-end -->
+<!-- pricing-area -->
+<!-- <section id="pricing" class="pricing-area pt-120 pb-60 fix p-relative">
       <div class="animations-01"><img src="img/bg/an-img-01.png" alt="an-img-01"></div>
       <div class="animations-02"><img src="img/bg/an-img-02.png" alt="contact-bg-an-01"></div>
       <div class="container"> 
@@ -408,9 +459,9 @@ use App\Models\BlogImages;
          </div>
       </div>
       </section> -->
-   <!-- pricing-area-end -->
-   <!-- testimonial-area -->
-   <!-- <section class="testimonial-area pt-120 pb-90 p-relative fix" style="background-image: url(img/bg/testimonial-bg.png); background-size: cover;">
+<!-- pricing-area-end -->
+<!-- testimonial-area -->
+<!-- <section class="testimonial-area pt-120 pb-90 p-relative fix" style="background-image: url(img/bg/testimonial-bg.png); background-size: cover;">
       <div class="container">
           <div class="row">
                <div class="col-lg-12">
@@ -497,9 +548,9 @@ use App\Models\BlogImages;
           </div>
       </div>
       </section> -->
-   <!-- testimonial-area-end -->
-   <!-- booking-area -->
-   <!-- <section class="booking pt-120 pb-120 p-relative fix">
+<!-- testimonial-area-end -->
+<!-- booking-area -->
+<!-- <section class="booking pt-120 pb-120 p-relative fix">
       <div class="animations-01"><img src="img/bg/an-img-01.png" alt="an-img-01"></div>
       <div class="container">
           <div class="row align-items-center">
@@ -570,9 +621,9 @@ use App\Models\BlogImages;
           </div>
       </div>
       </section> -->
-   <!-- booking-area-end -->	
-   <!-- video-area -->
-   <!-- <section id="video" class="video-area pt-150 pb-150 p-relative" style="background-image:url(img/bg/video-bg.png); background-repeat: no-repeat; background-position: center bottom; background-size:cover;">
+<!-- booking-area-end -->
+<!-- video-area -->
+<!-- <section id="video" class="video-area pt-150 pb-150 p-relative" style="background-image:url(img/bg/video-bg.png); background-repeat: no-repeat; background-position: center bottom; background-size:cover;">
       Lines
                  <div class="content-lines-wrapper2">
                      <div class="content-lines-inner2">
@@ -599,9 +650,9 @@ use App\Models\BlogImages;
          </div>
       </div>
       </section> -->
-   <!-- video-area-end -->
-   <!-- blog-area -->
-   <!-- <section id="blog" class="blog-area p-relative fix pt-90 pb-90">
+<!-- video-area-end -->
+<!-- blog-area -->
+<!-- <section id="blog" class="blog-area p-relative fix pt-90 pb-90">
       <div class="animations-02"><img src="img/bg/an-img-06.png" alt="contact-bg-an-05"></div>
       <div class="container">
          <div class="row align-items-center"> 
@@ -668,9 +719,9 @@ use App\Models\BlogImages;
          </div>
       </div>
       </section> -->
-   <!-- blog-area-end -->
-   <!-- brand-area -->
-   <!-- <div class="brand-area pt-60 pb-60" style="background-color:#f7f5f1">
+<!-- blog-area-end -->
+<!-- brand-area -->
+<!-- <div class="brand-area pt-60 pb-60" style="background-color:#f7f5f1">
       <div class="container">
           <div class="row brand-active">
               <div class="col-xl-2">
@@ -701,7 +752,7 @@ use App\Models\BlogImages;
           </div>
       </div>
       </div> -->
-   <!-- brand-area-end -->
+<!-- brand-area-end -->
 
 <!-- main-area-end -->
 @endsection

@@ -20,3 +20,4 @@
 <link rel="stylesheet" href="{{asset('fronted/css/style.css')}}">
 <link rel="stylesheet" href="{{asset('fronted/css/responsive.css')}}">
 <link rel="stylesheet" href="{{asset('fronted/css/hotel-sankalp.css')}}">
+<link rel="stylesheet" href="{{asset('fronted/css/jquery.fancybox.min.css')}}">

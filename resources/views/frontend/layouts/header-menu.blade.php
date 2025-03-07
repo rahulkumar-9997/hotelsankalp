@@ -38,7 +38,7 @@
             <div class="row align-items-center">
                <div class="col-xl-3 col-lg-3">
                   <div class="logo">
-                     <a href="{{URL::to('/')}}"><img src="{{asset('fronted/hotelsankalp-img/logo/transparent-logo.png')}}" alt="logo"></a>
+                     <a href="{{URL::to('/')}}"><img src="{{asset('fronted/hotelsankalp-img/logo/logo-new.png')}}" alt="logo"></a>
                   </div>
                </div>
                <div class="col-xl-9 col-lg-9">

@@ -1531,7 +1531,7 @@ text-align: left;
     margin-top: 0;
 }
 .slider-content.s-slider-content h3{
-    font-size: 25px;
+    font-size: 18px;
 }
 .slider-area .slider-bg{
     min-height: auto!important;
@@ -1625,7 +1625,8 @@ text-align: left;
 }
     /* mobile menu*/
      .mean-container a.meanmenu-reveal {
-        margin-top: -59px;
+        /* margin-top: -59px; */
+        margin-top: -52px;
     }
 	 .menu .sub-menu {
     border-top: 1px solid rgb(217, 217, 217, 0.5);

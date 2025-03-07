@@ -24,7 +24,7 @@ jQuery(function($) {
         var randomScalingFactor = function() {
             return Math.round(Math.random() * 100)
         };
-        
+
         var barChartData = {
             labels: ["January", "February", "March", "April", "May", "June", "July"],
             datasets: [{

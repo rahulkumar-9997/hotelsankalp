@@ -6,7 +6,7 @@
 
 
 jQuery(function($) {
-   
+
     'use strict';
 
     var ULTRA_SETTINGS = window.ULTRA_SETTINGS || {};

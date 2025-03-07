@@ -4,7 +4,7 @@
 @section('keywords', 'Hotel, Hotel varanasi, Sankalp, Varanasi Hotel, Luxury Hotel in Varanasi, Hotel sankalp about us')
 
 @section('main-content')
-    <section class="breadcrumb-area d-flex align-items-center" style="background-image:url('{{asset('fronted/hotelsankalp-img/breadcrub/bread-1.jpg') }}')">
+    <section class="breadcrumb-area d-flex align-items-center" style="background-image:url('{{asset('fronted/hotelsankalp-img/new-12-24/bread/4.jpg') }}')">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-xl-12 col-lg-12">
@@ -40,9 +40,9 @@
       <div class="row justify-content-center align-items-center">
          <div class="col-lg-6 col-md-12 col-sm-12">
             <div class="s-about-img p-relative  wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s">
-               <img src="{{asset('fronted/img/features/about_img_02.png')}}" alt="img">   
+               <img src="{{asset('fronted/hotelsankalp-img/new-12-24/about-2-top.jpg')}}" alt="img">   
                <div class="about-icon">
-                  <img src="{{asset('fronted/img/features/about_img_03.png')}}" alt="img">   
+                  <img src="{{asset('fronted/hotelsankalp-img/new-12-24/about-2-bottom.jpg')}}" alt="img">   
                </div>
             </div>
          </div>

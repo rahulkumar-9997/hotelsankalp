@@ -13,12 +13,9 @@ use App\Models\Banner;
 use App\Models\HotelFacilities;
 use App\Models\HotelRoom;
 use App\Models\RoomImage;
-use Auth;
-use Session;
-use DB;
-use Hash;
-use Illuminate\Support\Str;
-use Carbon\Carbon;
+use NoCaptcha;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Artisan;
 class FrontHomeController extends Controller
 {
     public function home(){
@@ -85,15 +82,27 @@ class FrontHomeController extends Controller
     }
 
     public function bookARooom(Request $request){
-        $this->validate($request, [
+        $validator = Validator::make($request->all(), [
             'check_in_date' => 'required|date',
             'check_out_date' => 'required|date',
             'room_type' => 'required|in:Deluxe Double Room,Super Deluxe Double Room,Triple Bed Room,Family Quad Room',
             'no_of_room' => 'required|in:1,2,3,4,5,6,7,8,9,10+',
             'contact_person_name' => 'required',
             'phone_number' => 'required|digits:10',
-            
+            'email' => 'required|email',
         ]);
+    
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput()->withFragment('bookaroom');
+        }
+    
+        if (!NoCaptcha::verifyResponse($request->input('g-recaptcha-response'))) {
+            return redirect()->back()
+                ->with('error', 'reCAPTCHA verification failed, please try again!')
+                ->withInput()
+                ->withFragment('bookaroom');
+        }
+    
         try {
             $data = [
                 'check_in_date' => date_create($request->input('check_in_date')),
@@ -102,14 +111,17 @@ class FrontHomeController extends Controller
                 'no_of_room' => $request->input('no_of_room'),
                 'contact_person_name' => $request->input('contact_person_name'),
                 'phone_number' => $request->input('phone_number'),
+                'email' => $request->input('email'),
             ];
-            
+    
             Mail::to('sankalpbanaras@gmail.com')->send(new BookAroomMail($data));
             Log::info('Book a Room Enquiry Form Email sent successfully to sankalpbanaras@gmail.com');
+            
+            return redirect()->back()->with('success', 'Your message has been sent successfully. Our team will contact you shortly!')->withFragment('bookaroom');
         } catch (Exception $e) {
             Log::error('Error sending email: ' . $e->getMessage());
+            return redirect()->back()->with('error', 'There was an error sending your request. Please try again later.')->withFragment('bookaroom');
         }
-        return redirect()->back()->with('success', 'Your message has been sent successfully, Our team contact you shortly.!');
     }
     
     public function contactForm(Request $request){
@@ -117,8 +129,12 @@ class FrontHomeController extends Controller
             'name' => 'required',
             'email' => 'required|email',
             'phone' => 'required|digits:10',
-            
+                        
         ]);
+        if (!NoCaptcha::verifyResponse($request->input('g-recaptcha-response'))) {
+            Log::info('Session Data:', session()->all());
+            return redirect()->back()->with('error', 'reCAPTCHA verification failed, please try again.!')->withInput();
+        }
         try {
             $data = [
                 'name' => $request->input('name'),
@@ -128,6 +144,7 @@ class FrontHomeController extends Controller
             ];
             
             Mail::to('sankalpbanaras@gmail.com')->send(new ContactFormMail($data));
+			Mail::to('akshat.gd@gmail.com')->send(new ContactFormMail($data));
             Log::info('Contact Us Form Enquiry Email sent successfully to sankalpbanaras@gmail.com');
         } catch (Exception $e) {
             Log::error('Error sending email: ' . $e->getMessage());
@@ -135,5 +152,15 @@ class FrontHomeController extends Controller
         return redirect()->back()->with('success', 'Your message has been sent successfully, Our team contact you shortly.!');
     }
     
+
+    public function clearCache(){
+        try {
+            // Clear all caches (application, route, config, and view)
+            Artisan::call('optimize:clear');
+            return back()->with('success', 'All caches have been cleared successfully.');
+        } catch (\Exception $e) {
+            return back()->with('error', 'Failed to clear caches. Please try again.');
+        }
+    }
     
 }
