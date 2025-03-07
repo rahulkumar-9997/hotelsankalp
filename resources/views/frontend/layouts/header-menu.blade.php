@@ -56,7 +56,12 @@
                                  </ul> -->
                            </li>
                            <li class="has-sub">
-                              <a href="{{route('about-us')}}" wire:navigate>About</a>
+                              <a href="{{route('about-us')}}">About</a>
+                           </li>
+                           <li class="has-sub">
+                              <a href="{{ route('restaurant-and-banquet') }}">
+                                 Restaurant & Banquet
+                              </a>
                            </li>
                            <li class="has-sub">
                               <a href="{{route('our-room')}}">our rooms</a>
@@ -67,21 +72,14 @@
                            </li>
                            <li class="has-sub">
                               <a href="{{route('facilities')}}">Facilities</a>
-                              <!-- <ul>													
-                                 <li> <a href="services.html">Services</a></li>
-                                                                        <li> <a href="single-service.html">Services Details</a></li>
-                                 </ul> -->
                            </li>
-                           <!-- <li class="has-sub"><a href="#">Pages</a>
+                        <!-- <li class="has-sub"><a href="#">Pages</a>
                               <ul>
-                                                                      <li><a href="projects.html">Gallery</a></li>
-                                                                      <li><a href="faq.html">Faq</a></li>
-                                                                      <li><a href="team.html">Team</a></li>
-                                                                      <li><a href="team-single.html">Team Details</a></li>
-                                                                      <li><a href="pricing.html">Pricing</a></li>
-                                                                      <li><a href="shop.html">Shop</a></li>
+                                                                     
+                                 <li><a href="pricing.html">Pricing</a></li>
+                                 <li><a href="shop.html">Shop</a></li>
                               	<li><a href="shop-details.html">Shop Details</a>
-                                                                    </ul>
+                              </ul>
                               </li> -->
                            <!-- <li class="has-sub"> 
                               <a href="blog.html">Blog</a>

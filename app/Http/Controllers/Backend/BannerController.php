@@ -40,13 +40,13 @@ class BannerController extends Controller
             $webp_file_name = 'banner-image-' . $date_time . '.webp';
             $destinationPath = public_path('hotel-sankalp-image-file/banner-image');
             Image::make($image)
-                ->resize(1920, 600, function ($constraint) {
+                ->resize(1220, 500, function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
                 })
                 ->save($destinationPath . '/' . $image_file_name, 90);
             Image::make($image)
-                ->resize(1920, 600, function ($constraint) {
+                ->resize(1920, 500, function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
                 })
@@ -95,7 +95,7 @@ class BannerController extends Controller
             }
             
             Image::make($image)
-                ->resize(1920, 600, function ($constraint) {
+                ->resize(1220, 500, function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
                 })

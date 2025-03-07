@@ -54,11 +54,11 @@ use App\Models\BlogImages;
           </div>
       </div> 
       </section> -->
-<div id="carouselExampleCaptions" class="carousel slide"  data-bs-ride="carousel" data-bs-interval="5000">
+<div id="carouselExampleCaptions" class="carousel slide"  data-bs-ride="carousel" data-bs-interval="5000" data-bs-wrap="true">
    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      @foreach ($data['banner'] as $index => $banner_row)
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="{{ $index }}" class="{{ $loop->first ? 'active' : '' }}" aria-label="Slide {{ $index + 1 }}"></button>
+      @endforeach
    </div>
    <div class="carousel-inner">
       @if (isset($data['banner']) && $data['banner']->count() > 0)

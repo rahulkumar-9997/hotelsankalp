@@ -3,7 +3,6 @@ namespace App\Http\Controllers\Frontend;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\Controller;
-
 use Illuminate\Support\Facades\Log;
 use App\Mail\QuickEnquiryMail; 
 use App\Mail\BookAroomMail; 
@@ -36,6 +35,10 @@ class FrontHomeController extends Controller
 
     public function aboutUs(){
 	    return view('frontend.pages.about-us');
+    }
+
+    public function restaurantAndBanquet() {
+        return view('frontend.pages.restaurant-banquet');
     }
 
     public function ourRoom(){
