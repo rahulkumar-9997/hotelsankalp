@@ -98,6 +98,7 @@ class FrontHomeController extends Controller
             'phone_number' => 'required|digits:10',
             'email' => 'required|email',
         ]);
+        
     
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput()->withFragment('bookaroom');
