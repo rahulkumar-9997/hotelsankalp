@@ -62,6 +62,7 @@ class FrontHomeController extends Controller
             'no_of_rooms' => 'required|in:1,2,3,4,5,6,7,8,9,10+',
             'contact_person_name' => 'required',
             'phone_no' => 'required|digits:10',
+            'email' => 'required|email',
             
         ]);
         try {
@@ -71,9 +72,12 @@ class FrontHomeController extends Controller
                 'no_of_rooms' => $request->input('no_of_rooms'),
                 'contact_person_name' => $request->input('contact_person_name'),
                 'phone_no' => $request->input('phone_no'),
+                'email' => $request->input('email'),
             ];
             
-            Mail::to('sankalpbanaras@gmail.com') // Replace with your recipient email address
+            // Mail::to('sankalpbanaras@gmail.com') 
+            //     ->send(new QuickEnquiryMail($data));
+            Mail::to('rahulkumarmaurya464@gmail.com') 
                 ->send(new QuickEnquiryMail($data));
             Log::info('Home Quick Enquiry Form Email sent successfully to sankalpbanaras@gmail.com');
             return redirect()->back()->with('success', 'Your message has been sent successfully. Our team will contact you shortly!')->withFragment('#form-section');

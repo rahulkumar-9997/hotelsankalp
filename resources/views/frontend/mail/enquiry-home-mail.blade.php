@@ -43,7 +43,11 @@
                   <tr>
                      <td style="text-align:center; background-color: #ecd592; color: #ffffff;">
                         <h2 style="color: #000000; font-size: 20px; margin-bottom: 5px; font-family: oswald,sans-serif; margin-top: 5px; ">
+<<<<<<< HEAD
                            Hotelsankalp room enquiry message
+=======
+                           Hotelsankalp Quick Room Enquiry Message.
+>>>>>>> 9092589 (Updated project with latest changes)
                         </h2>
                      </td>
                   </tr>
@@ -59,6 +63,13 @@
                               <td>{{ $data['phone_no'] }}</td>
                            </tr>
                            <tr>
+<<<<<<< HEAD
+=======
+                              <th>Email Id</th>
+                              <td>{{ $data['email'] }}</td>
+                           </tr>
+                           <tr>
+>>>>>>> 9092589 (Updated project with latest changes)
                               <th>Check in date</th>
                               <td>{{ date_format($data['check_in_date'],"d/m/Y ") }}</td>
                            </tr>

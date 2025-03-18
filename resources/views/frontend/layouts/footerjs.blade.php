@@ -4,7 +4,6 @@
 <script src="{{asset('fronted/js/popper.min.js')}}"></script>
 <script src="{{asset('fronted/js/bootstrap.min.js')}}"></script>
 <script src="{{asset('fronted/js/slick.min.js')}}"></script>
-<script src="{{asset('fronted/js/ajax-form.js')}}"></script>
 <script src="{{asset('fronted/js/paroller.js')}}"></script>
 <script src="{{asset('fronted/js/wow.min.js')}}"></script>
 <script src="{{asset('fronted/js/js_isotope.pkgd.min.js')}}"></script>
@@ -17,7 +16,7 @@
 <script src="{{asset('fronted/js/parallax-scroll.js')}}"></script>
 <script src="{{asset('fronted/js/jquery.magnific-popup.min.js')}}"></script>
 <script src="{{asset('fronted/js/element-in-view.js')}}"></script>
-<script src="{{asset('fronted/js/main.js')}}"></script>
+<script src="{{asset('fronted/js/main.js')}}?v={{ time() }}"></script>
 <script src="{{asset('fronted/js/jquery.fancybox.js')}}"></script>
 
 @stack('scripts')

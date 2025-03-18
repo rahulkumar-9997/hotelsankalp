@@ -187,6 +187,19 @@ use App\Models\BlogImages;
                   </li>
                   <li>
                      <div class="contact-field p-relative c-name">
+                        <label><i class="fal fa-mail-bulk"></i> Email Id</label>
+                        <input
+                           type="email"
+                           id="email"
+                           name="email"
+                           placeholder="Email id">
+                        @if($errors->has('email'))
+                        <div class="text-danger">{{ $errors->first('email') }}</div>
+                        @endif
+                     </div>
+                  </li>
+                  <li>
+                     <div class="contact-field p-relative c-name">
                         <label><i class="fal fa-mobile"></i> Phone No.</label>
                         <input
                            type="text"
@@ -207,7 +220,7 @@ use App\Models\BlogImages;
                   <li>
                      <div class="slider-btn">
                         <label><i class="fal fa-calendar-alt"></i></label>
-                        <button class="btn ss-btn" data-animation="fadeInRight" data-delay=".8s">Quick Enuiry</button>
+                        <button class="btn ss-btn" data-animation="fadeInRight" data-delay=".8s">Submit</button>
                      </div>
                   </li>
                </ul>

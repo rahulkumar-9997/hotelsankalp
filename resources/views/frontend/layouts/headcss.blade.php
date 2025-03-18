@@ -16,8 +16,9 @@
 <link rel="stylesheet" href="{{asset('fronted/css/dripicons.css')}}">
 <link rel="stylesheet" href="{{asset('fronted/css/slick.css')}}">
 <link rel="stylesheet" href="{{asset('fronted/css/meanmenu.css')}}">
-<link rel="stylesheet" href="{{asset('fronted/css/default.css')}}">
-<link rel="stylesheet" href="{{asset('fronted/css/style.css')}}">
-<link rel="stylesheet" href="{{asset('fronted/css/responsive.css')}}">
-<link rel="stylesheet" href="{{asset('fronted/css/hotel-sankalp.css')}}">
+<link rel="stylesheet" href="{{asset('fronted/css/default.css')}}?v={{ time() }}">
+<link rel="stylesheet" href="{{asset('fronted/css/style.css')}}?v={{ time() }}">
+<link rel="stylesheet" href="{{asset('fronted/css/responsive.css')}}?v={{ time() }}">
+<link rel="stylesheet" href="{{asset('fronted/css/hotel-sankalp.css')}}?v={{ time() }}">
 <link rel="stylesheet" href="{{asset('fronted/css/jquery.fancybox.min.css')}}">
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
