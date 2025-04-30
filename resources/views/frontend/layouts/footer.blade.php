@@ -12,9 +12,9 @@
                                    </div>
                                    <p>Experience top-rated tranquility in the heart of Varanasi, where your safety and comfort are our priority.</p>
                                    <div class="footer-social">                                    
-                                       <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                       <a href="#"><i class="fab fa-twitter"></i></a>
-                                       <a href="#"><i class="fab fa-instagram"></i></a>
+                                       <a target="_blank" href="https://www.facebook.com/share/1YSrtZ6wwy/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+                                       <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
+                                       <a target="_blank" href="https://www.instagram.com/hotelsankalpbanaras?igsh=MTF1Zmo4enhycWl1aA=="><i class="fab fa-instagram"></i></a>
                                    </div>  
                                </div>
                            </div>

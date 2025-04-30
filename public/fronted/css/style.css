@@ -32,7 +32,7 @@
     color: #181616;
 	font-style: normal;
      line-height: 26px;
-    background-color: #c8dfea;
+    background-color: #ecd8b3;
 }
 .pb-380{
     padding-bottom: 380px;
@@ -501,7 +501,7 @@ padding: 20px 0;
 font-weight: 400;
 position: relative;
 /* font-size: 16px; */
-font-size: 20px;
+font-size: 22px;
 font-family: 'Jost', sans-serif;
 text-transform: capitalize;
 letter-spacing: 1.5px;
@@ -10886,7 +10886,7 @@ blockquote a ,blockquote cite{
 }
 
 .booking-area .contact-form {
-background: #c8dfea;
+background: #dac193;
 padding: 30px 10px 20px 10px;
 box-shadow: 5px 6px 45px -23px rgba(0, 0, 0, 0.5);
 position: relative;
@@ -10954,7 +10954,7 @@ font-size: 20px;
     text-align: center;
 }
 .booking-area .contact-field i{
-    background: #c8dfea;
+    background: #dac193;
     padding-right: 5px;
 }
 .booking-area h2{

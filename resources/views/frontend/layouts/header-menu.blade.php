@@ -59,7 +59,7 @@
                               <a href="{{route('our-room')}}">Room</a>
                            </li>
                            <li class="has-sub">
-                              <a href="{{route('banquet-and-conference-hall')}}">Banquet and Conference Hall</a>
+                              <a href="{{route('banquet-and-conference-hall')}}">Banquet</a>
                            </li>
                            <li class="has-sub">
                               <a href="{{route('restaurant')}}">Restaurant</a>

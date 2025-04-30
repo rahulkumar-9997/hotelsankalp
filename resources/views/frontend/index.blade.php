@@ -272,7 +272,7 @@ use App\Models\BlogImages;
 <!-- about-area-end -->
 <!-- service-details2-area -->
 @if (isset($data['hotel_facilities']) && $data['hotel_facilities']->count() > 0)
-<section id="service-details2" class="pt-40 pb-40 p-relative" style="background-color: #9ec5d8;">
+<section id="service-details2" class="pt-40 pb-40 p-relative" style="background-color: #dac193;">
    <div class="animations-01">
       <img src="{{asset('fronted/img/bg/an-img-01.png')}}" alt="an-img-01">
    </div>
@@ -370,7 +370,7 @@ use App\Models\BlogImages;
 @endif
 <!-- room-area-end -->
 <!-- feature-area -->
-<section class="feature-area2 p-relative fix mb-5 ganges-section" style="background: #c8dfea;">
+<section class="feature-area2 p-relative fix mb-5 ganges-section" style="background: #dac193;">
    <div class="animations-02">
       <img src="{{asset('fronted/img/bg/an-img-02.png')}}" alt="contact-bg-an-05">
    </div>
