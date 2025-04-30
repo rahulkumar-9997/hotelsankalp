@@ -37,8 +37,12 @@ class FrontHomeController extends Controller
 	    return view('frontend.pages.about-us');
     }
 
-    public function restaurantAndBanquet() {
-        return view('frontend.pages.restaurant-banquet');
+    public function banquetAndCobferenceHall() {
+        return view('frontend.pages.banquet-and-conference-hall');
+    }
+
+    public function restaurant() {
+        return view('frontend.pages.restaurant');
     }
 
     public function ourRoom(){

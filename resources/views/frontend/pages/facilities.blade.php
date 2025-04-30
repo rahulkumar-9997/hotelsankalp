@@ -1,5 +1,5 @@
 @extends('frontend.layouts.master')
-@section('title','Hotel Sankalp :: Hotel Facilities')
+@section('title','Hotel Sankalp - Hotel Facilities')
 @section('description', 'Hotel Sankalp, The Hotel Facilities ')
 @section('keywords', 'Qulity Room , Best Accommodation Hotel in varanasi, Wellness & Spa in varanasi, Varanasi Hotel, Luxury Hotel in Varanasi, Hotel sankalp facilities')
 
@@ -31,7 +31,7 @@
         <div class="overlay"></div>
     </section>
     @if (isset($data['hotel_facilities']) && $data['hotel_facilities']->count() > 0)
-    <section id="service-details2" class="pt-120 pb-90 p-relative">
+    <section id="service-details2" class="pt-50 pb-60 p-relative">
         <div class="animations-01">
             <img src="{{asset('fronted/img/bg/an-img-01.png')}}" alt="an-img-01">
         </div>

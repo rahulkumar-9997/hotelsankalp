@@ -1,5 +1,5 @@
 @extends('frontend.layouts.master')
-@section('title','Hotel Sankalp :: Our Room')
+@section('title','Hotel Sankalp - Our Room')
 @section('description', 'Hotel Sankalp')
 @section('keywords', 'Qulity Room , Best Accommodation Hotel in varanasi, Wellness & Spa in varanasi, Varanasi Hotel, Luxury Hotel in Varanasi, Hotel sankalp facilities')
 @section('main-content')
@@ -31,7 +31,7 @@
     </section>
     <!-- room-area-->
     @if (isset($data['hotel_room']) && $data['hotel_room']->count() > 0)
-      <section id="services" class="our-room services-area pt-120 pb-90">
+      <section id="services" class="our-room services-area pt-50 pb-90">
          <div class="container">
             <div class="row justify-content-md-center">
                @php

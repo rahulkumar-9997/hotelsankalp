@@ -1,5 +1,5 @@
 @extends('frontend.layouts.master')
-@section('title','Hotel Sankalp :: About us')
+@section('title','Hotel Sankalp - About us')
 @section('description', 'Hotel Sankalp, Experience true tranquility and relaxation in Varanasi, known for its vibrant spirituality and rich cultural heritage.')
 @section('keywords', 'Hotel, Hotel varanasi, Sankalp, Varanasi Hotel, Luxury Hotel in Varanasi, Hotel sankalp about us')
 

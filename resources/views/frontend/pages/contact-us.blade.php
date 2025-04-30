@@ -1,5 +1,5 @@
 @extends('frontend.layouts.master')
-@section('title','Hotel Sankalp :: Contact Us')
+@section('title','Hotel Sankalp - Contact Us')
 @section('description', 'Hotel Sankalp Varansi')
 @section('keywords', 'Hotel, Hotel varanasi, Sankalp, Varanasi Hotel, Luxury Hotel in Varanasi, Hotel sankalp contact us')
 
@@ -30,7 +30,7 @@
         </div>
         <div class="overlay"></div>
     </section>
-    <section id="contact" class="contact-area after-none contact-bg pt-120 pb-20 p-relative fix">
+    <section id="contact" class="contact-area after-none contact-bg pt-50 pb-20 p-relative fix">
         <div class="container">
             <div class="row justify-content-center align-items-center">
 				<div class="col-lg-12">

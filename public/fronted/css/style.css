@@ -26,12 +26,13 @@
 
 /* 1. Theme default css */
  body {
-       font-family: 'Roboto', sans-serif;
-	font-size: 15px;
-	font-weight: normal;
-	color: #777;
+    font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+    font-weight: normal;
+    color: #181616;
 	font-style: normal;
      line-height: 26px;
+    background-color: #c8dfea;
 }
 .pb-380{
     padding-bottom: 380px;
@@ -164,6 +165,7 @@ h5,
 h6 {
     font-family: 'Jost', sans-serif;
 	color: #101010;
+    /* color:#67302D; */
 	margin-top: 0px;
 	font-style: normal;
 	font-weight: 600;
@@ -499,7 +501,7 @@ padding: 20px 0;
 font-weight: 400;
 position: relative;
 /* font-size: 16px; */
-font-size: 22px;
+font-size: 20px;
 font-family: 'Jost', sans-serif;
 text-transform: capitalize;
 letter-spacing: 1.5px;
@@ -1136,7 +1138,7 @@ font-weight: 500;
 	content: "|";
 }
 .breadcrumb-title h2 {
-font-size: 60px;
+font-size: 50px;
 margin-bottom: 25px;
 line-height: 1;
 color: #fff;
@@ -1357,6 +1359,10 @@ margin-right: 10px;
     line-height: 1.2;
     /* margin-bottom: 40px; */
     color: #fff;
+}
+.s-about-content p {
+    margin-bottom: 15px;
+    text-align: justify;
 }
 .slider-content h2 span {
 	color: #644222;
@@ -1666,7 +1672,7 @@ bottom: 5px;
 	margin-bottom: 30px;
 }
 .about-title h2 {
-	font-size: 60px;
+	font-size: 50px;
     margin-bottom: 0 !important;
 }
 .about-title h5{
@@ -2082,7 +2088,7 @@ font-size: 18px;
     margin: 0 10px;
 }
 .section-title h2 {
-	font-size: 60px;
+	font-size: 50px;
 	padding-bottom: 0;
 	margin-bottom: 0px !important;
 	position: relative;
@@ -9129,7 +9135,7 @@ display: inline-block;
   margin-bottom: 10px;
 }
 .feature-title h2 {
-  font-size: 70px;
+  font-size: 50px;
 }
 /* 24. skills-area */
 
@@ -10880,9 +10886,9 @@ blockquote a ,blockquote cite{
 }
 
 .booking-area .contact-form {
-background: #fff;
+background: #c8dfea;
 padding: 30px 10px 20px 10px;
-box-shadow: 0px 20px 60px 0px rgba(21, 21, 21, 0.2);
+box-shadow: 5px 6px 45px -23px rgba(0, 0, 0, 0.5);
 position: relative;
 z-index: 1;
 /* margin-top: -100px; */
@@ -10948,8 +10954,8 @@ font-size: 20px;
     text-align: center;
 }
 .booking-area .contact-field i{
-    background: #fff;
-padding-right: 5px;
+    background: #c8dfea;
+    padding-right: 5px;
 }
 .booking-area h2{
 color: #101010;

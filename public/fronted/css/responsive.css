@@ -1236,7 +1236,7 @@ box-shadow: 0 0 0 0;
     #booking .form-home .home-room{
         margin-bottom: 10px;
     }
-    #booking .fa-calendar-alt{
+    #booking .slider-btn label{
         display: none;
     }
     #booking .slider-btn{
@@ -1293,7 +1293,7 @@ box-shadow: 0 0 0 0;
     }
     .booking .contact-bg02 {
   background: none;
-  padding: 30px;
+  padding: 0px;
   text-align: left;
 }
     .booking-img img {
@@ -1329,14 +1329,16 @@ box-shadow: 0 0 0 0;
 }
     .booking-area ul li {
   margin-right: 0;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
         width: 100%;
+        padding-right: 0px;
 }
+
     .booking-area input,.booking-area .custom-select {
   width: 100%;
 }
     .booking-area .contact-form {
-  padding: 50px 15px 30px 15px;
+  padding: 30px 5px 30px 6px;
     }
     .booking-area .btn.ss-btn{
         width: 100%;
@@ -1351,12 +1353,18 @@ box-shadow: 0 0 0 0;
 .feature-title h2 {
     font-size: 30px;
 }
-    
-    .feature-area2 {
-  padding: 120px 0;
+.ganges-section .pr-30{
+    padding-right: 12px;
+}
+.ganges-section .feature-img{
+    margin-bottom: 5px;
+}
+
+.feature-area2 {
+  padding: 20px 0;
 }
     .feature-area2 .img {
-  margin-bottom: 30px;
+  margin-bottom: 5px;
 }
     .single-services .icon li {
   display: inline-block;
@@ -1391,7 +1399,7 @@ box-shadow: 0 0 0 0;
   padding: 60px 34px 0;
 }
     .copyright-wrap .container {
-  padding: 50px 0;
+  padding: 15px 0;
 }
     .progress-outer li:first-child {
  text-align: center;
@@ -1836,8 +1844,8 @@ display: inline-block;
 }
     
     .btn.ss-btn {
-    padding: 20px 15px;
-    font-size: 14px;
+        padding: 15px 15px;
+        font-size: 18px;
 }
     .about-content .nav-tabs .nav-link {
     padding: 12px 25px;
@@ -2521,9 +2529,19 @@ margin: 0;
 	font-weight: 500;
 }
 .breadcrumb-title h2 {
-	font-size: 35px;
+	font-size: 30px;
     margin-top: 0;
     margin-bottom: 0;
+}
+.mb-50 {
+    margin-bottom: 30px;
+}
+#booking .contact-field input,
+#booking .form-home .home-room,
+#bookaroom .contact-field input,
+#bookaroom .contact-field select
+{
+    height: 45px;
 }
 .breadcrumb-title p {
 	padding: 0;

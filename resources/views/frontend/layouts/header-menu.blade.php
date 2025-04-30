@@ -56,23 +56,34 @@
                                  </ul> -->
                            </li>
                            <li class="has-sub">
-                              <a href="{{route('about-us')}}">About</a>
+                              <a href="{{route('our-room')}}">Room</a>
                            </li>
                            <li class="has-sub">
-                              <a href="{{ route('restaurant-and-banquet') }}">
-                                 Restaurant & Banquet
-                              </a>
+                              <a href="{{route('banquet-and-conference-hall')}}">Banquet and Conference Hall</a>
                            </li>
                            <li class="has-sub">
-                              <a href="{{route('our-room')}}">our rooms</a>
-                              <!-- <ul>													
-                                 <li> <a href="room.html">Our Rooms</a></li>
-                                                                        <li> <a href="single-rooms.html">Rooms Details</a></li>
-                                 </ul> -->
+                              <a href="{{route('restaurant')}}">Restaurant</a>
                            </li>
                            <li class="has-sub">
                               <a href="{{route('facilities')}}">Facilities</a>
                            </li>
+                           <li class="has-sub">
+                              <a href="{{route('contact-us')}}">Contact Us</a>
+                           </li>
+                           <!--<li class="has-sub">
+                              <a href="{{route('about-us')}}">About</a>
+                           </li>
+                           
+                           <li class="has-sub">
+                              <a href="{{route('our-room')}}">our rooms</a>-->
+                              <!-- <ul>													
+                                 <li> <a href="room.html">Our Rooms</a></li>
+                                                                        <li> <a href="single-rooms.html">Rooms Details</a></li>
+                                 </ul> -->
+                           <!--</li>
+                           <li class="has-sub">
+                              <a href="{{route('facilities')}}">Facilities</a>
+                           </li>-->
                         <!-- <li class="has-sub"><a href="#">Pages</a>
                               <ul>
                                                                      
@@ -88,7 +99,7 @@
                                   <li><a href="blog-details.html">Blog Details</a></li>
                               </ul>
                               </li> -->
-                           <li><a href="{{route('contact-us')}}">Contact Us</a></li>
+                           <!-- <li><a href="{{route('contact-us')}}">Contact Us</a></li> -->
                         </ul>
                      </nav>
                   </div>

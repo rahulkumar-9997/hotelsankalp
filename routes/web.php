@@ -28,7 +28,8 @@ use App\Http\Controllers\Backend\HotelRoomController;
 
 Route::get('/', [FrontHomeController::class, 'home'])->name('home');
 Route::get('about-us', [FrontHomeController::class, 'aboutUs'])->name('about-us');
-Route::get('restaurant-and-banquet', [FrontHomeController::class, 'restaurantAndBanquet'])->name('restaurant-and-banquet');
+Route::get('banquet-and-conference-hall', [FrontHomeController::class, 'banquetAndCobferenceHall'])->name('banquet-and-conference-hall');
+Route::get('restaurant', [FrontHomeController::class, 'restaurant'])->name('restaurant');
 Route::get('our-room', [FrontHomeController::class, 'ourRoom'])->name('our-room');
 Route::get('facilities', [FrontHomeController::class, 'ourFacilities'])->name('facilities');
 Route::get('contact-us', [FrontHomeController::class, 'contactUs'])->name('contact-us');

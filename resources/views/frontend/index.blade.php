@@ -231,7 +231,7 @@ use App\Models\BlogImages;
 </div>
 <!-- booking-area-end -->
 <!-- about-area -->
-<section class="about-area about-p pt-120 pb-120 p-relative fix">
+<section class="about-area about-p pt-40 pb-40 p-relative fix">
    <div class="animations-02">
       <img src="{{asset('fronted/img/bg/an-img-02.png')}}" alt="contact-bg-an-02">
    </div>
@@ -272,14 +272,14 @@ use App\Models\BlogImages;
 <!-- about-area-end -->
 <!-- service-details2-area -->
 @if (isset($data['hotel_facilities']) && $data['hotel_facilities']->count() > 0)
-<section id="service-details2" class="pt-120 pb-90 p-relative" style="background-color: #f7f5f1;">
+<section id="service-details2" class="pt-40 pb-40 p-relative" style="background-color: #9ec5d8;">
    <div class="animations-01">
       <img src="{{asset('fronted/img/bg/an-img-01.png')}}" alt="an-img-01">
    </div>
    <div class="container">
       <div class="row align-items-center">
          <div class="col-lg-12">
-            <div class="section-title center-align mb-50 text-center">
+            <div class="section-title center-align mb-20 text-center">
                <h5>Explore</h5>
                <h2>
                   The Hotel Facilities
@@ -318,7 +318,7 @@ use App\Models\BlogImages;
 <!-- service-details2-area-end -->
 <!-- room-area-->
 @if (isset($data['hotel_room']) && $data['hotel_room']->count() > 0)
-<section id="services" class="services-area pt-113 pb-150 room-home">
+<section id="services" class="services-area pt-40 pb-70 room-home">
    <div class="container">
       <div class="row justify-content-center">
          <div class="col-xl-12">
@@ -370,7 +370,7 @@ use App\Models\BlogImages;
 @endif
 <!-- room-area-end -->
 <!-- feature-area -->
-<section class="feature-area2 p-relative fix mb-5" style="background: #f7f5f1;">
+<section class="feature-area2 p-relative fix mb-5 ganges-section" style="background: #c8dfea;">
    <div class="animations-02">
       <img src="{{asset('fronted/img/bg/an-img-02.png')}}" alt="contact-bg-an-05">
    </div>
