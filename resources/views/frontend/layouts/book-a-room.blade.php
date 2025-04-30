@@ -1,4 +1,4 @@
-<section class="booking pt-50 pb-50 p-relative fix mb-50" id="bookaroom" style="background: #9ec5d8;">
+<section class="booking pt-50 pb-50 p-relative fix mb-50" id="bookaroom" style="background: #dac193;">
    <div class="animations-01">
       <img src="{{asset('fronted/img/bg/an-img-01.png')}}" alt="an-img-01">
    </div>
