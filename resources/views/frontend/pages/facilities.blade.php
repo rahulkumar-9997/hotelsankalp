@@ -74,6 +74,6 @@
         </div>
     </section>
     @endif
-    @include('frontend.layouts.book-a-room')
+    <!-- @include('frontend.layouts.book-a-room') -->
     
 @endsection

@@ -31,6 +31,64 @@
     </div>
     <div class="overlay"></div>
 </section>
+<section id="service-details2" class="pt-40 pb-20 p-relative">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <div class="section-title center-align mb-20 text-center">
+                    <h3>
+                        Mantram Hall
+                    </h3>
+                    <h4>
+                        Banquet Capacity - 100-250 guests
+                    </h4>
+                    <h4>
+                        Banquet Area - 2500 sq.ft
+                    </h4>
+                    <h1>Ideal For</h1>
+                </div>
+
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="whatnew-box-two">
+                    <div class="confrence-box-ye">
+                        <div class="about-item-icon">
+                            <img src="{{asset('fronted/hotelsankalp-img/banquet-and-conference-hall/icon/wedding.png') }}" alt="Weddings & Receptions Engagement">
+                        </div>
+                        <div class="conference-box-price">
+                            <h1>Weddings & Receptions Engagement</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="whatnew-box-two">
+                    <div class="confrence-box-ye">
+                        <div class="about-item-icon">
+                            <img src="{{asset('fronted/hotelsankalp-img/banquet-and-conference-hall/icon/birthday.png') }}" alt="Birthday & Anniversary Parties">
+                        </div>
+                        <div class="conference-box-price">
+                            <h1>Birthday & Anniversary Parties</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="whatnew-box-two">
+                    <div class="confrence-box-ye">
+                        <div class="about-item-icon">
+                            <img src="{{asset('fronted/hotelsankalp-img/banquet-and-conference-hall/icon/festive.png') }}" alt="Festive Celebrations Many More">
+                        </div>
+                        <div class="conference-box-price">
+                            <h1>Festive Celebrations Many More</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="profile fix pt-50 pb-50">
     <div class="container">
         <div class="row">
@@ -51,7 +109,7 @@
                                 </figure>
                             </a>
                         </div>
-                        
+
                         <div class="col-lg-6 col-md-6 mb-10 mb-xl-2 pe-xl-0 ps-xl-2">
                             <a class="popup-image" href="{{asset('fronted/hotelsankalp-img/banquet-and-conference-hall/7.jpg') }}">
                                 <figure class="gallery-image">
@@ -59,7 +117,7 @@
                                 </figure>
                             </a>
                         </div>
-                        
+
                         <div class="col-lg-6 col-md-6 mb-10 mb-xl-2 pe-xl-0 ps-xl-2">
                             <a class="popup-image" href="{{asset('fronted/hotelsankalp-img/banquet-and-conference-hall/9.jpg') }}">
                                 <figure class="gallery-image">
@@ -67,7 +125,7 @@
                                 </figure>
                             </a>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>

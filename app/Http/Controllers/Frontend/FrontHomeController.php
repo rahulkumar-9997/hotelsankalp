@@ -50,6 +50,14 @@ class FrontHomeController extends Controller
 	    return view('frontend.pages.our-room', ['data' => $data]);
     }
 
+    public function ourRoomDetails($slug){
+        $data['room_details'] = HotelRoom::with('images')
+        ->where('slug', $slug)
+        ->firstOrFail();
+        //return response()->json($data['room_details']);
+        return view('frontend.pages.our-room-details', compact('data'));
+    }
+
     public function ourFacilities(){
         $data['hotel_facilities'] = HotelFacilities::select('id', 'title' ,'slug', 'facilities_content', 'facilities_icon')->get();
 	    return view('frontend.pages.facilities',  ['data' => $data]);
@@ -92,29 +100,24 @@ class FrontHomeController extends Controller
         
     }
 
-    public function bookARooom(Request $request){
+    public function bookARooom(Request $request)
+    {
         $validator = Validator::make($request->all(), [
             'check_in_date' => 'required|date',
-            'check_out_date' => 'required|date',
-            'room_type' => 'required|in:Deluxe Double Room,Super Deluxe Double Room,Triple Bed Room,Family Quad Room',
+            'check_out_date' => 'required|date|after_or_equal:check_in_date',
+            'room_type' => 'required',
             'no_of_room' => 'required|in:1,2,3,4,5,6,7,8,9,10+',
             'contact_person_name' => 'required',
             'phone_number' => 'required|digits:10',
-            'email' => 'required|email',
+            'email' => 'nullable|email',
         ]);
-        
-    
         if ($validator->fails()) {
-            return redirect()->back()->withErrors($validator)->withInput()->withFragment('bookaroom');
+            return response()->json([
+                'status' => 'error',
+                'errors' => $validator->errors()
+            ], 422);
         }
-    
-        if (!NoCaptcha::verifyResponse($request->input('g-recaptcha-response'))) {
-            return redirect()->back()
-                ->with('error', 'reCAPTCHA verification failed, please try again!')
-                ->withInput()
-                ->withFragment('bookaroom');
-        }
-    
+
         try {
             $data = [
                 'check_in_date' => date_create($request->input('check_in_date')),
@@ -125,14 +128,20 @@ class FrontHomeController extends Controller
                 'phone_number' => $request->input('phone_number'),
                 'email' => $request->input('email'),
             ];
-    
-            Mail::to('sankalpbanaras@gmail.com')->send(new BookAroomMail($data));
-            Log::info('Book a Room Enquiry Form Email sent successfully to sankalpbanaras@gmail.com');
-            
-            return redirect()->back()->with('success', 'Your message has been sent successfully. Our team will contact you shortly!')->withFragment('bookaroom');
+
+            Mail::to('rahulkumarmaurya464@gmail.com')->send(new BookAroomMail($data));
+            Log::info('Book a Room Enquiry Form Email sent successfully.');
+
+            return response()->json([
+                'status' => 'success',
+                'message' => 'Your booking request has been sent successfully. Our team will contact you shortly!'
+            ]);
         } catch (Exception $e) {
-            Log::error('Error sending email: ' . $e->getMessage());
-            return redirect()->back()->with('error', 'There was an error sending your request. Please try again later.')->withFragment('bookaroom');
+            Log::error('Error sending Book A Room email: ' . $e->getMessage());
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Something went wrong while sending your request. Please try again later.'
+            ], 500);
         }
     }
     
@@ -167,7 +176,6 @@ class FrontHomeController extends Controller
 
     public function clearCache(){
         try {
-            // Clear all caches (application, route, config, and view)
             Artisan::call('optimize:clear');
             return back()->with('success', 'All caches have been cleared successfully.');
         } catch (\Exception $e) {

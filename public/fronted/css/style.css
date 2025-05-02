@@ -274,7 +274,7 @@ label {
 	letter-spacing: 0;
 	line-height: 1;
 	margin-bottom: 0;
-	padding: 20px 30px;
+	padding: 13px 30px;
 	text-align: center;
 	text-transform: unset;
 	touch-action: manipulation;
@@ -5416,7 +5416,7 @@ font-family: 'Jost', sans-serif;
     transition: .3s;
     border-radius: 10px;
     border: 1px solid #777;
-    height: calc(3.0em + .75rem + 2px);
+    height: 45px;
     margin-bottom: 30px;
 }
 
@@ -8137,6 +8137,7 @@ p.checkout-coupon input[type="text"] {
   background: #f3f4f8;
   padding: 40px;
 margin-bottom: 30px;
+border-radius: 10px;
 }
 
 .services-categories{
@@ -8276,6 +8277,7 @@ font-weight: 600;
   text-align: center;
   margin-top: 50px;
     margin-bottom: 50px;
+    border-radius: 10px;
 }
 .service-detail-contact h3::before {
   content: "";
@@ -9511,7 +9513,7 @@ text-align: center;
     transition: .3s;
     border-radius: 0;
     border: 1px solid rgb(183, 183, 183);
-    height: calc(2.5em + .75rem + 2px);
+    height: 45px;
 }
 .contact-field .form-control:focus {
     color: #495057;
@@ -10932,7 +10934,7 @@ border-radius: 10px;
 -webkit-appearance: none;
 -moz-appearance: none;
 appearance: none;
-height: calc(3.0em + 0.55rem + 2px);
+height: 45px;
     border: 1px solid #64422247;
 }
 .booking-area .btn {
@@ -11214,7 +11216,160 @@ color: #fff;
 .home-banner-items {
     position: relative;
 }
+.room-details h1{
+    font-size: 28px;
+    line-height: 30px;
+    margin-bottom: 2px;
+}
+.room-details .price span{
+    font-size: 20px;
+}
+.room-details .room-de-carousel {
+    height: 500px;
+    position: relative;
+}
+#hotelRoomCarousel{
+    background: #a39166;
+    border-radius: 10px;
+}
+#hotelRoomCarousel .carousel-item img{
+    border-radius: 10px;
+    width: auto;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
+    /* padding: 5px; */
+    object-fit: contain;
+}
+.room-details .service-detail{
+    padding-left: 0px;
+    padding-top: 20px;
+}
+.whatnew-box-two {
+    margin: 0 auto;
+    /* max-width: 290px; */
+    max-width: 100%;
+    width: 100%;
+    min-height: 215px;
+    padding: 15px;
+    position: relative;
+    border-radius: 10px;
+    background: #644222 url(../hotelsankalp-img/line-pattern-bg.png);
+}
+.confrence-box-ye {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    position: relative;
+    z-index: 1;
+}
+.about-item-icon {
+    width: 90px;
+    height: 90px;
+    line-height: 80px;
+    text-align: center;
+    margin-bottom: 12px;
+    background: #66483d;
+    border-radius: 50px;
+    font-size: 45px;
+    color: var(--theme-color);
+    box-shadow: -5px 5px 0 rgb(17, 110, 99, 0.09);
+}
+.about-item-icon img {
+    width: 45px;
+    filter: brightness(0) invert(1);
+}
+.conference-box-price h1 {
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+}
+.conference-box-price h2 {
+    font-size: 25px;
+    color: #fff;
+    margin-bottom: 5px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: center;
+}
 /* .marg{
     margin-bottom: 20%;
 } */
+
+/* .MuiBox-root.css-1qq3jvr {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  .MuiBox-root.css-1g7yrq7 {
+    display: flex;
+    gap: 40px;
+  }
+  
+  .MuiBox-root.css-1l4w6pd {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .MuiBox-root.css-1ksxo9d,
+  .MuiBox-root.css-1g29yqe {
+    display: flex;
+    align-items: center;
+  }
+  
+  .MuiButton-root {
+    min-width: 36px;
+    min-height: 36px;
+    border-radius: 50%;
+    font-weight: bold;
+    border: 2px solid #1976d2; 
+    color: #1976d2;
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 0;
+  }
+  
+  .MuiBox-root.css-1ksxo9d > .MuiButton-root {
+    background-color: #1976d2;
+    color: white;
+  }
+  
+  .MuiTypography-root {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #444444;
+  }
+  .MuiButton-root:hover {
+    background-color: #115293;
+    color: white;
+    border-color: #115293;
+  }
+  .booking-emptyCart {
+    border-color: #9e9e9e;
+    color: #9e9e9e;
+    cursor: default;
+  }
+  
+  .booking-emptyCart:hover {
+    background-color: transparent;
+    color: #9e9e9e;
+    border-color: #9e9e9e;
+    pointer-events: none;
+  } */
+  
 

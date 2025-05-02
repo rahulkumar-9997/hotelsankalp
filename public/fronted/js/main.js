@@ -812,3 +812,80 @@ $(document).ready(function(){
 		$('#toast').delay(10000).fadeOut('active');
 	}, 5000);
 });
+
+$(document).off('submit', '#roomDetailsBookRoom').on('submit', '#roomDetailsBookRoom', function (event) {
+    event.preventDefault();
+    var form = $(this);
+    var submitButton = form.find('button[type="submit"]');
+    $('.form-control').removeClass('is-invalid');
+    $('.invalid-feedback').remove();
+    submitButton.prop('disabled', true).html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Submitting...');
+
+    var formData = new FormData(this);
+
+    $.ajax({
+        url: form.attr('action'),
+        type: 'POST',
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function(response) {
+            submitButton.prop('disabled', false).html('Submit');
+            if (response.status === 'success' || response.success) {
+                showToast('success', response.message || 'Form submitted successfully!');
+                form[0].reset();
+            }
+        },
+        error: function(xhr) {
+            submitButton.prop('disabled', false).html('Submit');
+            var errors = xhr.responseJSON?.errors;
+            if (errors) {
+                $.each(errors, function(key, value) {
+                    var inputField = $('#' + key);
+                    if (inputField.length) {
+                        inputField.addClass('is-invalid');
+                        inputField.after('<div class="invalid-feedback">' + value[0] + '</div>');
+                    }
+                });
+            } else if (xhr.responseJSON?.message) {
+                showToast('danger', xhr.responseJSON.message);
+            } else {
+                showToast('danger', "An error occurred! Please try again.");
+            }
+        }
+    });
+});
+
+function showToast(type, message) {
+    var toast = $('#toast');
+
+    if (!toast.length) {
+        toast = $('<div class="toast active" id="toast" style="opacity: 1;">' +
+                    '<div class="toast-content">' +
+                        '<i class="fas fa-solid fa-check check"></i>' +
+                        '<div class="message">' +
+                            '<span class="text text-2"></span>' +
+                        '</div>' +
+                    '</div>' +
+                  '</div>').appendTo('body');
+    }
+
+    // Set message
+    toast.find('.text-2').text(message);
+
+    // Set background color based on type
+    toast.removeClass('bg-success bg-danger bg-warning');
+    if (type === 'success') {
+        toast.addClass('bg-success');
+    } else if (type === 'danger') {
+        toast.addClass('bg-danger');
+    } else if (type === 'warning') {
+        toast.addClass('bg-warning');
+    }
+
+    toast.addClass('active').css('opacity', 1);
+    setTimeout(function () {
+        toast.removeClass('active').fadeOut();
+    }, 3000);
+}
+

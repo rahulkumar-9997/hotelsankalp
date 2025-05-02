@@ -2533,6 +2533,32 @@ margin: 0;
     margin-top: 0;
     margin-bottom: 0;
 }
+.room-details .room-de-carousel {
+    height: 230px;
+    position: relative;
+}
+.room-details-bread.breadcrumb-area {
+    background-position: center;
+}
+.room-details h1 {
+    font-size: 24px;
+}
+.room-details .price span {
+    font-size: 18px;
+}
+.room-details .services-sidebar .sidebar-widget{
+    padding: 18px;
+}
+.room-details .service-detail-contact h3{
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.room-details .service-detail-contact a{
+    font-size: 20px;
+}
+.room-details .sidebar-widget .widget-title{
+    font-size: 19px;
+}
 .mb-50 {
     margin-bottom: 30px;
 }
@@ -2781,5 +2807,6 @@ margin: 0;
     padding-bottom: 130px;
     padding-top: 340px;
 }
+
 
 }
