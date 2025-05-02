@@ -87,10 +87,8 @@ class FrontHomeController extends Controller
                 'email' => $request->input('email'),
             ];
             
-            // Mail::to('sankalpbanaras@gmail.com') 
-            //     ->send(new QuickEnquiryMail($data));
-            Mail::to('rahulkumarmaurya464@gmail.com') 
-                ->send(new QuickEnquiryMail($data));
+            Mail::to('sankalpbanaras@gmail.com')->send(new QuickEnquiryMail($data));
+           
             Log::info('Home Quick Enquiry Form Email sent successfully to sankalpbanaras@gmail.com');
             return redirect()->back()->with('success', 'Your message has been sent successfully. Our team will contact you shortly!')->withFragment('#form-section');
         } catch (Exception $e) {
@@ -128,8 +126,7 @@ class FrontHomeController extends Controller
                 'phone_number' => $request->input('phone_number'),
                 'email' => $request->input('email'),
             ];
-
-            Mail::to('rahulkumarmaurya464@gmail.com')->send(new BookAroomMail($data));
+            Mail::to('sankalpbanaras@gmail.com')->send(new BookAroomMail($data));
             Log::info('Book a Room Enquiry Form Email sent successfully.');
 
             return response()->json([
