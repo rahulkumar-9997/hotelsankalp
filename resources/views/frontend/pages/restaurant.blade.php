@@ -31,7 +31,7 @@
     </div>
     <div class="overlay"></div>
 </section>
-<section id="service-details2" class="pt-40 pb-20 p-relative restaurant-page">
+<section id="service-details2" class="pt-40 pb-50 p-relative restaurant-page">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-12">
@@ -96,14 +96,63 @@
             </div>
 
             <div class="col-lg-12">
-                <div class="mt-5 text-center">
+                <div class="mt-3 text-center">
                     <a href="{{asset('fronted/hotelsankalp-img/satvik-restaurant-menu.pdf') }}" class="btn ss-btn smoth-scroll" target="_blank">View Menu</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="profile fix pt-20 pb-50">
+<section class="about-area about-p pt-60 pb-60 p-relative fix dining-and-timing-section" style="background-color: #dac193;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="p-relative  wow fadeInLeft timing-img  animated" data-animation="fadeInLeft" data-delay=".4s">
+                    <img src="{{asset('fronted/hotelsankalp-img/restaurant/timining.png') }}" alt="img">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="about-content s-about-content  wow fadeInRight   pl-30 animated" data-animation="fadeInRight" data-delay=".4s">
+                    <div class="opening-time">
+                        <div class="about-title second-title pb-10">
+                            <h2>Dining Options & Timings</h2>
+                        </div>
+                        <div class="about-content3 mt-10">
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-md-12">
+                                    <ul class="green mb-10">
+                                        <li>Breakfast: 7 AM – 10:30 AM</li>
+                                        <li>Lunch: 12 PM – 3 PM</li>
+                                        <li>Dinner: 7 PM – 11 PM</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="seating">
+                        <div class="about-title second-title pb-10">
+                            <h2>Ambience & Seating</h2>
+                        </div>
+                        <div class="about-content3 mt-10">
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-md-12">
+                                    <ul class="green mb-10">
+                                        <li>Indoor seating - 70 guests</li>
+                                        <li>Outdoor seating - 20 guests</li>
+                                        <li>Cozy for families, ideal for romantic dinners</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="profile fix pt-40 pb-50">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">

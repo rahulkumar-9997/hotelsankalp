@@ -1974,7 +1974,8 @@
     .restaurant-page .section-title h3.mantram{
         font-size: 30px;
     }
-    .restaurant-page .section-title h1{
+    .restaurant-page .section-title h1, 
+    .section-title.mantram-section h1{
         font-size: 30px;
     }
     .about-item-icon{
@@ -1990,6 +1991,16 @@
     }
     .counter-area .single-counter {
         border-right: none;
+    }
+    .dining-and-timing-section .s-about-content.pl-30{
+        margin-top: 20px;
+    }
+    .dining-and-timing-section .about-title h2 {
+        font-size: 25px;
+    }
+    .opening-time .mt-10, 
+    .seating  .mt-10{
+        margin-top: 0px;
     }
 
     .single-counter p {

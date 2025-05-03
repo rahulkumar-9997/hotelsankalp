@@ -11288,7 +11288,7 @@ color: #fff;
     filter: brightness(0) invert(1);
 }
 .conference-box-price h1 {
-    font-size: 22px;
+    font-size: 20px;
     color: #fff;
     margin-bottom: 20px;
     font-weight: 600;
@@ -11365,6 +11365,15 @@ color: #fff;
 }
 .whatnew-box-two:hover {
     background: #644222;
+}
+.dining-and-timing-section .about-title h2{
+    font-size: 30px;
+}
+.dining-and-timing-section .about-content li{
+    font-size: 20px;
+}
+.timing-img img{
+    border-radius: 10px;
 }
 
 /* .marg{
