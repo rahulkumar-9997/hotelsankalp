@@ -31,12 +31,12 @@
     </div>
     <div class="overlay"></div>
 </section>
-<section id="service-details2" class="pt-40 pb-20 p-relative">
+<section id="service-details2" class="pt-40 pb-20 p-relative restaurant-page">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-12">
                 <div class="section-title center-align mb-20 text-center">
-                    <h3>
+                    <h3 class="mantram">
                         Mantram Hall
                     </h3>
                     <h4>
@@ -50,7 +50,7 @@
 
             </div>
             
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6 mb-2">
                 <div class="whatnew-box-two">
                     <div class="confrence-box-ye">
                         <div class="about-item-icon">
@@ -62,7 +62,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6 mb-2">
                 <div class="whatnew-box-two">
                     <div class="confrence-box-ye">
                         <div class="about-item-icon">
@@ -74,7 +74,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6 mb-2">
                 <div class="whatnew-box-two">
                     <div class="confrence-box-ye">
                         <div class="about-item-icon">
@@ -89,7 +89,7 @@
         </div>
     </div>
 </section>
-<section class="profile fix pt-50 pb-50">
+<section class="profile fix pt-20 pb-50">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">

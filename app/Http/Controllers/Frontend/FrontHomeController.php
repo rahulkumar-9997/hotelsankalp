@@ -88,7 +88,6 @@ class FrontHomeController extends Controller
             ];
             
             Mail::to('sankalpbanaras@gmail.com')->send(new QuickEnquiryMail($data));
-           
             Log::info('Home Quick Enquiry Form Email sent successfully to sankalpbanaras@gmail.com');
             return redirect()->back()->with('success', 'Your message has been sent successfully. Our team will contact you shortly!')->withFragment('#form-section');
         } catch (Exception $e) {

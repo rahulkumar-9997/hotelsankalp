@@ -232,6 +232,7 @@ use App\Models\BlogImages;
 <!-- booking-area-end -->
 <!-- about-area -->
 <section class="about-area about-p pt-40 pb-40 p-relative fix">
+   
    <div class="animations-02">
       <img src="{{asset('fronted/img/bg/an-img-02.png')}}" alt="contact-bg-an-02">
    </div>

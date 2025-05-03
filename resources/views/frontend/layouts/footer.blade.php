@@ -26,7 +26,9 @@
                         <div class="footer-link">
                             <ul>
                                 <li><a href="{{url('about-us') }}"> About Us</a></li>
-                                <li><a href="{{url('restaurant-and-banquet') }}">Restaurant & Banquet
+                                <li><a href="{{url('banquet-and-conference-hall') }}">Banquet
+                                    </a></li>
+                                <li><a href="{{url('restaurant') }}">Restaurant
                                     </a></li>
                                 <li><a href="{{url('our-room') }}">Our Rooms </a></li>
                                 <li><a href="{{url('facilities') }}">Facilities </a></li>

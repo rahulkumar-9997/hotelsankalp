@@ -274,7 +274,7 @@ label {
 	letter-spacing: 0;
 	line-height: 1;
 	margin-bottom: 0;
-	padding: 13px 30px;
+	padding: 15px 30px;
 	text-align: center;
 	text-transform: unset;
 	touch-action: manipulation;
@@ -11295,6 +11295,7 @@ color: #fff;
     line-height: 30px;
     text-align: center;
 }
+
 .conference-box-price h2 {
     font-size: 25px;
     color: #fff;
@@ -11303,6 +11304,69 @@ color: #fff;
     line-height: 22px;
     text-align: center;
 }
+.whatnew-box-two {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.whatnew-box-two::before,
+.whatnew-box-two::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: #e7836b;
+    transition: 0.4s ease;
+}
+
+.whatnew-box-two::before {
+    top: 0;
+    left: 0;
+}
+
+.whatnew-box-two::after {
+    bottom: 0;
+    right: 0;
+}
+
+.whatnew-box-two:hover::before {
+    width: 100%;
+}
+
+.whatnew-box-two:hover::after {
+    width: 100%;
+}
+
+.whatnew-box-two span::before,
+.whatnew-box-two span::after {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 3px;
+    background: #e7836b;
+    transition: 0.4s ease;
+}
+
+.whatnew-box-two span::before {
+    top: 0;
+    left: 0;
+}
+
+.whatnew-box-two span::after {
+    bottom: 0;
+    right: 0;
+}
+
+.whatnew-box-two:hover span::before,
+.whatnew-box-two:hover span::after {
+    height: 100%;
+}
+.whatnew-box-two:hover {
+    background: #644222;
+}
+
 /* .marg{
     margin-bottom: 20%;
 } */
