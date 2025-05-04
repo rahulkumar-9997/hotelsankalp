@@ -133,6 +133,7 @@ use App\Models\BlogImages;
    <div class="container">
       <form action="{{route('home-quick-enquiry.store')}}" class="contact-form form-home" method="post">
          @csrf
+         <input type="hidden" name="extra_field" class="hidden-honeypot">
          <div class="row align-items-center">
             <div class="col-lg-12">
                <!-- <h6 class="text-center text-danger">Booking Start 1 November 2024.</h6> -->

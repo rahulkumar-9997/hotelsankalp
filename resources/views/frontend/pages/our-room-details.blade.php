@@ -68,6 +68,7 @@ $firstImage = $data['room_details']->images->first();
                                     <form action="{{route('book-a-room.store')}}" method="post" class="contact-form mt-30" id="roomDetailsBookRoom">
                                         @csrf
                                         <input type="hidden" value="{{ $data['room_details']->title }}" name="room_type">
+                                        <input type="hidden" name="extra_field" class="hidden-honeypot">
 
                                         <div class="row">
                                             <div class="col-lg-12">

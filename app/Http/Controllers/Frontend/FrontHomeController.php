@@ -68,6 +68,11 @@ class FrontHomeController extends Controller
     }
     
     public function homeEnquiryQuickSubmit(Request $request){
+        if (!empty($request->input('extra_field'))) {
+            Log::warning('Spam detected via honeypot field.');
+            return redirect()->back()->with('error', 'Suspicious activity detected.')->withInput()->withFragment('#form-section');
+        }
+        
         $this->validate($request, [
             'check_in_date' => 'required|date',
             'check_out_date' => 'required|date',
@@ -99,6 +104,14 @@ class FrontHomeController extends Controller
 
     public function bookARooom(Request $request)
     {
+        if (!empty($request->input('extra_field'))) {
+            Log::warning('Honeypot triggered: possible bot submission.');
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Invalid request detected.'
+            ], 422);
+        }
+    
         $validator = Validator::make($request->all(), [
             'check_in_date' => 'required|date',
             'check_out_date' => 'required|date|after_or_equal:check_in_date',
