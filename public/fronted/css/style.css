@@ -11444,5 +11444,89 @@ color: #fff;
     border-color: #9e9e9e;
     pointer-events: none;
   } */
-  
+
+#commoanModal select{
+    color: #7e7e7e;
+}
+#commoanModal .modal-footer{
+    border-top: 1px solid transparent;
+}
+#commoanModal .modal-content{
+    background-color: #ecd8b3;
+}
+section.breadcrumb-area{
+    z-index: 0;
+}
+.bookantable a{
+    background: #ffffff;
+    color: #000000;
+}
+.bookantable a:hover{
+    color: #000000;
+}
+.animated-border:hover {
+    color: #fff;
+}
+
+.animated-border {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 1;
+    margin-bottom: 0;
+    padding: 17px 30px;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+    background: #644222;
+    border-radius: 5px;
+}
+
+.animated-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid transparent;
+    box-sizing: border-box;
+    animation: borderRun 7s linear infinite;
+}
+
+@keyframes borderRun {
+    0% {
+        border-top: 3px solid #e7836b;
+        border-right: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+        border-left: 3px solid transparent;
+    }
+    25% {
+        border-top: 3px solid transparent;
+        border-right: 3px solid #e7836b;
+        border-bottom: 3px solid transparent;
+        border-left: 3px solid transparent;
+    }
+    50% {
+        border-top: 3px solid transparent;
+        border-right: 3px solid transparent;
+        border-bottom: 3px solid #e7836b;
+        border-left: 3px solid transparent;
+    }
+    75% {
+        border-top: 3px solid transparent;
+        border-right: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+        border-left: 3px solid #e7836b;
+    }
+    100% {
+        border-top: 3px solid #e7836b;
+        border-right: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+        border-left: 3px solid transparent;
+    }
+}
+
 

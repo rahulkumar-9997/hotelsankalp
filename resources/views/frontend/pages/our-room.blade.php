@@ -62,7 +62,7 @@
                   @foreach ($hotel_room_row->images as $image)
                   <a class="lightbox" data-fancybox="images-{{$hotel_room_row->id}}" data-caption="{{ $hotel_room_row->title }}" href="{{ asset('hotel-sankalp-image-file/room-image/large/'. $image->image_path ) }}" title="{{ $hotel_room_row->title }}">
                      <div class="slider-banner-image">
-                        <img src="{{ asset('hotel-sankalp-image-file/room-image/large/'. $image->image_path ) }}" alt="{{ $hotel_room_row->title }}">
+                        <img src="{{ asset('hotel-sankalp-image-file/room-image/large/'. $image->image_path ) }}" alt="{{ $hotel_room_row->title }}" loading="lazy">
                      </div>
                   </a>
                   @endforeach
@@ -72,7 +72,7 @@
                   @foreach ($hotel_room_row->images as $image)
                   <div class="thumbnail-image">
                      <div class="thumbImg">
-                        <img src="{{ asset('hotel-sankalp-image-file/room-image/thumb/'. $image->image_path ) }}" alt="{{ $hotel_room_row->title }}">
+                        <img src="{{ asset('hotel-sankalp-image-file/room-image/thumb/'. $image->image_path ) }}" alt="{{ $hotel_room_row->title }}" loading="lazy">
                      </div>
                   </div>
                   @endforeach
@@ -86,12 +86,12 @@
                      </p>
                   <div class="icon">
                      <ul>
-                        <li><img src="{{asset('fronted/img/icon/sve-icon1.png')}}" alt="{{ $hotel_room_row->title }}"></li>
-                        <li><img src="{{asset('fronted/img/icon/sve-icon2.png')}}" alt="{{ $hotel_room_row->title }}"></li>
-                        <li><img src="{{asset('fronted/img/icon/sve-icon3.png')}}" alt="{{ $hotel_room_row->title }}"></li>
-                        <li><img src="{{asset('fronted/img/icon/sve-icon4.png')}}" alt="{{ $hotel_room_row->title }}"></li>
-                        <li><img src="{{asset('fronted/img/icon/sve-icon5.png')}}" alt="{{ $hotel_room_row->title }}"></li>
-                        <li><img src="{{asset('fronted/img/icon/sve-icon6.png')}}" alt="{{ $hotel_room_row->title }}"></li>
+                        <li><img src="{{asset('fronted/img/icon/sve-icon1.png')}}" alt="{{ $hotel_room_row->title }}" loading="lazy"></li>
+                        <li><img src="{{asset('fronted/img/icon/sve-icon2.png')}}" alt="{{ $hotel_room_row->title }}" loading="lazy"></li>
+                        <li><img src="{{asset('fronted/img/icon/sve-icon3.png')}}" alt="{{ $hotel_room_row->title }}" loading="lazy"></li>
+                        <li><img src="{{asset('fronted/img/icon/sve-icon4.png')}}" alt="{{ $hotel_room_row->title }}" loading="lazy"></li>
+                        <li><img src="{{asset('fronted/img/icon/sve-icon5.png')}}" alt="{{ $hotel_room_row->title }}" loading="lazy"></li>
+                        <li><img src="{{asset('fronted/img/icon/sve-icon6.png')}}" alt="{{ $hotel_room_row->title }}" loading="lazy"></li>
                      </ul>
                   </div>
 

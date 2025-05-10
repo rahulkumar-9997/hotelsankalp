@@ -40,6 +40,8 @@ Route::group(['middleware' => ['web']], function() {
     Route::post('contact-form.store', [FrontHomeController::class, 'contactForm'])->name('contact-form.store');
 });
 Route::get('/clear-cache', [FrontHomeController::class, 'clearCache'])->name('clear-cache');
+Route::post('book-a-table', [FrontHomeController::class, 'bookAtableModalForm'])->name('book.a.table');
+Route::post('book-a-table-submit', [FrontHomeController::class, 'bookAtableModalFormSubmit'])->name('book.a.table.submit');
 /**backend rout */
 Route::get('/login', [LoginController::class, 'showLoginForm']);
 Route::post('/login', [LoginController::class, 'login'])->name('login');

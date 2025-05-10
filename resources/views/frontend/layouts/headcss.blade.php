@@ -7,6 +7,7 @@
 <link rel="canonical" href="{{ url()->current() }}" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <link rel="shortcut icon" type="image/x-icon" href="{{asset('fronted/hotelsankalp-img/logo/fav-png.png')}}">
 <!-- CSS here -->
 <link rel="stylesheet" href="{{asset('fronted/css/bootstrap.min.css')}}">

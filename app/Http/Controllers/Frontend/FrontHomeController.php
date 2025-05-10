@@ -191,5 +191,134 @@ class FrontHomeController extends Controller
             return back()->with('error', 'Failed to clear caches. Please try again.');
         }
     }
+
+    public function bookAtableModalForm(Request $request){
+        
+        $form = '
+        <form method="POST" action="' . route('book.a.table.submit') . '" accept-charset="UTF-8" enctype="multipart/form-data" id="bookATableForm">
+            ' . csrf_field() . '
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-2">
+                        <label for="name" class="form-label">Name *</label>
+                        <input type="text" id="name" name="name" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-2">
+                        <label for="date_time" class="form-label">Date/Time *</label>
+                        <input type="date" id="date_time" name="date_time" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-2">
+                        <label for="no_of_guest" class="form-label">No. of Guest *</label>
+                        <select class="form-select" name="no_of_guest" id="no_of_guest">
+                           <option value=""> Select No  Of Guest </option>
+                           <option value="1">1</option>
+                           <option value="2">2</option>
+                           <option value="3">3</option>
+                           <option value="4">4</option>
+                           <option value="5">5</option>
+                           <option value="6">6</option>
+                           <option value="7">7</option>
+                           <option value="8">8</option>
+                           <option value="9">9</option>
+                           <option value="10+">10+</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-2">
+                        <label for="email" class="form-label">Email *</label>
+                        <input type="email" id="email" name="email" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="mb-2">
+                        <label for="mobile_number" class="form-label">Mobile No. *</label>
+                        <input type="text" maxlength="10" id="mobile_number" name="mobile_number" class="form-control">
+                    </div>
+                </div>
+                
+                
+                <div class="modal-footer pb-0">
+                    <!--<button type="button" class="btn btn-animation btn-md fw-bold" data-bs-dismiss="modal">Close</button>-->
+                    <button style="color:#ffffff;" type="submit" class="btn btn-2-animation btn-md fw-bold">Submit</button>
+                </div>
+            </div>
+        </form>
+        ';
+        return response()->json([
+            'message' => 'Form created successfully',
+            'form' => $form,
+        ]);
+    }
+
+    public function bookAtableModalFormSubmit(Request $request) {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string|max:255',
+            'date_time' => 'required|date|after_or_equal:today',
+            'no_of_guest' => 'required|integer|min:1|max:20',
+            'email' => 'required|email:rfc,dns|max:255', 
+            'mobile_number' => ['required', 'string', 'min:10', 'max:15', 'regex:/^[0-9+\- ]+$/'],
+        ], [
+            'name.required' => 'Please enter your name',
+            'date_time.required' => 'Please select date and time',
+            'date_time.after_or_equal' => 'Booking date must be today or a future date',
+            'no_of_guest.required' => 'Please select number of guests',
+            'no_of_guest.integer' => 'Number of guests must be a valid number',
+            'no_of_guest.min' => 'Minimum 1 guest required',
+            'no_of_guest.max' => 'Maximum 20 guests allowed',
+            'email.required' => 'Email address is required',
+            'email.email' => 'Please enter a valid email address',
+            'mobile_number.required' => 'Mobile number is required',
+            'mobile_number.min' => 'Mobile number must be at least 10 digits',
+            'mobile_number.max' => 'Mobile number cannot exceed 15 digits',
+            'mobile_number.regex' => 'Please enter a valid mobile number (only numbers, +, - or spaces allowed)',
+        ]);
+    
+        if ($validator->fails()) {
+            return response()->json([
+                'status' => 'error',
+                'errors' => $validator->errors(),
+            ], 422);
+        }
+    
+        try {
+            $formattedMobile = preg_replace('/[^0-9]/', '', $request->mobile_number);
+            $bookingData = [
+                'name' => $request->name,
+                'email' => $request->email,
+                'mobile_number' => $formattedMobile,
+                'date_time' => $request->date_time,
+                'no_of_guest' => $request->no_of_guest,
+            ];
+            
+            /*Send to customer*/
+            Mail::send('frontend.mail.book-a-table', $bookingData, function($message) use ($bookingData) {
+                $message->to($bookingData['email'])
+                        ->subject('Table Booking Confirmation');
+            });
+    
+            /*Send to admin*/
+            Mail::send('frontend.mail.book-a-table', $bookingData, function($message) use ($bookingData) {
+                $message->to('sankalpbanaras@gmail.com')
+                        ->subject('New Table Booking - ' . $bookingData['name']);
+            });
+    
+            return response()->json([
+                'status' => 'success',
+                'message' => 'Booking a table submitted successfully! Our team will contact you shortly.',
+            ], 200, [], JSON_UNESCAPED_SLASHES);
+    
+        } catch (\Exception $e) {
+            Log::error('Booking submission error: ' . $e->getMessage());
+            return response()->json([
+                'status' => 'error',
+                'message' => 'An error occurred while processing your booking. Please try again.',
+            ], 500);
+        }
+    }
     
 }

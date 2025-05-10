@@ -43,7 +43,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="p-relative  wow fadeInLeft timing-img  animated" data-animation="fadeInLeft" data-delay=".4s">
-                    <img src="{{asset('fronted/hotelsankalp-img/banquet-and-conference-hall/7.jpg') }}" alt="img">
+                    <img src="{{asset('fronted/hotelsankalp-img/banquet-and-conference-hall/10.jpg') }}" alt="img" loading="lazy">
                 </div>
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12">
@@ -95,10 +95,18 @@
                 <div class="whatnew-box-two">
                     <div class="confrence-box-ye">
                         <div class="about-item-icon">
-                            <img src="{{asset('fronted/hotelsankalp-img/banquet-and-conference-hall/icon/wedding.png') }}" alt="Weddings & Receptions Engagement">
+                            <img src="{{asset('fronted/hotelsankalp-img/banquet-and-conference-hall/icon/wedding.png') }}" alt="Weddings & Receptions Engagement" loading="lazy">
                         </div>
                         <div class="conference-box-price">
                             <h1>Weddings, Receptions & Engagement</h1>
+                            <div class="bookantable">
+                                <a href="javascript:void(0)"
+                                    data-title="Book a Table"
+                                    data-url="{{ route('book.a.table') }}"
+                                    data-size="lg" class="animated-border book-a-table-a">
+                                    Book a Table
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -107,10 +115,18 @@
                 <div class="whatnew-box-two">
                     <div class="confrence-box-ye">
                         <div class="about-item-icon">
-                            <img src="{{asset('fronted/hotelsankalp-img/banquet-and-conference-hall/icon/birthday.png') }}" alt="Birthday & Anniversary Parties">
+                            <img src="{{asset('fronted/hotelsankalp-img/banquet-and-conference-hall/icon/birthday.png') }}" alt="Birthday & Anniversary Parties" loading="lazy">
                         </div>
                         <div class="conference-box-price">
                             <h1>Birthday & Anniversary Parties</h1>
+                            <div class="bookantable">
+                                <a href="javascript:void(0)"
+                                    data-title="Book a Table"
+                                    data-url="{{ route('book.a.table') }}"
+                                    data-size="lg" class="animated-border book-a-table-a">
+                                    Book a Table
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -119,10 +135,18 @@
                 <div class="whatnew-box-two">
                     <div class="confrence-box-ye">
                         <div class="about-item-icon">
-                            <img src="{{asset('fronted/hotelsankalp-img/banquet-and-conference-hall/icon/festive.png') }}" alt="Festive Celebrations Many More">
+                            <img src="{{asset('fronted/hotelsankalp-img/banquet-and-conference-hall/icon/festive.png') }}" alt="Festive Celebrations Many More" loading="lazy">
                         </div>
                         <div class="conference-box-price">
                             <h1>Festive Celebrations & Many More</h1>
+                            <div class="bookantable">
+                                <a href="javascript:void(0)"
+                                    data-title="Book a Table"
+                                    data-url="{{ route('book.a.table') }}"
+                                    data-size="lg" class="animated-border book-a-table-a">
+                                    Book a Table
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -135,18 +159,32 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="restaurant-grid">
-                    <div class="row">
+                    <div class="row grid-services">
+                        <div class="col-lg-6 col-md-6 mb-10 mb-xl-2 pe-xl-0 ps-xl-2">
+                            <a class="popup-image" href="{{asset('fronted/hotelsankalp-img/banquet-and-conference-hall/10.jpg') }}">
+                                <figure class="gallery-image">
+                                    <img src="{{asset('fronted/hotelsankalp-img/banquet-and-conference-hall/10.jpg') }}" alt="img" class="img" loading="lazy">
+                                </figure>
+                            </a>
+                        </div>
+                        <!-- <div class="col-lg-6 col-md-6 mb-10 mb-xl-2 pe-xl-0 ps-xl-2">
+                            <a class="popup-image" href="{{asset('fronted/hotelsankalp-img/banquet-and-conference-hall/11.jpg') }}">
+                                <figure class="gallery-image">
+                                    <img src="{{asset('fronted/hotelsankalp-img/banquet-and-conference-hall/11.jpg') }}" alt="img" class="img" loading="lazy">
+                                </figure>
+                            </a>
+                        </div> -->
                         <div class="col-lg-6 col-md-6 mb-10 mb-xl-2 pe-xl-0 ps-xl-2">
                             <a class="popup-image" href="{{asset('fronted/hotelsankalp-img/banquet-and-conference-hall/2.jpg') }}">
                                 <figure class="gallery-image">
-                                    <img src="{{asset('fronted/hotelsankalp-img/banquet-and-conference-hall/2.jpg') }}" alt="img" class="img">
+                                    <img src="{{asset('fronted/hotelsankalp-img/banquet-and-conference-hall/2.jpg') }}" alt="img" class="img" loading="lazy">
                                 </figure>
                             </a>
                         </div>
                         <div class="col-lg-6 col-md-6 mb-10 mb-xl-2 pe-xl-0 ps-xl-2">
                             <a class="popup-image" href="{{asset('fronted/hotelsankalp-img/banquet-and-conference-hall/4.jpg') }}">
                                 <figure class="gallery-image">
-                                    <img src="{{asset('fronted/hotelsankalp-img/banquet-and-conference-hall/4.jpg') }}" alt="img" class="img">
+                                    <img src="{{asset('fronted/hotelsankalp-img/banquet-and-conference-hall/4.jpg') }}" alt="img" class="img" loading="lazy">
                                 </figure>
                             </a>
                         </div>
@@ -162,7 +200,7 @@
                         <div class="col-lg-6 col-md-6 mb-10 mb-xl-2 pe-xl-0 ps-xl-2">
                             <a class="popup-image" href="{{asset('fronted/hotelsankalp-img/banquet-and-conference-hall/9.jpg') }}">
                                 <figure class="gallery-image">
-                                    <img src="{{asset('fronted/hotelsankalp-img/banquet-and-conference-hall/9.jpg') }}" alt="img" class="img">
+                                    <img src="{{asset('fronted/hotelsankalp-img/banquet-and-conference-hall/9.jpg') }}" alt="img" class="img" loading="lazy">
                                 </figure>
                             </a>
                         </div>

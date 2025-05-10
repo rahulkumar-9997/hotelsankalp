@@ -64,7 +64,7 @@ use App\Models\BlogImages;
       @if (isset($data['banner']) && $data['banner']->count() > 0)
       @foreach($data['banner'] as $banner_row)
       <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-         <img src="{{ asset('hotel-sankalp-image-file/banner-image/' . $banner_row->banner_image_desktop) }}" class="d-block w-100" alt="...">
+         <img src="{{ asset('hotel-sankalp-image-file/banner-image/' . $banner_row->banner_image_desktop) }}" class="d-block w-100" alt="img" loading="lazy">
          <div class="centered">
             @if($banner_row->banner_title !== null && $banner_row->banner_title !== '')
             <div class="carousel-overlay">
@@ -235,15 +235,15 @@ use App\Models\BlogImages;
 <section class="about-area about-p pt-40 pb-40 p-relative fix">
    
    <div class="animations-02">
-      <img src="{{asset('fronted/img/bg/an-img-02.png')}}" alt="contact-bg-an-02">
+      <img src="{{asset('fronted/img/bg/an-img-02.png')}}" alt="contact-bg-an-02" loading="lazy">
    </div>
    <div class="container">
       <div class="row justify-content-center align-items-center">
          <div class="col-lg-6 col-md-12 col-sm-12">
             <div class="s-about-img p-relative  wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s">
-               <img src="{{asset('fronted/hotelsankalp-img/new-12-24/about-top.jpg')}}" alt="img">
+               <img src="{{asset('fronted/hotelsankalp-img/new-12-24/about-top.jpg')}}" alt="img" loading="lazy">
                <div class="about-icon">
-                  <img src="{{asset('fronted/hotelsankalp-img/new-12-24/about-bottom.jpg')}}" alt="img">
+                  <img src="{{asset('fronted/hotelsankalp-img/new-12-24/about-bottom.jpg')}}" alt="img" loading="lazy">
                </div>
             </div>
          </div>
@@ -276,7 +276,7 @@ use App\Models\BlogImages;
 @if (isset($data['hotel_facilities']) && $data['hotel_facilities']->count() > 0)
 <section id="service-details2" class="pt-40 pb-40 p-relative" style="background-color: #dac193;">
    <div class="animations-01">
-      <img src="{{asset('fronted/img/bg/an-img-01.png')}}" alt="an-img-01">
+      <img src="{{asset('fronted/img/bg/an-img-01.png')}}" alt="an-img-01" loading="lazy">
    </div>
    <div class="container">
       <div class="row align-items-center">
@@ -292,10 +292,10 @@ use App\Models\BlogImages;
          <div class="col-lg-4 col-md-6">
             <div class="services-08-item mb-30">
                <div class="services-icon2">
-                  <img src="{{ asset('hotel-sankalp-image-file/facilities-icon/'. $hotel_facilities_row->facilities_icon) }}" alt="img">
+                  <img src="{{ asset('hotel-sankalp-image-file/facilities-icon/'. $hotel_facilities_row->facilities_icon) }}" alt="img" loading="lazy">
                </div>
                <div class="services-08-thumb">
-                  <img src="{{ asset('hotel-sankalp-image-file/facilities-icon/'. $hotel_facilities_row->facilities_icon) }}" alt="img">
+                  <img src="{{ asset('hotel-sankalp-image-file/facilities-icon/'. $hotel_facilities_row->facilities_icon) }}" alt="img" loading="lazy">
                </div>
                <div class="services-08-content">
                   <h3><a href="#"> {{ $hotel_facilities_row->title }}</a></h3>
@@ -338,7 +338,7 @@ use App\Models\BlogImages;
             <div class="single-services mb-30">
                <div class="services-thumb">
                   <a class="gallery-link popup-image" href="{{ asset('hotel-sankalp-image-file/room-image/large/'. $hotel_room_row->random_image->image_path) }}">
-                     <img src="{{ asset('hotel-sankalp-image-file/room-image/large/'. $hotel_room_row->random_image->image_path) }}" alt="img">
+                     <img src="{{ asset('hotel-sankalp-image-file/room-image/large/'. $hotel_room_row->random_image->image_path) }}" alt="img" loading="lazy">
                   </a>
                </div>
                <div class="services-content">
@@ -354,12 +354,12 @@ use App\Models\BlogImages;
                   </p>
                   <div class="icon">
                      <ul>
-                        <li><img src="{{asset('fronted/img/icon/sve-icon1.png')}}" alt="img"></li>
-                        <li><img src="{{asset('fronted/img/icon/sve-icon2.png')}}" alt="img"></li>
-                        <li><img src="{{asset('fronted/img/icon/sve-icon3.png')}}" alt="img"></li>
-                        <li><img src="{{asset('fronted/img/icon/sve-icon4.png')}}" alt="img"></li>
-                        <li><img src="{{asset('fronted/img/icon/sve-icon5.png')}}" alt="img"></li>
-                        <li><img src="{{asset('fronted/img/icon/sve-icon6.png')}}" alt="img"></li>
+                        <li><img src="{{asset('fronted/img/icon/sve-icon1.png')}}" loading="lazy" alt="img"></li>
+                        <li><img src="{{asset('fronted/img/icon/sve-icon2.png')}}" loading="lazy" alt="img"></li>
+                        <li><img src="{{asset('fronted/img/icon/sve-icon3.png')}}" loading="lazy" alt="img"></li>
+                        <li><img src="{{asset('fronted/img/icon/sve-icon4.png')}}" loading="lazy" alt="img"></li>
+                        <li><img src="{{asset('fronted/img/icon/sve-icon5.png')}}" loading="lazy" alt="img"></li>
+                        <li><img src="{{asset('fronted/img/icon/sve-icon6.png')}}" loading="lazy" alt="img"></li>
                      </ul>
                   </div>
                </div>
@@ -374,13 +374,13 @@ use App\Models\BlogImages;
 <!-- feature-area -->
 <section class="feature-area2 p-relative fix mb-5 ganges-section" style="background: #dac193;">
    <div class="animations-02">
-      <img src="{{asset('fronted/img/bg/an-img-02.png')}}" alt="contact-bg-an-05">
+      <img src="{{asset('fronted/img/bg/an-img-02.png')}}" alt="contact-bg-an-05" loading="lazy">
    </div>
    <div class="container">
       <div class="row justify-content-center align-items-center">
          <div class="col-lg-6 col-md-12 col-sm-12 pr-30">
             <div class="feature-img">
-               <img src="{{asset('fronted/hotelsankalp-img/02-09-2024/reception_2.jpg')}}" alt="img" class="img">
+               <img src="{{asset('fronted/hotelsankalp-img/02-09-2024/reception_2.jpg')}}" alt="img" class="img" loading="lazy">
             </div>
          </div>
          <div class="col-lg-6 col-md-12 col-sm-12">

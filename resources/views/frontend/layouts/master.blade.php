@@ -18,6 +18,7 @@
 			@yield('main-content')
 		</main>
 		@include('frontend.layouts.footer')
+		@include('frontend.layouts.common-modal')
 		@include('frontend.layouts.footerjs')
 	</body>
 </html>

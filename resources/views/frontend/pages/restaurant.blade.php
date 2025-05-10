@@ -25,6 +25,14 @@
                             </nav>
                         </div>
                     </div>
+                    <div class="book-a-table-btn">
+                        <div class="btnt mt-3">
+                            <a href="javascript:void(0)"
+                            data-title="Book a Table"
+                            data-url="{{ route('book.a.table') }}"
+                            data-size="lg" class="animated-border book-a-table-a">Book a Table</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -49,7 +57,7 @@
                 <div class="whatnew-box-two">
                     <div class="confrence-box-ye">
                         <div class="about-item-icon">
-                            <img src="{{asset('fronted/hotelsankalp-img/restaurant/icon/indian.png') }}" alt="Indian">
+                            <img src="{{asset('fronted/hotelsankalp-img/restaurant/icon/indian.png') }}" alt="Indian" loading="lazy">
                         </div>
                         <div class="conference-box-price">
                             <h1>Indian</h1>
@@ -61,7 +69,7 @@
                 <div class="whatnew-box-two">
                     <div class="confrence-box-ye">
                         <div class="about-item-icon">
-                            <img src="{{ asset('fronted/hotelsankalp-img/restaurant/icon/continental.png') }}" alt="Continental">
+                            <img src="{{ asset('fronted/hotelsankalp-img/restaurant/icon/continental.png') }}" alt="Continental" loading="lazy">
                         </div>
                         <div class="conference-box-price">
                             <h1>Continental</h1>
@@ -74,7 +82,7 @@
                 <div class="whatnew-box-two">
                     <div class="confrence-box-ye">
                         <div class="about-item-icon">
-                            <img src="{{asset('fronted/hotelsankalp-img/restaurant/icon/asian.png') }}" alt="Asian">
+                            <img src="{{asset('fronted/hotelsankalp-img/restaurant/icon/asian.png') }}" alt="Asian" loading="lazy">
                         </div>
                         <div class="conference-box-price">
                             <h1>Asian</h1>
@@ -86,7 +94,7 @@
                 <div class="whatnew-box-two">
                     <div class="confrence-box-ye">
                         <div class="about-item-icon">
-                            <img src="{{asset('fronted/hotelsankalp-img/restaurant/icon/vegan.png')}}" alt="Vegan/Healthy options">
+                            <img src="{{asset('fronted/hotelsankalp-img/restaurant/icon/vegan.png')}}" alt="Vegan/Healthy options" loading="lazy">
                         </div>
                         <div class="conference-box-price">
                             <h1>Vegan/Healthy options</h1>
@@ -108,7 +116,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="p-relative  wow fadeInLeft timing-img  animated" data-animation="fadeInLeft" data-delay=".4s">
-                    <img src="{{asset('fronted/hotelsankalp-img/restaurant/timining.png') }}" alt="img">
+                    <img src="{{asset('fronted/hotelsankalp-img/restaurant/timining.png') }}" alt="img" loading="lazy">
                 </div>
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12">
@@ -157,18 +165,46 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="restaurant-grid">
-                    <div class="row">
+                    <div class="row grid-services">
+                        <div class="col-lg-6 col-md-6 mb-10 mb-xl-2 pe-xl-0 ps-xl-2">
+                            <a class="popup-image" href="{{asset('fronted/hotelsankalp-img/restaurant/1.jpg') }}">
+                                <figure class="gallery-image">
+                                    <img src="{{asset('fronted/hotelsankalp-img/restaurant/1.jpg') }}" alt="img" class="img" loading="lazy">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 mb-10 mb-xl-2 pe-xl-0 ps-xl-2">
+                            <a class="popup-image" href="{{asset('fronted/hotelsankalp-img/restaurant/2.jpg') }}">
+                                <figure class="gallery-image">
+                                    <img src="{{asset('fronted/hotelsankalp-img/restaurant/2.jpg') }}" alt="img" class="img" loading="lazy">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 mb-10 mb-xl-2 pe-xl-0 ps-xl-2">
+                            <a class="popup-image" href="{{asset('fronted/hotelsankalp-img/restaurant/3.jpg') }}">
+                                <figure class="gallery-image">
+                                    <img src="{{asset('fronted/hotelsankalp-img/restaurant/3.jpg') }}" alt="img" class="img" loading="lazy">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 mb-10 mb-xl-2 pe-xl-0 ps-xl-2">
+                            <a class="popup-image" href="{{asset('fronted/hotelsankalp-img/restaurant/4.jpg') }}">
+                                <figure class="gallery-image">
+                                    <img src="{{asset('fronted/hotelsankalp-img/restaurant/4.jpg') }}" alt="img" class="img" loading="lazy">
+                                </figure>
+                            </a>
+                        </div>
                         <div class="col-lg-6 col-md-6 mb-10 mb-xl-2 pe-xl-0 ps-xl-2">
                             <a class="popup-image" href="{{asset('fronted/hotelsankalp-img/restaurant/5.jpg') }}">
                                 <figure class="gallery-image">
-                                    <img src="{{asset('fronted/hotelsankalp-img/restaurant/5.jpg') }}" alt="img" class="img">
+                                    <img src="{{asset('fronted/hotelsankalp-img/restaurant/5.jpg') }}" alt="img" class="img" loading="lazy">
                                 </figure>
                             </a>
                         </div>
                         <div class="col-lg-6 col-md-6 mb-10 mb-xl-2 pe-xl-0 ps-xl-2">
                             <a class="popup-image" href="{{asset('fronted/hotelsankalp-img/restaurant/6.jpg') }}">
                                 <figure class="gallery-image">
-                                    <img src="{{asset('fronted/hotelsankalp-img/restaurant/6.jpg') }}" alt="img" class="img">
+                                    <img src="{{asset('fronted/hotelsankalp-img/restaurant/6.jpg') }}" alt="img" class="img" loading="lazy">
                                 </figure>
                             </a>
                         </div>

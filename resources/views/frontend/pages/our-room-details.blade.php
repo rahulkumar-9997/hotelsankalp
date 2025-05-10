@@ -160,7 +160,7 @@ $firstImage = $data['room_details']->images->first();
                                     <div class="carousel-item {{ $key === 0 ? 'active' : '' }}">
                                         <div class="room-de-carousel">
                                             <a class="lightbox" data-fancybox="images-{{ $data['room_details']->id }}" data-caption="{{ $data['room_details']->title }}" href="{{ asset('hotel-sankalp-image-file/room-image/large/'. $image->image_path ) }}" title="{{ $data['room_details']->title }}">
-                                                <img src="{{ asset('hotel-sankalp-image-file/room-image/large/'. $image->image_path ) }}" class="d-block w-100" alt="{{ $data['room_details']->title }}">
+                                                <img src="{{ asset('hotel-sankalp-image-file/room-image/large/'. $image->image_path ) }}" class="d-block w-100" alt="{{ $data['room_details']->title }}" loading="lazy">
                                             </a>
                                         </div>
                                     </div>
