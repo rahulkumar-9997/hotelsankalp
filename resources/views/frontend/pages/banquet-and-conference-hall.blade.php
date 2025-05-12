@@ -47,9 +47,14 @@
                 </div>
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="about-content s-about-content  wow fadeInRight   pl-30 animated" data-animation="fadeInRight" data-delay=".4s">
+                <div class="about-content s-about-content  wow fadeInRight animated" data-animation="fadeInRight" data-delay=".4s">
+                    <div class="ban-content-area">
+                        <p>
+                            Mantram Hall at Hotel Sankalp is a spacious and elegant banquet venue spread across 2500 sq. ft., designed to host a wide range of celebrations. With a flexible capacity of 100 to 250 guests, it is the perfect setting for weddings, receptions, engagements, birthday and anniversary parties, festive gatherings, and many more special occasions. Whether you're planning an intimate celebration or a grand event, Mantram Hall offers the ideal space, warm hospitality, and seamless service to make every moment memorable. Book your table today and let us help you create unforgettable experiences.
+                        </p>
+                    </div>
                     <div class="opening-time">
-                        <div class="about-title second-title pb-10">
+                        <div class="about-title second-title">
                             <h2>Banquet Capacity</h2>
                         </div>
                         <div class="about-content3 mt-10">
@@ -64,7 +69,7 @@
                         </div>
                     </div>
                     <div class="seating">
-                        <div class="about-title second-title pb-10">
+                        <div class="about-title second-title">
                             <h2>Banquet Area </h2>
                         </div>
                         <div class="about-content3 mt-10">
@@ -103,7 +108,10 @@
                                 <a href="javascript:void(0)"
                                     data-title="Book a Table"
                                     data-url="{{ route('book.a.table') }}"
-                                    data-size="lg" class="animated-border book-a-table-a">
+                                    data-size="lg" 
+                                    data-btntype="banquet"
+                                    data-octitle="Weddings, Receptions & Engagement"
+                                    class="animated-border book-a-table-a">
                                     Book a Table
                                 </a>
                             </div>
@@ -123,7 +131,10 @@
                                 <a href="javascript:void(0)"
                                     data-title="Book a Table"
                                     data-url="{{ route('book.a.table') }}"
-                                    data-size="lg" class="animated-border book-a-table-a">
+                                    data-size="lg"
+                                    data-btntype="banquet"
+                                    data-octitle="Birthday & Anniversary Parties"
+                                    class="animated-border book-a-table-a">
                                     Book a Table
                                 </a>
                             </div>
@@ -143,7 +154,10 @@
                                 <a href="javascript:void(0)"
                                     data-title="Book a Table"
                                     data-url="{{ route('book.a.table') }}"
-                                    data-size="lg" class="animated-border book-a-table-a">
+                                    data-size="lg"
+                                    data-btntype="banquet"
+                                    data-octitle="Festive Celebrations & Many More"
+                                    class="animated-border book-a-table-a">
                                     Book a Table
                                 </a>
                             </div>

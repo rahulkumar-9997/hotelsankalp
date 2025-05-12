@@ -11,6 +11,7 @@ use Exception;
 use App\Models\Banner;
 use App\Models\HotelFacilities;
 use App\Models\HotelRoom;
+use App\Models\NearByAttraction;
 use App\Models\RoomImage;
 use NoCaptcha;
 use Illuminate\Support\Facades\Validator;
@@ -26,10 +27,12 @@ class FrontHomeController extends Controller
             ->limit(4)
             ->get()
             ->map(function ($room) {
-                // Pick a random image from the images relationship if images exist
                 $room->random_image = $room->images->isNotEmpty() ? $room->images->random() : null;
                 return $room;
             });
+        $data['nearby_attractions'] = NearByAttraction::orderBy('id', 'desc')
+            ->limit(9)
+            ->get();
         return view('frontend.index', ['data' => $data]);
     }
 
@@ -193,7 +196,8 @@ class FrontHomeController extends Controller
     }
 
     public function bookAtableModalForm(Request $request){
-        
+        $btn_type = $request->btn_type;
+        $occasion_title = $request->occasion_title;
         $form = '
         <form method="POST" action="' . route('book.a.table.submit') . '" accept-charset="UTF-8" enctype="multipart/form-data" id="bookATableForm">
             ' . csrf_field() . '
@@ -209,39 +213,86 @@ class FrontHomeController extends Controller
                         <label for="date_time" class="form-label">Date/Time *</label>
                         <input type="date" id="date_time" name="date_time" class="form-control">
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="mb-2">
-                        <label for="no_of_guest" class="form-label">No. of Guest *</label>
-                        <select class="form-select" name="no_of_guest" id="no_of_guest">
-                           <option value=""> Select No  Of Guest </option>
-                           <option value="1">1</option>
-                           <option value="2">2</option>
-                           <option value="3">3</option>
-                           <option value="4">4</option>
-                           <option value="5">5</option>
-                           <option value="6">6</option>
-                           <option value="7">7</option>
-                           <option value="8">8</option>
-                           <option value="9">9</option>
-                           <option value="10+">10+</option>
-                        </select>
-                    </div>
-                </div>
+                </div>';
+                if($btn_type =='banquet'){
+                    $form .='
+                    <div class="col-md-6">
+                        <div class="mb-2">
+                            <label for="no_of_guest" class="form-label">No. of Guest *</label>
+                            <select class="form-select" name="no_of_guest" id="no_of_guest">
+                                <option value="">Select No Of Guest</option>
+                                <option value="1-10">1-10</option>
+                                <option value="11-20">11-20</option>
+                                <option value="21-30">21-30</option>
+                                <option value="31-40">31-40</option>
+                                <option value="41-50">41-50</option>
+                                <option value="51-60">51-60</option>
+                                <option value="61-70">61-70</option>
+                                <option value="71-80">71-80</option>
+                                <option value="81-90">81-90</option>
+                                <option value="91-100">91-100</option>
+                                <option value="101-120">101-120</option>
+                                <option value="121-140">121-140</option>
+                                <option value="141-160">141-160</option>
+                                <option value="161-180">161-180</option>
+                                <option value="181-200">181-200</option>
+                                <option value="201-220">201-220</option>
+                                <option value="221-240">221-240</option>
+                                <option value="241-250">241-250</option>
+                                <option value="250">250</option>
+                            </select>
+                        </div>
+                    </div>';
+                }
+                else
+                {
+                     $form .='
+                    <div class="col-md-6">
+                        <div class="mb-2">
+                            <label for="no_of_guest" class="form-label">No. of Guest *</label>
+                            <select class="form-select" name="no_of_guest" id="no_of_guest">
+                            <option value=""> Select No  Of Guest </option>';
+                                    for ($i = 1; $i <= 70; $i++) {
+                                        $form .= '<option value="' . $i . '">' . $i . '</option>';
+                                    }
+                                    $form .='
+                            </select>
+                        </div>
+                    </div>';
+                }
+                $form .='
                 <div class="col-md-6">
                     <div class="mb-2">
                         <label for="email" class="form-label">Email *</label>
                         <input type="email" id="email" name="email" class="form-control">
                     </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="mb-2">
-                        <label for="mobile_number" class="form-label">Mobile No. *</label>
-                        <input type="text" maxlength="10" id="mobile_number" name="mobile_number" class="form-control">
+                </div>';
+                if($btn_type =='banquet'){
+                    $form .='
+                    <div class="col-md-6">
+                        <div class="mb-2">
+                            <label for="occasion_type" class="form-label">Type of Occasion *</label>
+                            <input type="text" id="occasion_type" name="occasion_type" class="form-control" value="'.$occasion_title.'">
+                        </div>
                     </div>
-                </div>
-                
-                
+                    <div class="col-md-6">
+                        <div class="mb-2">
+                            <label for="mobile_number" class="form-label">Mobile No. *</label>
+                            <input type="text" maxlength="10" id="mobile_number" name="mobile_number" class="form-control">
+                        </div>
+                    </div>';
+                }
+                else
+                {
+                    $form .='
+                    <div class="col-md-12">
+                        <div class="mb-2">
+                            <label for="mobile_number" class="form-label">Mobile No. *</label>
+                            <input type="text" maxlength="10" id="mobile_number" name="mobile_number" class="form-control">
+                        </div>
+                    </div>';
+                }
+                $form .='                
                 <div class="modal-footer pb-0">
                     <!--<button type="button" class="btn btn-animation btn-md fw-bold" data-bs-dismiss="modal">Close</button>-->
                     <button style="color:#ffffff;" type="submit" class="btn btn-2-animation btn-md fw-bold">Submit</button>
@@ -256,27 +307,40 @@ class FrontHomeController extends Controller
     }
 
     public function bookAtableModalFormSubmit(Request $request) {
-        $validator = Validator::make($request->all(), [
+        $rules = [
             'name' => 'required|string|max:255',
             'date_time' => 'required|date|after_or_equal:today',
-            'no_of_guest' => 'required|integer|min:1|max:20',
             'email' => 'required|email:rfc,dns|max:255', 
-            'mobile_number' => ['required', 'string', 'min:10', 'max:15', 'regex:/^[0-9+\- ]+$/'],
-        ], [
+            'mobile_number' => ['required', 'string', 'min:10', 'max:10', 'regex:/^[0-9]{10}$/'],
+        ];
+    
+        $messages = [
             'name.required' => 'Please enter your name',
             'date_time.required' => 'Please select date and time',
             'date_time.after_or_equal' => 'Booking date must be today or a future date',
-            'no_of_guest.required' => 'Please select number of guests',
-            'no_of_guest.integer' => 'Number of guests must be a valid number',
-            'no_of_guest.min' => 'Minimum 1 guest required',
-            'no_of_guest.max' => 'Maximum 20 guests allowed',
             'email.required' => 'Email address is required',
             'email.email' => 'Please enter a valid email address',
             'mobile_number.required' => 'Mobile number is required',
-            'mobile_number.min' => 'Mobile number must be at least 10 digits',
-            'mobile_number.max' => 'Mobile number cannot exceed 15 digits',
-            'mobile_number.regex' => 'Please enter a valid mobile number (only numbers, +, - or spaces allowed)',
-        ]);
+            'mobile_number.min' => 'Mobile number must be 10 digits',
+            'mobile_number.max' => 'Mobile number must be 10 digits',
+            'mobile_number.regex' => 'Please enter a valid 10-digit mobile number',
+        ];
+        $isBanquet = $request->has('occasion_type') && !empty($request->occasion_type);
+        if ($isBanquet) {
+            $rules['no_of_guest'] = 'required|string|in:1-10,11-20,21-30,31-40,41-50,51-60,61-70,71-80,81-90,91-100,101-120,121-140,141-160,161-180,181-200,201-220,221-240,241-250,250';
+            $rules['occasion_type'] = 'required|string|max:255';
+            
+            $messages['no_of_guest.in'] = 'Please select a valid guest range';
+            $messages['occasion_type.required'] = 'Please specify the occasion type';
+        } else {
+            $rules['no_of_guest'] = 'required|integer|min:1|max:70';
+            $messages['no_of_guest.required'] = 'Please select number of guests';
+            $messages['no_of_guest.integer'] = 'Number of guests must be a valid number';
+            $messages['no_of_guest.min'] = 'Minimum 1 guest required';
+            $messages['no_of_guest.max'] = 'Maximum 70 guests allowed';
+        }
+    
+        $validator = Validator::make($request->all(), $rules, $messages);
     
         if ($validator->fails()) {
             return response()->json([
@@ -293,23 +357,29 @@ class FrontHomeController extends Controller
                 'mobile_number' => $formattedMobile,
                 'date_time' => $request->date_time,
                 'no_of_guest' => $request->no_of_guest,
+                'booking_type' => $isBanquet ? 'banquet' : 'regular',
             ];
-            
+    
+            // Add occasion type if banquet
+            if ($isBanquet) {
+                $bookingData['occasion_type'] = $request->occasion_type;
+            }
+    
             /*Send to customer*/
             Mail::send('frontend.mail.book-a-table', $bookingData, function($message) use ($bookingData) {
                 $message->to($bookingData['email'])
                         ->subject('Table Booking Confirmation');
             });
     
-            /*Send to admin*/
+            /*Send to admin sankalpbanaras@gmail.com*/
             Mail::send('frontend.mail.book-a-table', $bookingData, function($message) use ($bookingData) {
                 $message->to('sankalpbanaras@gmail.com')
-                        ->subject('New Table Booking - ' . $bookingData['name']);
+                        ->subject('New ' . ($bookingData['booking_type'] === 'banquet' ? 'Banquet' : 'Table') . ' Booking - ' . $bookingData['name']);
             });
     
             return response()->json([
                 'status' => 'success',
-                'message' => 'Booking a table submitted successfully! Our team will contact you shortly.',
+                'message' => 'Booking submitted successfully! Our team will contact you shortly.',
             ], 200, [], JSON_UNESCAPED_SLASHES);
     
         } catch (\Exception $e) {

@@ -1709,7 +1709,7 @@ bottom: 5px;
 }
 .about-content li {
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     color: #644222;
 }
 .about-content li .text {
@@ -4886,11 +4886,10 @@ left: 0;
     z-index: 1;
 }
 .blog-content2 {
-padding: 40px 30px 30px;
-float: left;
-position: relative;
-background: #fff;
-border: 1px solid #b7b7b7;
+    padding: 20px 10px 10px;
+    position: relative;
+    background: #fff;
+    border: 1px solid #b7b7b7;
 }
 
 .blog-content2 .b-meta{
@@ -11367,10 +11366,10 @@ color: #fff;
     background: #644222;
 }
 .dining-and-timing-section .about-title h2{
-    font-size: 30px;
+    font-size: 20px;
 }
 .dining-and-timing-section .about-content li{
-    font-size: 20px;
+    font-size: 18px;
 }
 .timing-img img{
     border-radius: 10px;
@@ -11528,5 +11527,14 @@ section.breadcrumb-area{
         border-left: 3px solid transparent;
     }
 }
-
+.near-by-attraction-section .near-main-content h4{
+    color: #67302D;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.blog-content2.near-main-content{
+    background: none;
+    border: none;
+    text-align: center;
+}
 

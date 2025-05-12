@@ -83,7 +83,7 @@
          </li>	
          <li class="{{ request()->is('hotel-room') ? 'open' : ''}} {{ request()->is('hotel-room/add') ? 'open' : ''}} ">
             <a href="javascript:;">
-            <i class="fa fa-home"></i>
+            <i class="fa fa-ioxhost"></i>
             <span class="title">Manage Hotel Room</span>
             </a>
             <ul class="sub-menu" >
@@ -94,6 +94,18 @@
                   <a class="" href="{{route('hotel-room.add')}}"> Add Hotel Room</a>
                </li>
                
+               
+            </ul>
+         </li>	
+         <li class="{{ request()->is('near-by-attractions') ? 'open' : ''}}">
+            <a href="javascript:;">
+            <i class="fa fa-home"></i>
+            <span class="title">Manage Home Section</span>
+            </a>
+            <ul class="sub-menu" >
+               <li>
+                  <a class="" href="{{route('near-by-attractions')}}">Near By Attractions</a>
+               </li>           
                
             </ul>
          </li>	

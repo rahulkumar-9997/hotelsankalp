@@ -14,6 +14,7 @@ use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\BannerController;
 use App\Http\Controllers\Backend\HotelFacilitiesController;
 use App\Http\Controllers\Backend\HotelRoomController;
+use App\Http\Controllers\Backend\NearByAttractionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,8 +53,8 @@ Route::get('reset-password/{token}', [ForgotPasswordController::class, 'showRese
 Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
 
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
-Route::group(['middleware' => ['auth', 'permission']], function() {
-    /**CREATE USER AND ASSIGN ROLE AND PERMISSION */
+Route::group(['middleware' => ['auth']], function() {
+    /**CREATE USER AND ASSIGN ROLE AND PERMISSION 'permission'*/
     Route::group(['prefix' => 'users'], function() {
         Route::get('/', [UsersController::class, 'index'])->name('users');
         Route::get('/create', [UsersController::class, 'create'])->name('users.create');
@@ -93,5 +94,11 @@ Route::group(['middleware' => ['auth', 'permission']], function() {
     Route::delete('hotel-room/delete/{id}', [HotelRoomController::class, 'deleteHotelRooms'])->name('hotel-room.delete');
 
     Route::delete('multiple-img/delete/{id}', [HotelRoomController::class, 'deleteHotelRoomsImage'])->name('multiple-img.delete');
-
+    
+    Route::get('near-by-attractions', [NearByAttractionController::class, 'index'])->name('near-by-attractions');
+    Route::get('near-by-attractions/create', [NearByAttractionController::class, 'create'])->name('near-by-attractions.create');
+    Route::post('near-by-attractions/store', [NearByAttractionController::class, 'store'])->name('near-by-attractions.store');
+    Route::get('near-by-attractions/edit/{id}', [NearByAttractionController::class, 'edit'])->name('near-by-attractions.edit');
+    Route::put('near-by-attractions/{id}', [NearByAttractionController::class, 'update'])->name('near-by-attractions.update');
+    Route::delete('near-by-attractions/destroy/{id}', [NearByAttractionController::class, 'destroy'])->name('near-by-attractions.destroy');
 });

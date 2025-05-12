@@ -12,7 +12,7 @@
                         </div>
                         <p>Experience top-rated tranquility in the heart of Varanasi, where your safety and comfort are our priority.</p>
                         <div class="footer-social">
-                            <a target="_blank" href="https://www.facebook.com/share/1YSrtZ6wwy/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+                            <a target="_blank" href="https://www.facebook.com/people/Hotel-Sankalp-Banaras/61574172173217/"><i class="fab fa-facebook-f"></i></a>
                             <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
                             <a target="_blank" href="https://www.instagram.com/hotelsankalpbanaras?igsh=MTF1Zmo4enhycWl1aA=="><i class="fab fa-instagram"></i></a>
                         </div>
@@ -45,7 +45,7 @@
                         </div>
                         <div class="footer-link">
                             <ul>
-                                <li><a href="https://www.facebook.com/share/1YSrtZ6wwy/?mibextid=wwXIfr" target="_blank">Facebook</a></li>
+                                <li><a href="https://www.facebook.com/people/Hotel-Sankalp-Banaras/61574172173217/" target="_blank">Facebook</a></li>
                                 <li><a href="https://www.instagram.com/hotelsankalpbanaras?igsh=MTF1Zmo4enhycWl1aA==" target="_blank">Instagram</a></li>
                                 <!-- <li><a href="#">Youtube</a></li>
                                 <li><a href="#">Linkedin</a></li> -->

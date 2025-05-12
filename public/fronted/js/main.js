@@ -909,9 +909,13 @@ $(document).on('click', '.book-a-table-a', function(e) {
 	button.prop('disabled', true).html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading please wait...');
 	var title = $(this).data('title');
 	var size = ($(this).data('size') == '') ? 'md' : $(this).data('size');
+	var btntype = ($(this).data('btntype') == '') ? '' : $(this).data('btntype');
+	var occasion_title = ($(this).data('octitle') == '') ? '' : $(this).data('octitle');
 	var url = $(this).data('url');
 	var data = {
 		_token: $('meta[name="csrf-token"]').attr('content'),
+		btn_type: btntype,
+		occasion_title: occasion_title,
 	};
 	$("#commoanModal .modal-title").html(title);
 	$("#commoanModal .modal-dialog").addClass('modal-' + size);

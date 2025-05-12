@@ -4,7 +4,7 @@
 @section('keywords', 'Qulity Room , Best Accommodation Hotel in varanasi, Wellness & Spa in varanasi, Varanasi Hotel, Luxury Hotel in Varanasi, Hotel sankalp facilities')
 
 @section('main-content')
-<section class="breadcrumb-area d-flex align-items-center" style="background-image:url('{{asset('fronted/hotelsankalp-img/restaurant/bread-2.jpg') }}'); background-position: top;">
+<section class="breadcrumb-area d-flex align-items-center" style="background-image:url('{{asset('fronted/hotelsankalp-img/restaurant/banner.jpg') }}'); background-position: top;">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-xl-12 col-lg-12">
@@ -105,7 +105,7 @@
 
             <div class="col-lg-12">
                 <div class="mt-3 text-center">
-                    <a href="{{asset('fronted/hotelsankalp-img/satvik-restaurant-menu.pdf') }}" class="btn ss-btn smoth-scroll" target="_blank">View Menu</a>
+                    <a href="{{asset('fronted/hotelsankalp-img/new-satvik-restaurant-menu.pdf') }}" class="btn ss-btn smoth-scroll" target="_blank">View Menu</a>
                 </div>
             </div>
         </div>
@@ -120,9 +120,14 @@
                 </div>
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="about-content s-about-content  wow fadeInRight   pl-30 animated" data-animation="fadeInRight" data-delay=".4s">
+                <div class="about-content s-about-content  wow fadeInRight animated" data-animation="fadeInRight" data-delay=".4s">
+                    <div class="res-content-area">
+                        <p>
+                            Satvik Restaurant at Hotel Sankalp offers a warm and inviting dining experience, perfect for every occasion. Serving breakfast from 7 AM to 10:30 AM, lunch from 12 PM to 3 PM, and dinner from 7 PM to 11 PM, it’s the ideal place to enjoy delicious meals throughout the day. The restaurant features comfortable indoor seating for up to 70 guests and a charming rooftop space that accommodates 20 guests—perfect for romantic dinners under the stars. Whether you're dining with family or planning a special evening, Satvik promises great food in a cozy and elegant setting.
+                        </p>
+                    </div>
                     <div class="opening-time">
-                        <div class="about-title second-title pb-10">
+                        <div class="about-title second-title">
                             <h2>Dining Options & Timings</h2>
                         </div>
                         <div class="about-content3 mt-10">
@@ -138,7 +143,7 @@
                         </div>
                     </div>
                     <div class="seating">
-                        <div class="about-title second-title pb-10">
+                        <div class="about-title second-title">
                             <h2>Ambience & Seating</h2>
                         </div>
                         <div class="about-content3 mt-10">

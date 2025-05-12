@@ -54,7 +54,7 @@ use App\Models\BlogImages;
           </div>
       </div> 
       </section> -->
-<div id="carouselExampleCaptions" class="carousel slide"  data-bs-ride="carousel" data-bs-interval="5000" data-bs-wrap="true">
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-wrap="true">
    <div class="carousel-indicators">
       @foreach ($data['banner'] as $index => $banner_row)
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="{{ $index }}" class="{{ $loop->first ? 'active' : '' }}" aria-label="Slide {{ $index + 1 }}"></button>
@@ -233,7 +233,7 @@ use App\Models\BlogImages;
 <!-- booking-area-end -->
 <!-- about-area -->
 <section class="about-area about-p pt-40 pb-40 p-relative fix">
-   
+
    <div class="animations-02">
       <img src="{{asset('fronted/img/bg/an-img-02.png')}}" alt="contact-bg-an-02" loading="lazy">
    </div>
@@ -372,7 +372,7 @@ use App\Models\BlogImages;
 @endif
 <!-- room-area-end -->
 <!-- feature-area -->
-<section class="feature-area2 p-relative fix mb-5 ganges-section" style="background: #dac193;">
+<section class="feature-area2 p-relative fix mb-2 ganges-section" style="background: #dac193;">
    <div class="animations-02">
       <img src="{{asset('fronted/img/bg/an-img-02.png')}}" alt="contact-bg-an-05" loading="lazy">
    </div>
@@ -401,373 +401,50 @@ use App\Models\BlogImages;
       </div>
    </div>
 </section>
-<!-- feature-area-end -->
-<!-- pricing-area -->
-<!-- <section id="pricing" class="pricing-area pt-120 pb-60 fix p-relative">
-      <div class="animations-01"><img src="img/bg/an-img-01.png" alt="an-img-01"></div>
-      <div class="animations-02"><img src="img/bg/an-img-02.png" alt="contact-bg-an-01"></div>
-      <div class="container"> 
-         
-        <div class="row justify-content-center align-items-center">
-             
-             <div class="col-lg-4 col-md-12">
-              <div class="section-title mb-20">
-                     <h5>Best Prices</h5>
-                     <h2>Extra Services</h2>                               
-                 </div>
-                  <p>Proin consectetur non dolor vitae pulvinar. Pellentesque sollicitudin dolor eget neque viverra, sed interdum metus interdum. Cras lobortis pulvinar dolor, sit amet ullamcorper dolor iaculis vel</p>
-                 <p>Cras finibus laoreet felis et hendrerit. Integer ligula lorem, finibus vitae lorem at, egestas consectetur urna. Integer id ultricies elit. Maecenas sodales nibh, quis posuere felis. In commodo mi lectus venenatis metus eget fringilla. Suspendisse varius ante eget.</p>
-             </div>
-             <div class="col-lg-4 col-md-6">
-                  <div class="pricing-box pricing-box2 mb-60">
-                         <div class="pricing-head">  
-                             <h3>Room cleaning</h3>    
-                             <p>Perfect for early-stage startups</p>
-                             <div class="month">Monthly</div>
-                             <div class="price-count">
-                                 <h2>₹39.99</h2>
-                             </div> 
-                             <hr>
-                         </div>
-      
-                         <div class="pricing-body mt-20 mb-30 text-left">
-                            <ul>
-                                 <li>Hotel quis justo at lorem</li>
-                                 <li>Fusce sodales, urna et tempus</li>
-                                 <li>Vestibulum blandit lorem quis</li>                                           
-                             </ul>
-                         </div>      
-                          
-      
-                         <div class="pricing-btn">
-                            <a href="/" class="btn ss-btn">Get Started <i class="fal fa-angle-right"></i></a>
-                         </div>
-                     </div>
-           
-             </div>
-              <div class="col-lg-4 col-md-6">
-                 <div class="pricing-box pricing-box2 mb-60">
-                         <div class="pricing-head">  
-                             <h3>Drinks included</h3>    
-                             <p>Perfect for early-stage startups</p>
-                             <div class="month">Monthly</div>
-                             <div class="price-count">
-                                 <h2>₹59.99</h2>
-                             </div> 
-                             <hr>
-                         </div>
-      
-                         <div class="pricing-body mt-20 mb-30 text-left">
-                            <ul>
-                                <li>Hotel quis justo at lorem</li>
-                                 <li>Fusce sodales, urna et tempus</li>
-                                 <li>Vestibulum blandit lorem quis</li> 
-                             </ul>
-                         </div>      
-                          
-      
-                         <div class="pricing-btn">
-                            <a href="/" class="btn ss-btn">Get Started <i class="fal fa-angle-right"></i></a>
-                         </div>
-                     </div>
-             </div>
-         </div>
-      </div>
-      </section> -->
-<!-- pricing-area-end -->
-<!-- testimonial-area -->
-<!-- <section class="testimonial-area pt-120 pb-90 p-relative fix" style="background-image: url(img/bg/testimonial-bg.png); background-size: cover;">
+@if($data['nearby_attractions']->isNotEmpty())
+   <section id="blog" class="blog-area p-relative fix pt-30 pb-30 near-by-attraction-section">
       <div class="container">
-          <div class="row">
-               <div class="col-lg-12">
-                    <div class="section-title center-align mb-50 text-center">
-                      <h5>Testimonial</h5>
-                      <h2>What Our Clients Says</h2>
-                      <p>Proin consectetur non dolor vitae pulvinar. Pellentesque sollicitudin dolor eget neque viverra, sed interdum metus interdum. Cras lobortis pulvinar dolor, sit amet ullamcorper dolor iaculis vel</p>
-                  </div>
-                 
-              </div>
-              <div class="col-lg-12">
-                  <div class="testimonial-active">
-                      <div class="single-testimonial">
-                           <div class="testi-author">
-                              <img src="img/testimonial/testi_avatar.png" alt="img">
-                              <div class="ta-info">
-                                  <h6>Jina Nilson</h6>
-                                  <span>Client</span>
-                              </div>
-                          </div>
-                          <div class="review-icon">
-                              <img src="img/testimonial/review-icon.png" alt="img">
-                           </div>
-                          <p>“Phasellus aliquam quis lorem amet dapibus feugiat vitae purus vitae efficitur. Vestibulum sed elit id orci rhoncus ultricies. Morbi vitae semper consequat ipsum semper quam”.</p>
-                          
-                          <div class="qt-img">
-                          <img src="img/testimonial/qt-icon.png" alt="img">
-                          </div>
-                      </div>
-                     <div class="single-testimonial">
-                           <div class="testi-author">
-                              <img src="img/testimonial/testi_avatar_02.png" alt="img">
-                              <div class="ta-info">
-                                  <h6>Braitly Dcosta</h6>
-                                  <span>Client</span>
-                              </div>
-                          </div>
-                         <div class="review-icon">
-                              <img src="img/testimonial/review-icon.png" alt="img">
-                           </div>
-                            <p>“Phasellus aliquam quis lorem amet dapibus feugiat vitae purus vitae efficitur. Vestibulum sed elit id orci rhoncus ultricies. Morbi vitae semper consequat ipsum semper quam”.</p>
-                          
-                          <div class="qt-img">
-                          <img src="img/testimonial/qt-icon.png" alt="img">
-                          </div>
-                      </div>
-                     <div class="single-testimonial">
-                           <div class="testi-author">
-                              <img src="img/testimonial/testi_avatar_03.png" alt="img">
-                              <div class="ta-info">
-                                  <h6>Roboto Dose</h6>
-                                  <span>Client</span>
-                              </div>
-                          </div>
-                          <div class="review-icon">
-                              <img src="img/testimonial/review-icon.png" alt="img">
-                           </div>
-                          <p>“Phasellus aliquam quis lorem amet dapibus feugiat vitae purus vitae efficitur. Vestibulum sed elit id orci rhoncus ultricies. Morbi vitae semper consequat ipsum semper quam”.</p>
-                          
-                          <div class="qt-img">
-                          <img src="img/testimonial/qt-icon.png" alt="img">
-                          </div>
-                      </div>
-                     <div class="single-testimonial">
-                           <div class="testi-author">
-                              <img src="img/testimonial/testi_avatar_02.png" alt="img">
-                              <div class="ta-info">
-                                  <h6>Braitly Dcosta</h6>
-                                  <span>Client</span>
-                              </div>
-                          </div>
-                         <div class="review-icon">
-                              <img src="img/testimonial/review-icon.png" alt="img">
-                           </div>
-                            <p>“Phasellus aliquam quis lorem amet dapibus feugiat vitae purus vitae efficitur. Vestibulum sed elit id orci rhoncus ultricies. Morbi vitae semper consequat ipsum semper quam”.</p>
-                          
-                          <div class="qt-img">
-                          <img src="img/testimonial/qt-icon.png" alt="img">
-                          </div>
-                      </div>
-                  </div>
-              </div>
-             
-          </div>
-      </div>
-      </section> -->
-<!-- testimonial-area-end -->
-<!-- booking-area -->
-<!-- <section class="booking pt-120 pb-120 p-relative fix">
-      <div class="animations-01"><img src="img/bg/an-img-01.png" alt="an-img-01"></div>
-      <div class="container">
-          <div class="row align-items-center">
-              <div class="col-lg-6 col-md-6">
-                   <div class="contact-bg02">
-                      <div class="section-title center-align">
-                          <h5>make appointment</h5>
-                          <h2>
-                             Book A Room
-                          </h2>
-                      </div>                                
-                      <form action="https://htmldemo.zcubethemes.com/riorelax/mail.php" method="post" class="contact-form mt-30">
-                          <div class="row">
-                          <div class="col-lg-6 col-md-6">
-                              <div class="contact-field p-relative c-name mb-20">                                    
-                                 <label><i class="fal fa-badge-check"></i> Check In Date</label>
-                                           <input type="date" id="chackin2" name="date">
-                              </div>                               
-                          </div>
-      
-                          <div class="col-lg-6 col-md-6">                               
-                              <div class="contact-field p-relative c-subject mb-20">                                   
-                                 <label><i class="fal fa-times-octagon"></i> Check Out Date</label>
-                                           <input type="date" id="chackout2" name="date">
-                              </div>
-                          </div>		
-                          <div class="col-lg-6 col-md-6">                               
-                              <div class="contact-field p-relative c-subject mb-20">                                   
-                                   <label><i class="fal fa-users"></i> Adults</label>
-                                      <select name="adults" id="adu2">
-                                        <option value="sports-massage">Adults</option>
-                                        <option value="1">1</option>
-                                          <option value="2">2</option>
-                                          <option value="3">3</option>
-                                          <option value="4">4</option>
-                                          <option value="5">5</option>
-                                      </select>
-                              </div>
-                          </div>	
-                          <div class="col-lg-6 col-md-6">                               
-                              <div class="contact-field p-relative c-option mb-20">                                   
-                                  <label><i class="fal fa-concierge-bell"></i> Room</label>
-                                     <select name="room" id="rm2">
-                                        <option value="sports-massage">Room</option>
-                                        <option value="1">1</option>
-                                          <option value="2">2</option>
-                                          <option value="3">3</option>
-                                          <option value="4">4</option>
-                                          <option value="5">5</option>
-                                      </select>
-                              </div>
-                          </div>
-                          <div class="col-lg-12">
-                              <div class="slider-btn mt-15">                                          
-                                          <button class="btn ss-btn" data-animation="fadeInRight" data-delay=".8s"><span>Book Table Now</span></button>				
-                                      </div>                             
-                          </div>
-                          </div>
-                  </form>                            
-                  </div>  
-                                   
-              </div>
-              <div class="col-lg-6 col-md-6">
-                   <div class="booking-img">
-                       <img src="img/slider/9224B.1.jpg" alt="img">
-                  </div>
-              </div>
-          </div>
-      </div>
-      </section> -->
-<!-- booking-area-end -->
-<!-- video-area -->
-<!-- <section id="video" class="video-area pt-150 pb-150 p-relative" style="background-image:url(img/bg/video-bg.png); background-repeat: no-repeat; background-position: center bottom; background-size:cover;">
-      Lines
-                 <div class="content-lines-wrapper2">
-                     <div class="content-lines-inner2">
-                         <div class="content-lines2"></div>
-                     </div>
-                 </div>
-                Lines
-      <div class="container">                   
-          <div class="row">
-             <div class="col-12">
-                 <div class="s-video-wrap">
-                     <div class="s-video-content">
-                         <a href="https://www.youtube.com/watch?v=gyGsPlt06bo" class="popup-video"><img src="img/bg/play-button.png" alt="circle_right"></a>
-                        
-                     </div>
-                 </div>
-                 <div class="section-title center-align text-center">
-                     <h2>
-                      Take A Tour Of Luxuri
-                     </h2>
-                 </div>
-             </div>
-             
-         </div>
-      </div>
-      </section> -->
-<!-- video-area-end -->
-<!-- blog-area -->
-<!-- <section id="blog" class="blog-area p-relative fix pt-90 pb-90">
-      <div class="animations-02"><img src="img/bg/an-img-06.png" alt="contact-bg-an-05"></div>
-      <div class="container">
-         <div class="row align-items-center"> 
-             <div class="col-lg-12">
-                 <div class="section-title center-align mb-50 text-center wow fadeInDown animated" data-animation="fadeInDown" data-delay=".4s">
-                      <h5>Our Blog</h5>
-                     <h2>
-                         Latest Blog & News
-                     </h2>
-                     <p>Proin consectetur non dolor vitae pulvinar. Pellentesque sollicitudin dolor eget neque viverra, sed interdum metus interdum. Cras lobortis pulvinar dolor, sit amet ullamcorper dolor iaculis vel</p>
-                 </div>
-                
-             </div>
+         <div class="row align-items-center">
+            <div class="col-lg-12">
+               <div class="section-title center-align mb-30 text-center wow fadeInDown  animated" data-animation="fadeInDown" data-delay=".4s">
+                  <!-- <h5>NEARBY ATTRACTIONS</h5> -->
+                  <h2>
+                     Near by Attractions
+                  </h2>
+                  <!-- <p>Proin consectetur non dolor vitae pulvinar. Pellentesque sollicitudin dolor eget neque viverra, sed interdum metus interdum. Cras lobortis pulvinar dolor, sit amet ullamcorper dolor iaculis vel</p> -->
+               </div>
+
+            </div>
          </div>
          <div class="row">
-            <div class="col-lg-4 col-md-6">
-                 <div class="single-post2 hover-zoomin mb-30 wow fadeInUp animated" data-animation="fadeInUp" data-delay=".4s">
+            @foreach($data['nearby_attractions'] as $attraction)
+               <div class="col-lg-3 col-md-6">
+                  <div class="single-post2 hover-zoomin mb-20 wow fadeInUp animated" data-animation="fadeInUp" data-delay=".4s">
+                     @if($attraction->image_file)
                      <div class="blog-thumb2">
-                         <a href="blog-details.html"><img src="img/blog/inner_b1.jpg" alt="img"></a>
-                     </div>                    
-                     <div class="blog-content2">    
-                         <div class="date-home">
-                             24th March 2022
-                         </div>
-                         <h4><a href="blog-details.html">Cras accumsan nulla nec lacus ultricies placerat.</a></h4> 
-                         <p>Curabitur sagittis libero tincidunt tempor finibus. Mauris at dignissim ligula, nec tristique orci.</p>
-                         <div class="blog-btn"><a href="blog-details.html">Read More</a></div>
-                          
+                           <a href="#">
+                              <img src="{{ asset('hotel-sankalp-image-file/near-by-img/' . $attraction->image_file) }}" alt="{{ $attraction->title }}">
+                           </a>
                      </div>
-                 </div>
-             </div>
-              <div class="col-lg-4 col-md-6">
-                 <div class="single-post2 mb-30 hover-zoomin wow fadeInUp animated" data-animation="fadeInUp" data-delay=".4s">
-                     <div class="blog-thumb2">
-                         <a href="blog-details.html"><img src="img/blog/inner_b2.2.jpg" alt="img"></a>
+                     @endif
+                     <div class="blog-content2 near-main-content">
+                           <h4>
+                              <a href="#">
+                                 {{ $attraction->title }}
+                              </a>
+                           </h4>
+                           <!-- <p>
+                              {!! Str::limit($attraction->description, 70) !!}
+                           </p> -->
+                           <!-- <div class="blog-btn">
+                              <a href="#">Read More</a>
+                           </div> -->
                      </div>
-                     <div class="blog-content2">                                    
-                         <div class="date-home">
-                            24th March 2022
-                         </div>
-                         <h4><a href="blog-details.html">Dras accumsan nulla nec lacus ultricies placerat.</a></h4> 
-                         <p>Curabitur sagittis libero tincidunt tempor finibus. Mauris at dignissim ligula, nec tristique orci.</p>
-                         <div class="blog-btn"><a href="blog-details.html">Read More</a></div>
-                     </div>
-                 </div>
-             </div>
-             <div class="col-lg-4 col-md-6">
-                 <div class="single-post2 mb-30 hover-zoomin wow fadeInUp animated" data-animation="fadeInUp" data-delay=".4s">
-                     <div class="blog-thumb2">
-                         <a href="blog-details.html"><img src="img/blog/inner_b3.jpg" alt="img"></a>
-                     </div>
-                     <div class="blog-content2">                                    
-                         <div class="date-home">
-                             24th March 2022
-                         </div>
-                         <h4><a href="blog-details.html">Seas accumsan nulla nec lacus ultricies placerat.</a></h4> 
-                         <p>Curabitur sagittis libero tincidunt tempor finibus. Mauris at dignissim ligula, nec tristique orci.</p>
-                         <div class="blog-btn"><a href="blog-details.html">Read More</a></div>
-                     </div>
-                 </div>
-             </div>
-      
-             
+                  </div>
+               </div>
+               @endforeach
          </div>
       </div>
-      </section> -->
-<!-- blog-area-end -->
-<!-- brand-area -->
-<!-- <div class="brand-area pt-60 pb-60" style="background-color:#f7f5f1">
-      <div class="container">
-          <div class="row brand-active">
-              <div class="col-xl-2">
-                  <div class="single-brand">
-                      <img src="img/brand/b-logo1.png" alt="img">
-                  </div>
-              </div>
-              <div class="col-xl-2">
-                  <div class="single-brand">
-                       <img src="img/brand/b-logo2.png" alt="img">
-                  </div>
-              </div>
-              <div class="col-xl-2">
-                  <div class="single-brand">
-                       <img src="img/brand/b-logo3.png" alt="img">
-                  </div>
-              </div>
-              <div class="col-xl-2">
-                  <div class="single-brand">
-                        <img src="img/brand/b-logo4.png" alt="img">
-                  </div>
-              </div>
-              <div class="col-xl-2">
-                  <div class="single-brand">
-                       <img src="img/brand/b-logo5.png" alt="img">
-                  </div>
-              </div>
-          </div>
-      </div>
-      </div> -->
-<!-- brand-area-end -->
-
-<!-- main-area-end -->
+   </section>
+@endif
 @endsection
