@@ -4,7 +4,7 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta name="x-apple-disable-message-reformatting">
-      <title></title>
+      <title>Hotel Sankalp Room Enquiry</title>
       <style>
          table,
          td,
@@ -14,46 +14,51 @@
          font-weight: 500;
          font-family: Arial, sans-serif;
          }
-         .btn {margin: 10px 0px;
-         border-radius: 4px;
-         text-decoration: none;
-         color: #fff !important;
-         height: 46px;
-         padding: 10px 20px;
-         font-size: 16px;
-         font-weight: 600;
-         background-image: linear-gradient(to right top, #021d68, #052579, #072d8b, #09369d, #093fb0) !important;
+         .btn {
+           margin: 10px 0px;
+           border-radius: 4px;
+           text-decoration: none;
+           color: #fff !important;
+           height: 46px;
+           padding: 10px 20px;
+           font-size: 16px;
+           font-weight: 600;
+           background-image: linear-gradient(to right top, #021d68, #052579, #072d8b, #09369d, #093fb0) !important;
          }
          .btn:hover {
-         text-decoration: none;
-         opacity: .8;
+           text-decoration: none;
+           opacity: .8;
+         }
+         .data-table th {
+           text-align: left;
+           padding-right: 15px;
+           color: #555;
+         }
+         .data-table td {
+           padding: 5px 0;
          }
       </style>
    </head>
    <body style="margin:0;padding:0;">
-      <div style="margin: 0; padding: 0 !important;  color: rgba(0,0,0,.4); line-height: 1.8;     font-family: 'Playfair Display', serif;  font-weight: 400; font-size: 15px;">
+      <div style="margin: 0; padding: 0 !important; color: rgba(0,0,0,.4); line-height: 1.8; font-family: 'Playfair Display', serif; font-weight: 400; font-size: 15px;">
          <center style="width: 100%; background-color: #f1f1f1;">
             <div style="max-width: 600px; margin: 0 auto;" class="email-container">
                <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
                   <tr>
                      <td style="padding: 0em 2.5em; text-align: center; background-color: #0e1029;">
-                        <img src="https://www.hotelsankalp.com/public/fronted/hotelsankalp-img/logo/transparent-logo.png" style="width: 45%; padding-top: 10px; padding-bottom: 10px;">
+                        <img src="https://www.hotelsankalp.com/public/fronted/hotelsankalp-img/logo/transparent-logo.png" alt="Hotel Sankalp Logo" style="width: 45%; padding-top: 10px; padding-bottom: 10px;">
                      </td>
                   </tr>
                   <tr>
                      <td style="text-align:center; background-color: #ecd592; color: #ffffff;">
-                        <h2 style="color: #000000; font-size: 20px; margin-bottom: 5px; font-family: oswald,sans-serif; margin-top: 5px; ">
-<<<<<<< HEAD
-                           Hotelsankalp room enquiry message
-=======
-                           Hotelsankalp Quick Room Enquiry Message.
->>>>>>> 9092589 (Updated project with latest changes)
+                        <h2 style="color: #000000; font-size: 20px; margin-bottom: 5px; font-family: oswald,sans-serif; margin-top: 5px;">
+                           Hotel Sankalp Quick Room Enquiry Message
                         </h2>
                      </td>
                   </tr>
                   <tr>
-                     <td style="padding: 20px; width: 100%; background:  #ffffff; text-align: left;">
-                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                     <td style="padding: 20px; width: 100%; background: #ffffff; text-align: left;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" class="data-table">
                            <tr>
                               <th>Name</th>
                               <td>{{ $data['contact_person_name'] }}</td>
@@ -63,19 +68,16 @@
                               <td>{{ $data['phone_no'] }}</td>
                            </tr>
                            <tr>
-<<<<<<< HEAD
-=======
                               <th>Email Id</th>
-                              <td>{{ $data['email'] }}</td>
+                              <td>{{ $data['email'] ?? 'Not provided' }}</td>
                            </tr>
                            <tr>
->>>>>>> 9092589 (Updated project with latest changes)
                               <th>Check in date</th>
-                              <td>{{ date_format($data['check_in_date'],"d/m/Y ") }}</td>
+                              <td>{{ date_format($data['check_in_date'],"d/m/Y") }}</td>
                            </tr>
                            <tr>
                               <th>Check out Date</th>
-                              <td>{{ date_format($data['check_out_date'],"d/m/Y ") }}</td>
+                              <td>{{ date_format($data['check_out_date'],"d/m/Y") }}</td>
                            </tr>
                            <tr>
                               <th>Number of room</th>
@@ -91,13 +93,11 @@
                         <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                            <tr>
                               <td style="text-align: center; padding-right: 10px; font-family: oswald,sans-serif;">
-                                 <p><strong style="font-size:20px; color: #fff; line-height: 30px;">Contact Details </strong></p>
-                                 Email :  
-                                 <a style="color:#557e00; text-decoration: none;" href="mailto:info@sankalpbanaras.com" target="_blank" rel="noreferrer">sankalpbanaras@gmail.com, 
-                                 info@sankalpbanaras.com</a>
+                                 <p><strong style="font-size:20px; color: #fff; line-height: 30px;">Contact Details</strong></p>
+                                 Email:  
+                                 <a style="color:#ecd592; text-decoration: none;" href="mailto:info@sankalpbanaras.com" target="_blank" rel="noreferrer">sankalpbanaras@gmail.com, info@sankalpbanaras.com</a>
                                  <br>
-                                 Contact :  +91-9005050196, 
-                                 +91-9005050197 </p>
+                                 Contact: +91-9005050196, +91-9005050197
                               </td>
                            </tr>
                         </table>

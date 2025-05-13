@@ -11537,4 +11537,9 @@ section.breadcrumb-area{
     border: none;
     text-align: center;
 }
+.dining-and-timing-section .about-content{
+    box-shadow: 5px -2px 45px -23px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+}
 

@@ -889,19 +889,38 @@ function showToast(type, message) {
     }, 3000);
 }
 
-$(window).on('load', function () {
-    resizeColumnOnDesktop();
+function initIsotopeServices() {
+    var $container = $('.grid-services');
+    if ($container.length) {
+        if ($("body").width() > 1024) {
+            $container.imagesLoaded(function() {
+                $container.isotope({
+                    itemSelector: '.col-lg-6',
+                    filter: '*',
+                    layoutMode: 'masonry',
+                    percentPosition: true 
+                });
+                setTimeout(function() {
+                    $container.isotope('layout');
+                }, 500);
+            });
+        }
+    }
+}
+
+$(window).on('load', function() {
+    initIsotopeServices();
 });
 
-function resizeColumnOnDesktop() {
-  var width = $("body").width();
-  if (width > 1024) {
-    var $container = $('.grid-services');
-    $container.isotope({
-	filter: '*',
-    });
-  }
-};
+var resizeTimer;
+$(window).on('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+        if ($("body").width() > 1024) {
+            initIsotopeServices();
+        }
+    }, 250);
+});
 /**book a table modal code */
 $(document).on('click', '.book-a-table-a', function(e) {
 	var button = $(this);
