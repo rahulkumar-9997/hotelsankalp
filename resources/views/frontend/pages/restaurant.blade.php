@@ -134,9 +134,9 @@
                             <div class="row justify-content-center align-items-center">
                                 <div class="col-md-12">
                                     <ul class="green mb-10">
-                                        <li>Breakfast: 7 AM – 10:30 AM</li>
+                                        <li>Breakfast: 8 AM – 10:AM </li>
                                         <li>Lunch: 12 PM – 3 PM</li>
-                                        <li>Dinner: 7 PM – 11 PM</li>
+                                        <li>Dinner: 7 PM – 10.30 PM</li>
                                     </ul>
                                 </div>
                             </div>

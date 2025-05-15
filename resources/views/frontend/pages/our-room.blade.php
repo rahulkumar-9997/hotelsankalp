@@ -91,7 +91,7 @@
                         <li><img src="{{asset('fronted/img/icon/sve-icon3.png')}}" alt="{{ $hotel_room_row->title }}" loading="lazy"></li>
                         <li><img src="{{asset('fronted/img/icon/sve-icon4.png')}}" alt="{{ $hotel_room_row->title }}" loading="lazy"></li>
                         <li><img src="{{asset('fronted/img/icon/sve-icon5.png')}}" alt="{{ $hotel_room_row->title }}" loading="lazy"></li>
-                        <li><img src="{{asset('fronted/img/icon/sve-icon6.png')}}" alt="{{ $hotel_room_row->title }}" loading="lazy"></li>
+                        <!-- <li><img src="{{asset('fronted/img/icon/sve-icon6.png')}}" alt="{{ $hotel_room_row->title }}" loading="lazy"></li> -->
                      </ul>
                   </div>
 

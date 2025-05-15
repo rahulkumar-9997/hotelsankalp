@@ -30,7 +30,7 @@ class FrontHomeController extends Controller
                 $room->random_image = $room->images->isNotEmpty() ? $room->images->random() : null;
                 return $room;
             });
-        $data['nearby_attractions'] = NearByAttraction::orderBy('id', 'desc')
+        $data['nearby_attractions'] = NearByAttraction::orderBy('id', 'asc')
             ->limit(9)
             ->get();
         return view('frontend.index', ['data' => $data]);

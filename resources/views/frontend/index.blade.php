@@ -241,7 +241,7 @@ use App\Models\BlogImages;
       <div class="row justify-content-center align-items-center">
          <div class="col-lg-6 col-md-12 col-sm-12">
             <div class="s-about-img p-relative  wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s">
-               <img src="{{asset('fronted/hotelsankalp-img/new-12-24/about-top.jpg')}}" alt="img" loading="lazy">
+               <img src="{{asset('fronted/hotelsankalp-img/new-12-24/about-top.png')}}" alt="img" loading="lazy">
                <div class="about-icon">
                   <img src="{{asset('fronted/hotelsankalp-img/new-12-24/about-bottom.jpg')}}" alt="img" loading="lazy">
                </div>
@@ -359,7 +359,7 @@ use App\Models\BlogImages;
                         <li><img src="{{asset('fronted/img/icon/sve-icon3.png')}}" loading="lazy" alt="img"></li>
                         <li><img src="{{asset('fronted/img/icon/sve-icon4.png')}}" loading="lazy" alt="img"></li>
                         <li><img src="{{asset('fronted/img/icon/sve-icon5.png')}}" loading="lazy" alt="img"></li>
-                        <li><img src="{{asset('fronted/img/icon/sve-icon6.png')}}" loading="lazy" alt="img"></li>
+                        <!-- <li><img src="{{asset('fronted/img/icon/sve-icon6.png')}}" loading="lazy" alt="img"></li> -->
                      </ul>
                   </div>
                </div>
