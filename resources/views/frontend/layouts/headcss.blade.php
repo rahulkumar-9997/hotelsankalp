@@ -10,6 +10,7 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <link rel="shortcut icon" type="image/x-icon" href="{{asset('fronted/hotelsankalp-img/logo/fav-png.png')}}">
 <!-- CSS here -->
+<link rel="stylesheet" href="{{ asset('fronted/css/app.css') }}?v={{ filemtime(public_path('fronted/css/app.css')) }}">
 <link rel="stylesheet" href="{{asset('fronted/css/bootstrap.min.css')}}">
 <link rel="stylesheet" href="{{asset('fronted/css/animate.min.css')}}">
 <link rel="stylesheet" href="{{asset('fronted/css/magnific-popup.css')}}">

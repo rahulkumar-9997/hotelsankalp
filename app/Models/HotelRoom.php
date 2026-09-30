@@ -8,7 +8,6 @@ class HotelRoom extends Model
     use HasFactory;
     protected $table = 'hotel_rooms';
     protected $fillable = ['id', 'title', 'room_price', 'slug', 'main_image', 'details'];
-    
     public function images()
     {
         return $this->hasMany(RoomImage::class);

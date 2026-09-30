@@ -7,53 +7,6 @@ use App\Models\BlogImages;
 @section('keywords', 'Hotel, Hotel varanasi, Sankalp, Varanasi Hotel, Luxury Hotel in Varanasi, The Hotel Facilities ,')
 
 @section('main-content')
-<!-- main-area -->
-
-<!-- slider-area -->
-<!-- <section id="home" class="slider-area fix p-relative" >
-      <div class="slider-active" >
-          <div class="single-slider slider-bg d-flex align-items-center" style="background-image: url(img/slider/ghat4.avif); background-size: cover;height: 100vh;">
-                  <div class="container" 
-                  style="position: relative;
-                  z-index: 2;"
-                  >
-                      <div class="row justify-content-center">  
-                          <div class="col-lg-8 col-md-8 mt-5">
-                              <div class="slider-content s-slider-content text-center mt-3">
-                                  <h3 data-animation="fadeInUp" data-delay=".4s">Enjoy A Luxuary Experience</h3>
-                                  <p data-animation="fadeInUp" data-delay=".6s">Discover peace amidst the bustle of Varanasi at our hotel. Experience tranquility and relaxation in this vibrant, spiritual city.</p>
-                                  
-                                  <div class="slider-btn mt-30 mb-105">     
-                                      <a href="/" class="btn ss-btn active mr-15" data-animation="fadeInLeft" data-delay=".4s">Discover More </a>
-                                      <a href="https://www.youtube.com/watch?v=gyGsPlt06bo" class="video-i popup-video" data-animation="fadeInUp" data-delay=".8s" style="animation-delay: 0.8s;" tabindex="0"><i class="fas fa-play"></i> Intro Video</a>
-                                  </div>            
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              
-          </div>
-          <div class="single-slider slider-bg d-flex align-items-center menu-area" style="background-image: url(img/slider/9224B.1.jpg); background-size: cover;">
-             
-                  <div class="container" style="position: relative;
-                  z-index: 2;">
-                      <div class="row justify-content-center">
-                          <div class="col-lg-8 col-md-8 mt-5">
-                              <div class="slider-content s-slider-content text-center mt-3">
-                                  <h3 data-animation="fadeInUp" data-delay=".4s">Tranquil Retreat in Varanasi</h3>
-                                  <p data-animation="fadeInUp" data-delay=".6s">Indulge in a serene escape at our hotel, where tranquility meets the vibrant spirit of Varanasi.</p>
-                                  
-                                  <div class="slider-btn mt-30 mb-105">     
-                                      <a href="/" class="btn ss-btn active mr-15" data-animation="fadeInLeft" data-delay=".4s">Discover More </a>
-                                      <a href="https://www.youtube.com/watch?v=gyGsPlt06bo" class="video-i popup-video" data-animation="fadeInUp" data-delay=".8s" style="animation-delay: 0.8s;" tabindex="0"><i class="fas fa-play"></i> Intro Video</a>
-                                  </div>        
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-          </div>
-      </div> 
-      </section> -->
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-wrap="true">
    <div class="carousel-indicators">
       @foreach ($data['banner'] as $index => $banner_row)
@@ -94,41 +47,6 @@ use App\Models\BlogImages;
    </button>
 </div>
 
-<!-- <section id="home" class="slider-area fix p-relative home">
-      <div class="slider-active">
-      @if (isset($data['banner']) && $data['banner']->count() > 0)
-         @foreach($data['banner'] as $banner_row)
-            <div class="home-banner-items">
-               <div class="banner-inner-wrap" style="background-image: url('{{ asset('hotel-sankalp-image-file/banner-image/' . $banner_row->banner_image_desktop) }}')"></div>
-               <div class="slider-overlay"></div>
-               <div class="banner-content-wrap">
-                  <div class="container">
-                     <div class="row justify-content-center marg">
-                        <div class="col-lg-8 col-md-8 ">
-                           @if($banner_row->banner_title !== null && $banner_row->banner_title !== '')
-                           <div class="carousel-overlay">
-                              <div class="slider-content s-slider-content text-center mt-3">
-                                 <h3 data-animation="fadeInUp" data-delay=".4s">
-                                 {{ $banner_row->banner_title }}
-                                 </h3>
-                                 @if($banner_row->banner_content !== null && $banner_row->banner_content !== '')
-                                    <p data-animation="fadeInUp" data-delay=".6s">{{ $banner_row->banner_content }}</p>
-                                 @endif  
-                                 
-                              </div>
-                           </div>
-                           @endif
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         @endforeach
-      @endif
-      </div>
-   </section>-->
-<!-- slider-area-end -->
-<!-- booking-area -->
 <div id="booking" class="booking-area p-relative">
    <div class="container">
       <form action="{{route('home-quick-enquiry.store')}}" class="contact-form form-home" method="post">
@@ -272,6 +190,129 @@ use App\Models\BlogImages;
    </div>
 </section>
 <!-- about-area-end -->
+
+<!-- New SEO Content Section with Tailwind CSS -->
+<section class="tw-relative tw-py-10 md:tw-py-15 tw-px-4 sm:tw-px-6 lg:tw-px-8 tw-overflow-hidden tw-bg-[#faf8f5]">
+   <div class="tw-absolute tw-inset-0 tw-opacity-[0.04] tw-pointer-events-none" style="background-image: radial-gradient(circle, #78350f 1px, transparent 1px); background-size: 28px 28px;"></div>
+   <div class="tw-absolute tw-top-0 tw-left-0 tw-w-[600px] tw-h-[600px] tw-rounded-full tw-blur-3xl -tw-translate-x-1/3 -tw-translate-y-1/3 tw-pointer-events-none" style="background: radial-gradient(circle, rgba(251,191,36,0.4) 0%, transparent 70%);"></div>
+   <div class="tw-absolute tw-bottom-0 tw-right-0 tw-w-[700px] tw-h-[700px] tw-rounded-full tw-blur-3xl tw-translate-x-1/3 tw-translate-y-1/3 tw-pointer-events-none" style="background: radial-gradient(circle, rgba(251,146,60,0.3) 0%, transparent 70%);"></div>
+   <div class="tw-absolute tw-top-0 tw-left-0 tw-right-0 tw-h-px tw-bg-gradient-to-r tw-from-transparent tw-via-amber-500/60 tw-to-transparent tw-pointer-events-none"></div>
+   <div class="tw-relative tw-max-w-7xl tw-mx-auto">
+      <div class="tw-text-center tw-mb-12 md:tw-mb-15">        
+
+         <h3 class="tw-text-2xl md:tw-text-4xl tw-text-gray-900 tw-leading-snug">
+            Best Hotel in Varanasi for a
+            <span class="tw-block tw-mt-1 tw-text-[#644222]">
+               Comfortable Stay
+            </span>
+         </h3>
+         <div class="tw-w-16 tw-h-0.5 tw-bg-[#dac193] tw-mx-auto tw-mt-4 tw-rounded-full"></div>
+      </div>
+      <div class="tw-grid lg:tw-grid-cols-12 tw-gap-8 tw-mb-20">
+         <div class="lg:tw-col-span-7 tw-relative tw-bg-white tw-rounded-2xl tw-p-10 md:tw-p-12 tw-shadow-[0_20px_60px_-15px_rgba(120,53,15,0.15)] tw-border tw-border-amber-100/80 tw-overflow-hidden tw-group hover:tw-shadow-[0_30px_80px_-15px_rgba(120,53,15,0.25)] hover:-tw-translate-y-1 tw-transition-all tw-duration-500">
+            <div class="tw-absolute tw-top-0 tw-left-0 tw-w-24 tw-h-24 tw-border-t-2 tw-border-l-2 tw-border-amber-300 tw-rounded-tl-2xl"></div>
+            <div class="tw-absolute tw-bottom-0 tw-right-0 tw-w-24 tw-h-24 tw-border-b-2 tw-border-r-2 tw-border-amber-300 tw-rounded-br-2xl"></div>
+            <div class="tw-relative">
+               <div class="tw-flex tw-items-baseline tw-gap-3 tw-mb-6">
+                  <span class="tw-text-5xl tw-font-serif tw-font-bold tw-text-amber-600/40 tw-leading-none">01</span>
+                  <span class="tw-h-px tw-flex-1 tw-bg-gradient-to-r tw-from-amber-300 tw-to-transparent"></span>
+               </div>
+               <p class="tw-text-[16px] tw-text-[#181616]">
+                  Welcome to Hotel Sankalp, a comfortable and welcoming destination for travelers looking to experience Varanasi with convenience and peace of mind. The hotel offer a relaxing base for exploring the spiritual, cultural, and historical attractions of the city while located in Mahmoorganj.
+               </p>
+            </div>
+         </div>
+         
+         <div class="lg:tw-col-span-5 tw-relative tw-bg-gradient-to-br tw-from-[#1a1410] tw-via-[#221a13] tw-to-[#1a1410] tw-rounded-2xl tw-p-10 md:tw-p-12 tw-shadow-[0_20px_60px_-15px_rgba(0,0,0,0.4)] tw-overflow-hidden tw-group hover:-tw-translate-y-1 tw-transition-all tw-duration-500">
+            <div class="tw-absolute tw-top-0 tw-left-0 tw-right-0 tw-h-px tw-bg-gradient-to-r tw-from-transparent tw-via-amber-500 tw-to-transparent"></div>
+            <div class="tw-absolute tw-inset-0 tw-opacity-[0.06]" style="background-image: radial-gradient(circle, #fbbf24 1px, transparent 1px); background-size: 22px 22px;"></div>
+            <div class="tw-absolute -tw-bottom-24 -tw-right-24 tw-w-64 tw-h-64 tw-bg-amber-500 tw-rounded-full tw-opacity-20 tw-blur-3xl"></div>
+
+            <div class="tw-relative">
+               <div class="tw-flex tw-items-baseline tw-gap-3 tw-mb-6">
+                  <span class="tw-text-5xl tw-font-serif tw-font-bold tw-text-amber-500/50 tw-leading-none">02</span>
+                  <span class="tw-h-px tw-flex-1 tw-bg-gradient-to-r tw-from-amber-500/40 tw-to-transparent"></span>
+               </div>
+
+               <p class="tw-text-[16px] tw-text-[#ffff]">
+                  Hotel Sankalp offers a combination of comfortable accommodation, attentive service, convenient facilities, and a well connected location, if you are looking for the Best Hotel in Varanasi. The hotel features Family Rooms, Executive Triple Rooms, Executive Rooms, and Deluxe Rooms, giving guests options suited to different travel requirements.
+               </p>
+            </div>
+         </div>
+      </div>
+
+      <div class="tw-relative tw-mb-20">
+         <div class="tw-grid lg:tw-grid-cols-12 tw-gap-10 tw-items-start">
+            <div class="lg:tw-col-span-3 tw-flex lg:tw-block tw-justify-center">
+               <div class="tw-relative tw-inline-block">
+                  <div class="tw-text-[140px] md:tw-text-[180px] tw-leading-[0.85] tw-font-serif tw-font-bold tw-text-transparent tw-select-none" style="-webkit-text-stroke: 2px #d97706; tw-text-stroke: 2px #d97706;">
+                     01
+                  </div>
+                  <div class="tw-absolute -tw-bottom-2 tw-left-1/2 -tw-translate-x-1/2 tw-whitespace-nowrap tw-text-[10px] tw-font-bold tw-text-amber-700 tw-uppercase tw-tracking-[0.35em] tw-bg-[#faf8f5] tw-px-3">
+                     Family Stay
+                  </div>
+               </div>
+            </div>
+            <div class="lg:tw-col-span-9 tw-relative">
+               <div class="tw-absolute -tw-left-6 tw-top-2 tw-bottom-2 tw-w-px tw-bg-gradient-to-b tw-from-amber-400 tw-via-amber-300 tw-to-transparent tw-hidden lg:tw-block"></div>
+               <h4 class="tw-text-2xl md:tw-text-3xl lg:tw-text-3xl tw-text-gray-900 tw-leading-tight tw-mb-3">
+                  A Comfortable
+                  <span class="tw-relative tw-inline-block">
+                     <span class="tw-text-amber-700">Family Stay</span>
+                     <span class="tw-absolute tw-bottom-1 tw-left-0 tw-right-0 tw-h-px tw-bg-amber-500/40"></span>
+                  </span>
+                  in Varanasi
+               </h4>
+
+               <p class="tw-text-[16px] tw-text-[#181616]">
+                  Planning a holiday with your loved ones becomes easier when everyone has a comfortable place to relax. Offering spacious accommodation options and a peaceful environment after a day of sightseeing, Hotel Sankalp is a welcoming Family Hotel in Varanasi. Families can explore the famous temples, ghats, and cultural attractions of the city before returning to the comfort of the hotel. This property also provides parking and 24 hour power backup that add convenience to your stay.
+               </p>
+            </div>
+         </div>
+      </div>
+
+      <div class="tw-relative">
+         <div class="tw-grid lg:tw-grid-cols-12 tw-gap-10 tw-items-start">
+            <div class="lg:tw-col-span-9 lg:tw-order-1 tw-relative">
+               <div class="tw-absolute -tw-right-6 tw-top-2 tw-bottom-2 tw-w-px tw-bg-gradient-to-b tw-from-amber-400 tw-via-amber-300 tw-to-transparent tw-hidden lg:tw-block"></div>
+
+               <h4 class="tw-text-2xl md:tw-text-3xl lg:tw-text-3xl tw-text-gray-900 tw-leading-tight tw-mb-3">
+                  Quality Accommodation at a
+                  <span class="tw-relative tw-inline-block">
+                     <span class="tw-text-amber-700">Convenient Price</span>
+                     <span class="tw-absolute tw-bottom-1 tw-left-0 tw-right-0 tw-h-px tw-bg-amber-500/40"></span>
+                  </span>
+               </h4>
+
+               <div class="tw-text-[16px] tw-text-[#181616]">
+                  <p>
+                     Hotel Sankalp can also be considered a Budget Hotel in Varanasi for travelers who want comfort without unnecessary extravagance. While enjoying essential hotel facilities and attentive service where guests can choose from various room categories according to their requirements.
+                  </p>
+                  <p>
+                     The hotel is also home to Satvik Restaurant, offering Indian, Continental, Asian, and vegan/healthy options. Hotel Sankalp offers a convenience place to stay whether you are visiting Varanasi for pilgrimage, family travel, business, or sightseeing. Discover the city, return to a comfortable room, and enjoy a stay designed around your needs.
+                  </p>
+               </div>
+            </div>
+
+            <!-- Number visual -->
+            <div class="lg:tw-col-span-3 lg:tw-order-2 tw-flex lg:tw-block tw-justify-center">
+               <div class="tw-relative tw-inline-block">
+                  <div class="tw-text-[140px] md:tw-text-[180px] tw-leading-[0.85] tw-font-serif tw-font-bold tw-text-transparent tw-select-none" style="-webkit-text-stroke: 2px #d97706; tw-text-stroke: 2px #d97706;">
+                     02
+                  </div>
+                  <div class="tw-absolute -tw-bottom-2 tw-left-1/2 -tw-translate-x-1/2 tw-whitespace-nowrap tw-text-[10px] tw-font-bold tw-text-amber-700 tw-uppercase tw-tracking-[0.35em] tw-bg-[#faf8f5] tw-px-3">
+                     Best Value
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+   </div>
+
+   <div class="tw-absolute tw-bottom-0 tw-left-0 tw-right-0 tw-h-px tw-bg-gradient-to-r tw-from-transparent tw-via-amber-500/60 tw-to-transparent"></div>
+</section>
+<!-- End New SEO Content Section -->
 <!-- service-details2-area -->
 @if (isset($data['hotel_facilities']) && $data['hotel_facilities']->count() > 0)
 <section id="service-details2" class="pt-40 pb-40 p-relative" style="background-color: #dac193;">
@@ -401,50 +442,51 @@ use App\Models\BlogImages;
       </div>
    </div>
 </section>
-@if($data['nearby_attractions']->isNotEmpty())
-   <section id="blog" class="blog-area p-relative fix pt-30 pb-30 near-by-attraction-section">
-      <div class="container">
-         <div class="row align-items-center">
-            <div class="col-lg-12">
-               <div class="section-title center-align mb-30 text-center wow fadeInDown  animated" data-animation="fadeInDown" data-delay=".4s">
-                  <!-- <h5>NEARBY ATTRACTIONS</h5> -->
-                  <h2>
-                     Near by Attractions
-                  </h2>
-                  <!-- <p>Proin consectetur non dolor vitae pulvinar. Pellentesque sollicitudin dolor eget neque viverra, sed interdum metus interdum. Cras lobortis pulvinar dolor, sit amet ullamcorper dolor iaculis vel</p> -->
-               </div>
 
+@if($data['nearby_attractions']->isNotEmpty())
+<section id="blog" class="blog-area p-relative fix pt-30 pb-30 near-by-attraction-section">
+   <div class="container">
+      <div class="row align-items-center">
+         <div class="col-lg-12">
+            <div class="section-title center-align mb-30 text-center wow fadeInDown  animated" data-animation="fadeInDown" data-delay=".4s">
+               <!-- <h5>NEARBY ATTRACTIONS</h5> -->
+               <h2>
+                  Near by Attractions
+               </h2>
+               <!-- <p>Proin consectetur non dolor vitae pulvinar. Pellentesque sollicitudin dolor eget neque viverra, sed interdum metus interdum. Cras lobortis pulvinar dolor, sit amet ullamcorper dolor iaculis vel</p> -->
             </div>
-         </div>
-         <div class="row">
-            @foreach($data['nearby_attractions'] as $attraction)
-               <div class="col-lg-3 col-md-6">
-                  <div class="single-post2 hover-zoomin mb-20 wow fadeInUp animated" data-animation="fadeInUp" data-delay=".4s">
-                     @if($attraction->image_file)
-                     <div class="blog-thumb2">
-                           <a href="#">
-                              <img src="{{ asset('hotel-sankalp-image-file/near-by-img/' . $attraction->image_file) }}" alt="{{ $attraction->title }}">
-                           </a>
-                     </div>
-                     @endif
-                     <div class="blog-content2 near-main-content">
-                           <h4>
-                              <a href="#">
-                                 {{ $attraction->title }}
-                              </a>
-                           </h4>
-                           <!-- <p>
-                              {!! Str::limit($attraction->description, 70) !!}
-                           </p> -->
-                           <!-- <div class="blog-btn">
-                              <a href="#">Read More</a>
-                           </div> -->
-                     </div>
-                  </div>
-               </div>
-               @endforeach
+
          </div>
       </div>
-   </section>
+      <div class="row">
+         @foreach($data['nearby_attractions'] as $attraction)
+         <div class="col-lg-3 col-md-6">
+            <div class="single-post2 hover-zoomin mb-20 wow fadeInUp animated" data-animation="fadeInUp" data-delay=".4s">
+               @if($attraction->image_file)
+               <div class="blog-thumb2">
+                  <a href="#">
+                     <img src="{{ asset('hotel-sankalp-image-file/near-by-img/' . $attraction->image_file) }}" alt="{{ $attraction->title }}">
+                  </a>
+               </div>
+               @endif
+               <div class="blog-content2 near-main-content">
+                  <h4>
+                     <a href="#">
+                        {{ $attraction->title }}
+                     </a>
+                  </h4>
+                  <!-- <p>
+                              {!! Str::limit($attraction->description, 70) !!}
+                           </p> -->
+                  <!-- <div class="blog-btn">
+                              <a href="#">Read More</a>
+                           </div> -->
+               </div>
+            </div>
+         </div>
+         @endforeach
+      </div>
+   </div>
+</section>
 @endif
 @endsection
