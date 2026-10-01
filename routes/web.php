@@ -1,8 +1,4 @@
 <?php
-/**
- * 
- * https://dev.to/codeanddeploy/laravel-8-user-roles-and-permissions-step-by-step-tutorial-1dij
- */
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\FrontHomeController;
 use App\Http\Controllers\Backend\LoginController;
@@ -16,16 +12,6 @@ use App\Http\Controllers\Backend\HotelFacilitiesController;
 use App\Http\Controllers\Backend\HotelRoomController;
 use App\Http\Controllers\Backend\NearByAttractionController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/', [FrontHomeController::class, 'home'])->name('home');
 Route::get('about-us', [FrontHomeController::class, 'aboutUs'])->name('about-us');
@@ -34,12 +20,19 @@ Route::get('restaurant', [FrontHomeController::class, 'restaurant'])->name('rest
 Route::get('our-room', [FrontHomeController::class, 'ourRoom'])->name('our-room');
 Route::get('our-room/{slug}', [FrontHomeController::class, 'ourRoomDetails'])->name('our-room.details');
 Route::get('facilities', [FrontHomeController::class, 'ourFacilities'])->name('facilities');
+
 Route::get('contact-us', [FrontHomeController::class, 'contactUs'])->name('contact-us');
 Route::post('home-quick-enquiry.store', [FrontHomeController::class, 'homeEnquiryQuickSubmit'])->name('home-quick-enquiry.store');
 Route::group(['middleware' => ['web']], function() {
     Route::post('book-a-room.store', [FrontHomeController::class, 'bookARooom'])->name('book-a-room.store');
     Route::post('contact-form.store', [FrontHomeController::class, 'contactForm'])->name('contact-form.store');
 });
+Route::get('near-by-attraction', [FrontHomeController::class, 'nearByAttractionsList'])->name('near-by-attraction');
+Route::get('near-by-attraction/{slug}', [FrontHomeController::class, 'nearByAttractionsDetails'])->name('near-by-attraction.details');
+Route::get('hotel-near-dlw-varanasi', [FrontHomeController::class, 'hotelNearDlw'])->name('hotel.near.dlw');
+Route::get('hotel-near-bhu-varanasi', [FrontHomeController::class, 'hotelNearBhu'])->name('hotel.near.bhu');
+
+
 Route::get('/clear-cache', [FrontHomeController::class, 'clearCache'])->name('clear-cache');
 Route::post('book-a-table', [FrontHomeController::class, 'bookAtableModalForm'])->name('book.a.table');
 Route::post('book-a-table-submit', [FrontHomeController::class, 'bookAtableModalFormSubmit'])->name('book.a.table.submit');

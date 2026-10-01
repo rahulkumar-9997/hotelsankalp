@@ -32,6 +32,9 @@
                                     </a></li>
                                 <li><a href="{{url('our-room') }}">Our Rooms </a></li>
                                 <li><a href="{{url('facilities') }}">Facilities </a></li>
+                                <li><a href="{{url('near-by-attraction') }}"> Near By Attractions</a></li>
+                                <li><a href="{{route('hotel.near.dlw') }}"> Hotel Near DLW Road</a></li>
+                                <li><a href="{{route('hotel.near.bhu') }}"> Hotel Near BHU</a></li>
                                 <li><a href="{{url('contact-us') }}"> Contact Us</a></li>
 
                             </ul>

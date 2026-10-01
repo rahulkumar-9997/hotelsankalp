@@ -28,9 +28,9 @@
                     <div class="book-a-table-btn">
                         <div class="btnt mt-3">
                             <a href="javascript:void(0)"
-                            data-title="Book a Table"
-                            data-url="{{ route('book.a.table') }}"
-                            data-size="lg" class="animated-border book-a-table-a">Book a Table</a>
+                                data-title="Book a Table"
+                                data-url="{{ route('book.a.table') }}"
+                                data-size="lg" class="animated-border book-a-table-a">Book a Table</a>
                         </div>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
             <div class="col-lg-3 col-md-6 mb-2">
                 <div class="whatnew-box-two">
                     <div class="confrence-box-ye">
-                        <div class="about-item-icon">
+                        <div class="about-item-icon d-flex justify-content-center align-items-center">
                             <img src="{{asset('fronted/hotelsankalp-img/restaurant/icon/indian.png') }}" alt="Indian" loading="lazy">
                         </div>
                         <div class="conference-box-price">
@@ -68,7 +68,7 @@
             <div class="col-lg-3 col-md-6 mb-2">
                 <div class="whatnew-box-two">
                     <div class="confrence-box-ye">
-                        <div class="about-item-icon">
+                        <div class="about-item-icon d-flex justify-content-center align-items-center">
                             <img src="{{ asset('fronted/hotelsankalp-img/restaurant/icon/continental.png') }}" alt="Continental" loading="lazy">
                         </div>
                         <div class="conference-box-price">
@@ -81,7 +81,7 @@
             <div class="col-lg-3 col-md-6 mb-2">
                 <div class="whatnew-box-two">
                     <div class="confrence-box-ye">
-                        <div class="about-item-icon">
+                        <div class="about-item-icon d-flex justify-content-center align-items-center">
                             <img src="{{asset('fronted/hotelsankalp-img/restaurant/icon/asian.png') }}" alt="Asian" loading="lazy">
                         </div>
                         <div class="conference-box-price">
@@ -93,7 +93,7 @@
             <div class="col-lg-3 col-md-6 mb-2">
                 <div class="whatnew-box-two">
                     <div class="confrence-box-ye">
-                        <div class="about-item-icon">
+                        <div class="about-item-icon d-flex justify-content-center align-items-center">
                             <img src="{{asset('fronted/hotelsankalp-img/restaurant/icon/vegan.png')}}" alt="Vegan/Healthy options" loading="lazy">
                         </div>
                         <div class="conference-box-price">
@@ -161,6 +161,61 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+</section>
+
+<section class="tw-relative tw-py-16 md:tw-py-24 tw-px-6 sm:tw-px-6 lg:tw-px-8  tw-overflow-hidden" style="background: linear-gradient(135deg, #f5e6c8 0%, #ecd8b3 100%);">
+    <div class="tw-absolute tw-inset-0 tw-pointer-events-none tw-opacity-[0.04]"
+        style="background-image: repeating-linear-gradient(-45deg, #78350f 0px, #78350f 1px, transparent 1px, transparent 18px);"></div>
+    <div class="tw-absolute tw-top-0 tw-left-0 tw-w-[400px] tw-h-[400px] tw-rounded-full tw-pointer-events-none -tw-translate-x-1/2 -tw-translate-y-1/2"
+        style="border: 1px solid rgba(120,53,15,0.15);"></div>
+    <div class="tw-absolute tw-top-0 tw-left-0 tw-w-[600px] tw-h-[600px] tw-rounded-full tw-pointer-events-none -tw-translate-x-1/2 -tw-translate-y-1/2"
+        style="border: 1px solid rgba(120,53,15,0.08);"></div>
+    <div class="tw-relative tw-max-w-7xl tw-mx-auto">
+        <div class="tw-text-center tw-mb-10 md:tw-mb-8">
+            <h4 class="tw-text-2xl sm:tw-text-2xl md:tw-text-3xl tw-mb-6 tw-text-[#101010]">
+                 Pure Veg Hotel in Varanasi
+            </h4>
+            <div class="tw-flex tw-items-center tw-justify-center tw-gap-3">
+                <div class="tw-w-16 tw-h-px" style="background: linear-gradient(90deg, transparent, #78350f);"></div>
+                <div class="tw-w-2 tw-h-2 tw-rotate-45" style="background:#78350f;"></div>
+                <div class="tw-w-16 tw-h-px" style="background: linear-gradient(270deg, transparent, #78350f);"></div>
+            </div>
+        </div>
+        <div class="tw-grid lg:tw-grid-cols-12 tw-gap-6 tw-mb-12 tw-items-center">
+            <div class="lg:tw-col-span-7 tw-relative tw-rounded-3xl tw-p-4 md:tw-p-6"
+                style="background: linear-gradient(145deg, #78350f 0%, #451a03 100%); box-shadow: 0 25px 60px -20px rgba(69,26,3,0.5);">
+                <p class="tw-text-amber-50">
+                    Travelers who prefer vegetarian dining during their stay, Hotel Sankalp offer a convenient accommodation and dining experience in Mahmoorganj. The restaurant of the hotel Sankalp offer satvik food with comfortable setting for guests who are looking to enjoy a variety of meals while staying in Varanasi.
+                </p>
+            </div>
+
+            <div class="lg:tw-col-span-5 tw-relative tw-rounded-3xl tw-p-4 md:tw-p-6 tw-bg-white"
+                style="box-shadow: 0 20px 50px -20px rgba(120,53,15,0.3);">
+                <div class="tw-absolute tw-top-8 tw-left-0 tw-w-0.5 tw-h-16"
+                    style="background:#78350f;"></div>
+
+                <p>
+                    Hotel Sankalp offer comfortable accommodation along with an in-house restaurant where guests can enjoy their meals without any need to travel elsewhere if anyone looking for a Pure veg. Hotel in Varanasi.
+                </p>
+            </div>
+        </div>
+        <div class="tw-flex tw-items-center tw-gap-6 tw-mb-8">
+            <div class="tw-h-px tw-flex-1" style="background: linear-gradient(90deg, transparent, rgba(120,53,15,0.35), transparent);"></div>            
+            <h5 class="tw-text-2xl sm:tw-text-2xl md:tw-text-3xl tw-mb-6 tw-text-[#101010]">
+              Satvik Restaurant – Dining at Hotel Sankalp
+            </h5>
+            <div class="tw-h-px tw-flex-1" style="background: linear-gradient(90deg, transparent, rgba(120,53,15,0.35), transparent);"></div>
+        </div>
+        <div class="tw-space-y-5">
+            <p>
+                Satvik Restaurant is designed as a warm and inviting dining space for families, couples, and guests at the hotel. The restaurant offers various dining options such as Indian, Continental, Asian, and vegan/healthy options according to the preference for different travelers.
+            </p>
+
+            <p>
+                The restaurant features indoor seating for up to 70 guests and outdoor seating for up to 20 guests, creating options for both family meals and relaxed evenings. Our Satvik restaurant offer a convenient dining option within Hotel Sankalp for guests specifically looking for a Pure veg. restaurant in Varanasi. The restaurant serves breakfast, lunch, and dinner, allowing hotel guests to enjoy meals during their stay.
+            </p>
         </div>
     </div>
 </section>

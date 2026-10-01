@@ -34,7 +34,12 @@
         <div class="container">
             <div class="row justify-content-center align-items-center">
 				<div class="col-lg-12">
-					<h2 class="text-center mb-10">Hotel Sankalp Banaras</h2>
+					<h2 class="text-center mb-10 tw-text-2xl sm:tw-text-2xl md:tw-text-3xl">Banaras Hotel Contact Number</h2>
+                    <div class="text-center">
+                        <p>
+                        Get in touch with Hotel Sankalp for information about rooms, reservation, dining, events, and other stay related requirements if you are planning a stay, event, business visit, or family trip to Varanasi.
+                        </p>                    
+                    </div>                    
 				</div>
                 <div class="col-lg-4 order-1 d-flex justify-content-between">
                     <div class="contact-info">
@@ -43,10 +48,9 @@
                                 <i class="far fa-map"></i>
                             </div>
                             <div class="contact-div">
-                                <h5>Hotel Address</h5>
-                                <h6>Hotel Sankalp Banaras</h6>
+                                <h5>Contact Hotel Sankalp</h5>
                                 <p>B-38/8-3, Raghunath Nagar<br> Colony,
-                                    Mahmoorganj, Varanasi-221010
+                                    Mahmoorganj, Varanasi-221010, Uttar Pradesh. 
                                 </p>
                             </div>
                         </div>
@@ -59,11 +63,13 @@
                                 <p>
                                     <a href="tel:0542-2975050">0542-2975050</a>
                                     <br> 
-                                    <a href="tel:+919005050196">+91-9005050196</a>
+                                    <a href="tel:+91-9005050196">+91-9005050196</a>
+                                    <br>
+                                    <a href="tel:+91-9005050197">+91-9005050197</a>
                                 </p>
                             </div>
                         </div>
-                        <div class="single-cta pb-30 mb-30 wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s">
+                        <!-- <div class="single-cta pb-30 mb-30 wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s">
                             <div class="f-cta-icon">
                                 <i class="fab fa-whatsapp"></i>
                             </div>
@@ -73,7 +79,7 @@
                                     <a href="tel:+919005050197">+91-9005050197</a>
                                 </p>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="single-cta wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s">
                             <div class="f-cta-icon">
                                 <i class="far fa-envelope-open"></i>
@@ -84,8 +90,6 @@
                                     <a href="mailto:sankalpbanaras@gmail.com">sankalpbanaras@gmail.com</a>
                                     <br>
                                     <a href="mailto:info@sankalpbanaras.com">info@sankalpbanaras.com</a>
-                                    
-                                    <!-- <a href="#">info@gmail.com</a> -->
                                 </p>
                             </div>
                         </div>
@@ -140,6 +144,15 @@
                             </div>
                         </div>
                     </form>
+                    </div>
+                </div>                
+            </div>
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-12">
+                    <div class="tw-text-center">
+                        <p>
+                            Whether you need information about room availability, a family stay, restaurant services, or banquet arrangements, the Hotel Sankalp team can assist with your requirements.
+                        </p>
                     </div>
                 </div>
             </div>

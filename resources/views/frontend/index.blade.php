@@ -208,14 +208,14 @@ use App\Models\BlogImages;
          </h3>
          <div class="tw-w-16 tw-h-0.5 tw-bg-[#dac193] tw-mx-auto tw-mt-4 tw-rounded-full"></div>
       </div>
-      <div class="tw-grid lg:tw-grid-cols-12 tw-gap-8 tw-mb-20">
-         <div class="lg:tw-col-span-7 tw-relative tw-bg-white tw-rounded-2xl tw-p-10 md:tw-p-12 tw-shadow-[0_20px_60px_-15px_rgba(120,53,15,0.15)] tw-border tw-border-amber-100/80 tw-overflow-hidden tw-group hover:tw-shadow-[0_30px_80px_-15px_rgba(120,53,15,0.25)] hover:-tw-translate-y-1 tw-transition-all tw-duration-500">
-            <div class="tw-absolute tw-top-0 tw-left-0 tw-w-24 tw-h-24 tw-border-t-2 tw-border-l-2 tw-border-amber-300 tw-rounded-tl-2xl"></div>
-            <div class="tw-absolute tw-bottom-0 tw-right-0 tw-w-24 tw-h-24 tw-border-b-2 tw-border-r-2 tw-border-amber-300 tw-rounded-br-2xl"></div>
+      <div class="tw-grid lg:tw-grid-cols-12 tw-gap-8 tw-lg:mb-15 tw-mb-10">
+         <div class="lg:tw-col-span-7 tw-relative tw-bg-white tw-rounded-2xl tw-p-5 md:tw-p-6 tw-shadow-[0_20px_60px_-15px_rgba(120,53,15,0.15)] tw-border tw-border-amber-100/80 tw-overflow-hidden tw-group hover:tw-shadow-[0_30px_80px_-15px_rgba(120,53,15,0.25)] hover:-tw-translate-y-1 tw-transition-all tw-duration-500">
+            <div class="tw-absolute tw-top-0 tw-left-0 tw-w-24 tw-h-24 tw-border-t-2 tw-border-l-2 tw-border-[#644222] tw-rounded-tl-2xl"></div>
+            <div class="tw-absolute tw-bottom-0 tw-right-0 tw-w-24 tw-h-24 tw-border-b-2 tw-border-r-2 tw-border-[#644222] tw-rounded-br-2xl"></div>
             <div class="tw-relative">
                <div class="tw-flex tw-items-baseline tw-gap-3 tw-mb-6">
-                  <span class="tw-text-5xl tw-font-serif tw-font-bold tw-text-amber-600/40 tw-leading-none">01</span>
-                  <span class="tw-h-px tw-flex-1 tw-bg-gradient-to-r tw-from-amber-300 tw-to-transparent"></span>
+                  <span class="tw-text-5xl tw-font-serif tw-font-bold tw-text-[#644222] tw-leading-none">01</span>
+                  <span class="tw-h-px tw-flex-1 tw-bg-gradient-to-r tw-from-[#644222] tw-to-transparent"></span>
                </div>
                <p class="tw-text-[16px] tw-text-[#181616]">
                   Welcome to Hotel Sankalp, a comfortable and welcoming destination for travelers looking to experience Varanasi with convenience and peace of mind. The hotel offer a relaxing base for exploring the spiritual, cultural, and historical attractions of the city while located in Mahmoorganj.
@@ -223,15 +223,15 @@ use App\Models\BlogImages;
             </div>
          </div>
          
-         <div class="lg:tw-col-span-5 tw-relative tw-bg-gradient-to-br tw-from-[#1a1410] tw-via-[#221a13] tw-to-[#1a1410] tw-rounded-2xl tw-p-10 md:tw-p-12 tw-shadow-[0_20px_60px_-15px_rgba(0,0,0,0.4)] tw-overflow-hidden tw-group hover:-tw-translate-y-1 tw-transition-all tw-duration-500">
-            <div class="tw-absolute tw-top-0 tw-left-0 tw-right-0 tw-h-px tw-bg-gradient-to-r tw-from-transparent tw-via-amber-500 tw-to-transparent"></div>
+         <div class="lg:tw-col-span-5 tw-relative tw-bg-gradient-to-br tw-from-[#1a1410] tw-via-[#221a13] tw-to-[#1a1410] tw-rounded-2xl tw-p-5 md:tw-p-6 tw-shadow-[0_20px_60px_-15px_rgba(0,0,0,0.4)] tw-overflow-hidden tw-group hover:-tw-translate-y-1 tw-transition-all tw-duration-500">
+            <div class="tw-absolute tw-top-0 tw-left-0 tw-right-0 tw-h-px tw-bg-gradient-to-r tw-from-transparent tw-via-[#644222] tw-to-transparent"></div>
             <div class="tw-absolute tw-inset-0 tw-opacity-[0.06]" style="background-image: radial-gradient(circle, #fbbf24 1px, transparent 1px); background-size: 22px 22px;"></div>
-            <div class="tw-absolute -tw-bottom-24 -tw-right-24 tw-w-64 tw-h-64 tw-bg-amber-500 tw-rounded-full tw-opacity-20 tw-blur-3xl"></div>
+            <div class="tw-absolute -tw-bottom-24 -tw-right-24 tw-w-64 tw-h-64 tw-bg-[#644222] tw-rounded-full tw-opacity-20 tw-blur-3xl"></div>
 
             <div class="tw-relative">
                <div class="tw-flex tw-items-baseline tw-gap-3 tw-mb-6">
-                  <span class="tw-text-5xl tw-font-serif tw-font-bold tw-text-amber-500/50 tw-leading-none">02</span>
-                  <span class="tw-h-px tw-flex-1 tw-bg-gradient-to-r tw-from-amber-500/40 tw-to-transparent"></span>
+                  <span class="tw-text-5xl tw-font-serif tw-font-bold tw-text-white tw-leading-none">02</span>
+                  <span class="tw-h-px tw-flex-1 tw-bg-gradient-to-r tw-from-white tw-to-transparent"></span>
                </div>
 
                <p class="tw-text-[16px] tw-text-[#ffff]">
@@ -241,14 +241,14 @@ use App\Models\BlogImages;
          </div>
       </div>
 
-      <div class="tw-relative tw-mb-20">
-         <div class="tw-grid lg:tw-grid-cols-12 tw-gap-10 tw-items-start">
+      <div class="tw-relative tw-lg:mb-20 tw-mb-5">
+         <div class="tw-grid lg:tw-grid-cols-12 tw-lg:tw-gap-10 tw-lg:tw-gap-5 tw-items-start">
             <div class="lg:tw-col-span-3 tw-flex lg:tw-block tw-justify-center">
-               <div class="tw-relative tw-inline-block">
-                  <div class="tw-text-[140px] md:tw-text-[180px] tw-leading-[0.85] tw-font-serif tw-font-bold tw-text-transparent tw-select-none" style="-webkit-text-stroke: 2px #d97706; tw-text-stroke: 2px #d97706;">
+               <div class="tw-hidden lg:tw-inline-block tw-relative">
+                  <div class="tw-text-[140px] md:tw-text-[180px] tw-leading-[0.85] tw-font-serif tw-font-bold tw-text-transparent tw-select-none" style="-webkit-text-stroke: 2px #644222; tw-text-stroke: 2px #644222;">
                      01
                   </div>
-                  <div class="tw-absolute -tw-bottom-2 tw-left-1/2 -tw-translate-x-1/2 tw-whitespace-nowrap tw-text-[10px] tw-font-bold tw-text-amber-700 tw-uppercase tw-tracking-[0.35em] tw-bg-[#faf8f5] tw-px-3">
+                  <div class="tw-absolute -tw-bottom-2 tw-left-1/2 -tw-translate-x-1/2 tw-whitespace-nowrap tw-text-[10px] tw-font-bold tw-text-[#644222] tw-uppercase tw-tracking-[0.35em] tw-bg-[#faf8f5] tw-px-3">
                      Family Stay
                   </div>
                </div>
@@ -258,8 +258,8 @@ use App\Models\BlogImages;
                <h4 class="tw-text-2xl md:tw-text-3xl lg:tw-text-3xl tw-text-gray-900 tw-leading-tight tw-mb-3">
                   A Comfortable
                   <span class="tw-relative tw-inline-block">
-                     <span class="tw-text-amber-700">Family Stay</span>
-                     <span class="tw-absolute tw-bottom-1 tw-left-0 tw-right-0 tw-h-px tw-bg-amber-500/40"></span>
+                     <span class="tw-text-[#644222]">Family Stay</span>
+                     <span class="tw-absolute tw-bottom-1 tw-left-0 tw-right-0 tw-h-px tw-bg-[#644222]/40"></span>
                   </span>
                   in Varanasi
                </h4>
@@ -279,8 +279,8 @@ use App\Models\BlogImages;
                <h4 class="tw-text-2xl md:tw-text-3xl lg:tw-text-3xl tw-text-gray-900 tw-leading-tight tw-mb-3">
                   Quality Accommodation at a
                   <span class="tw-relative tw-inline-block">
-                     <span class="tw-text-amber-700">Convenient Price</span>
-                     <span class="tw-absolute tw-bottom-1 tw-left-0 tw-right-0 tw-h-px tw-bg-amber-500/40"></span>
+                     <span class="tw-text-[#644222]">Convenient Price</span>
+                     <span class="tw-absolute tw-bottom-1 tw-left-0 tw-right-0 tw-h-px tw-bg-[#644222]"></span>
                   </span>
                </h4>
 
@@ -296,11 +296,11 @@ use App\Models\BlogImages;
 
             <!-- Number visual -->
             <div class="lg:tw-col-span-3 lg:tw-order-2 tw-flex lg:tw-block tw-justify-center">
-               <div class="tw-relative tw-inline-block">
-                  <div class="tw-text-[140px] md:tw-text-[180px] tw-leading-[0.85] tw-font-serif tw-font-bold tw-text-transparent tw-select-none" style="-webkit-text-stroke: 2px #d97706; tw-text-stroke: 2px #d97706;">
+               <div class="tw-hidden lg:tw-inline-block tw-relative">
+                  <div class="tw-text-[140px] md:tw-text-[180px] tw-leading-[0.85] tw-font-serif tw-font-bold tw-text-transparent tw-select-none" style="-webkit-text-stroke: 2px #644222; tw-text-stroke: 2px #644222;">
                      02
                   </div>
-                  <div class="tw-absolute -tw-bottom-2 tw-left-1/2 -tw-translate-x-1/2 tw-whitespace-nowrap tw-text-[10px] tw-font-bold tw-text-amber-700 tw-uppercase tw-tracking-[0.35em] tw-bg-[#faf8f5] tw-px-3">
+                  <div class="tw-absolute -tw-bottom-2 tw-left-1/2 -tw-translate-x-1/2 tw-whitespace-nowrap tw-text-[10px] tw-font-bold tw-text-[#644222] tw-uppercase tw-tracking-[0.35em] tw-bg-[#faf8f5] tw-px-3">
                      Best Value
                   </div>
                </div>
@@ -464,27 +464,34 @@ use App\Models\BlogImages;
             <div class="single-post2 hover-zoomin mb-20 wow fadeInUp animated" data-animation="fadeInUp" data-delay=".4s">
                @if($attraction->image_file)
                <div class="blog-thumb2">
-                  <a href="#">
+                  <a href="{{ route('near-by-attraction.details', $attraction->slug) }}">
                      <img src="{{ asset('hotel-sankalp-image-file/near-by-img/' . $attraction->image_file) }}" alt="{{ $attraction->title }}">
                   </a>
                </div>
                @endif
                <div class="blog-content2 near-main-content">
                   <h4>
-                     <a href="#">
+                     <a href="{{ route('near-by-attraction.details', $attraction->slug) }}">
                         {{ $attraction->title }}
                      </a>
                   </h4>
-                  <!-- <p>
-                              {!! Str::limit($attraction->description, 70) !!}
-                           </p> -->
+                  <!-- @if($attraction->description)
+                     <p>
+                        {!! Str::limit($attraction->description, 70) !!}
+                     </p>
+                  @endif -->
                   <!-- <div class="blog-btn">
-                              <a href="#">Read More</a>
-                           </div> -->
+                     <a href="#">Read More</a>
+                  </div> -->
                </div>
             </div>
          </div>
          @endforeach
+         <div class="col-md-12">
+            <div class="ml--3 text-center">
+               <a href="{{ route('near-by-attraction') }}" class="btn ss-btn smoth-scroll">View All</a>
+            </div>
+         </div>
       </div>
    </div>
 </section>

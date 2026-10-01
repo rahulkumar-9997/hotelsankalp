@@ -40,7 +40,7 @@ return [
     */
 
     'debug' => (bool) env('APP_DEBUG', false),
-
+    'asset_url' => env('ASSET_URL', null),
     /*
     |--------------------------------------------------------------------------
     | Application URL

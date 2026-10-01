@@ -390,5 +390,33 @@ class FrontHomeController extends Controller
             ], 500);
         }
     }
+
+    public function nearByAttractionsList()
+    {
+        $data['nearby_attractions'] = NearByAttraction::orderBy('id', 'asc')
+            ->paginate(20);
+        return view('frontend.pages.near-by-attraction.index', compact('data'));
+    }
+
+    public function nearByAttractionsDetails($slug)
+    {
+        $data['attraction'] = NearByAttraction::where('slug', $slug)->firstOrFail();
+        $data['nearby_attractions'] = NearByAttraction::where('id', '!=', $data['attraction']->id)
+        ->latest()
+        ->take(6)
+        ->get();
+        return view('frontend.pages.near-by-attraction.details', compact('data'));
+    }
+    
+
+    public function hotelNearDlw()
+    {
+        return view('frontend.pages.hotel-near-dlw-varanasi');
+    }
+
+    public function hotelNearBhu()
+    {
+        return view('frontend.pages.hotel-near-bhu-varanasi');
+    }
     
 }
